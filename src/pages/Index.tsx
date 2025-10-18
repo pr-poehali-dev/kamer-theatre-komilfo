@@ -8,73 +8,69 @@ const Index = () => {
 
   const navigation = [
     { id: 'home', label: 'Главная' },
-    { id: 'schedule', label: 'Афиша' },
-    { id: 'troupe', label: 'Труппа' },
-    { id: 'news', label: 'Новости' },
+    { id: 'schedule', label: 'Репертуар' },
+    { id: 'troupe', label: 'Руководитель' },
+    { id: 'news', label: 'Расписание' },
     { id: 'contacts', label: 'Контакты' },
   ];
 
   const performances = [
     {
-      title: 'Вишнёвый сад',
-      author: 'А.П. Чехов',
-      date: '15 ноября, 19:00',
-      duration: '2 часа 30 минут',
+      title: 'Вечернее турне',
+      date: 'Репетиции по четвергам',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
     },
     {
-      title: 'Три сестры',
-      author: 'А.П. Чехов',
-      date: '22 ноября, 19:00',
-      duration: '2 часа 45 минут',
+      title: 'Безымянная карточка',
+      date: 'Репетиции по четвергам',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
     },
     {
-      title: 'Гроза',
-      author: 'А.Н. Островский',
-      date: '29 ноября, 19:00',
-      duration: '2 часа 15 минут',
+      title: 'Тайна "Кафе Ромашка"',
+      date: 'Репетиции по четвергам',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
+    },
+    {
+      title: 'КраШная шапочка',
+      date: 'Репетиции по четвергам',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
+    },
+    {
+      title: 'Городские истории',
+      date: 'Репетиции по четвергам',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
+    },
+    {
+      title: 'Делегация радости',
+      date: 'Репетиции по четвергам',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
+    },
+    {
+      title: 'Баба Яга не против',
+      date: 'Репетиции по четвергам',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
+    },
+    {
+      title: 'Любовь и проводы',
+      date: 'Репетиции по четвергам',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
     },
   ];
 
   const troupe = [
     {
-      name: 'Анна Петрова',
-      role: 'Заслуженная артистка',
+      name: 'Светлана Кузикова',
+      role: 'Основатель и режиссёр театра',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/2edf09ae-deaa-4454-9bb4-1fae41b9ef61.jpg',
-      bio: 'Более 20 лет на театральной сцене',
-    },
-    {
-      name: 'Михаил Иванов',
-      role: 'Народный артист',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/2edf09ae-deaa-4454-9bb4-1fae41b9ef61.jpg',
-      bio: 'Главные роли в постановках классического репертуара',
-    },
-    {
-      name: 'Елена Смирнова',
-      role: 'Актриса театра',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/2edf09ae-deaa-4454-9bb4-1fae41b9ef61.jpg',
-      bio: 'Лауреат премии "Золотая маска"',
+      bio: 'Психолог, арт-терапевт, театральный педагог, автор курсов и книг',
     },
   ];
 
-  const news = [
-    {
-      title: 'Премьера спектакля "Вишнёвый сад"',
-      date: '1 ноября 2024',
-      description: 'Приглашаем на премьерный показ новой постановки классического произведения А.П. Чехова.',
-    },
-    {
-      title: 'Гастроли в Санкт-Петербурге',
-      date: '15 октября 2024',
-      description: 'Наш театр с успехом выступил на сцене Александринского театра.',
-    },
-    {
-      title: 'Награда на фестивале',
-      date: '5 октября 2024',
-      description: 'Спектакль "Три сестры" получил Гран-при на международном театральном фестивале.',
-    },
+  const aboutText = [
+    'Театр «КОМИЛЬФО» (бывший «Театр для своих») - независимый самодеятельный театральный коллектив, созданный из выпускников курсов и программ Центра психологии и творчества Kuzikova school.',
+    '"КОМИЛЬФО" это арт-пространство для исцеления души средствами театрального искусства и решения психологических задач личностного роста.',
+    'Это площадка для раскрытия талантов и творческой реализации. Это место - где участники начинают верить в себя, освобождаются от зажатости и неуверенности, учатся смело выступать перед аудиторией.',
+    'Театр «Комильфо» даёт возможность творчески развиваться, приобретать навыки актерского мастерства, ораторского искусства, а также решить психологические задачи по повышению самооценки и уверенности в себе, избавиться от страхов в общении и публичных выступлениях, развивать эмоциональный интеллект.',
   ];
 
   return (
@@ -117,14 +113,27 @@ const Index = () => {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground"
                   onClick={() => setActiveSection('schedule')}
                 >
-                  Посмотреть афишу
+                  Посмотреть репертуар
                 </Button>
+              </div>
+            </section>
+
+            <section className="py-20 bg-background">
+              <div className="container mx-auto px-4 max-w-4xl">
+                <h3 className="text-4xl font-bold text-center mb-12">О театре</h3>
+                <div className="space-y-6 text-lg leading-relaxed">
+                  {aboutText.map((paragraph, idx) => (
+                    <p key={idx} className="text-muted-foreground">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
             </section>
 
             <section className="py-20 bg-card">
               <div className="container mx-auto px-4">
-                <h3 className="text-4xl font-bold text-center mb-12">Ближайшие спектакли</h3>
+                <h3 className="text-4xl font-bold text-center mb-12">Репертуар театра</h3>
                 <div className="grid md:grid-cols-3 gap-8">
                   {performances.map((perf, idx) => (
                     <Card
@@ -140,14 +149,9 @@ const Index = () => {
                       </div>
                       <CardContent className="p-6">
                         <h4 className="text-2xl font-bold mb-2 text-accent">{perf.title}</h4>
-                        <p className="text-muted-foreground mb-4">{perf.author}</p>
-                        <div className="flex items-center gap-2 text-sm mb-2">
+                        <div className="flex items-center gap-2 text-sm">
                           <Icon name="Calendar" size={16} className="text-accent" />
                           <span>{perf.date}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <Icon name="Clock" size={16} className="text-accent" />
-                          <span>{perf.duration}</span>
                         </div>
                       </CardContent>
                     </Card>
@@ -161,7 +165,7 @@ const Index = () => {
         {activeSection === 'schedule' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">Афиша</h2>
+              <h2 className="text-5xl font-bold text-center mb-16">Репертуар</h2>
               <div className="max-w-4xl mx-auto space-y-6">
                 {performances.map((perf, idx) => (
                   <Card
@@ -178,19 +182,12 @@ const Index = () => {
                       </div>
                       <CardContent className="md:w-2/3 p-8">
                         <h3 className="text-3xl font-bold mb-3 text-accent">{perf.title}</h3>
-                        <p className="text-lg text-muted-foreground mb-6">{perf.author}</p>
-                        <div className="space-y-3 mb-6">
-                          <div className="flex items-center gap-3">
-                            <Icon name="Calendar" size={20} className="text-accent" />
-                            <span className="text-lg">{perf.date}</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <Icon name="Clock" size={20} className="text-accent" />
-                            <span className="text-lg">{perf.duration}</span>
-                          </div>
+                        <div className="flex items-center gap-3 mb-6">
+                          <Icon name="Calendar" size={20} className="text-accent" />
+                          <span className="text-lg">{perf.date}</span>
                         </div>
                         <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                          Купить билет
+                          Узнать подробнее
                         </Button>
                       </CardContent>
                     </div>
@@ -204,25 +201,27 @@ const Index = () => {
         {activeSection === 'troupe' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">Труппа</h2>
-              <div className="grid md:grid-cols-3 gap-8">
+              <h2 className="text-5xl font-bold text-center mb-16">Руководитель</h2>
+              <div className="max-w-2xl mx-auto">
                 {troupe.map((actor, idx) => (
                   <Card
                     key={idx}
-                    className="overflow-hidden hover:scale-105 transition-transform bg-card border-border"
+                    className="overflow-hidden bg-card border-border"
                   >
-                    <div className="aspect-[3/4] overflow-hidden">
-                      <img
-                        src={actor.image}
-                        alt={actor.name}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="md:flex">
+                      <div className="md:w-1/3 aspect-square overflow-hidden">
+                        <img
+                          src={actor.image}
+                          alt={actor.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <CardContent className="md:w-2/3 p-8">
+                        <h3 className="text-3xl font-bold mb-3 text-accent">{actor.name}</h3>
+                        <p className="text-lg text-muted-foreground mb-4">{actor.role}</p>
+                        <p className="text-base leading-relaxed">{actor.bio}</p>
+                      </CardContent>
                     </div>
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-2xl font-bold mb-2 text-accent">{actor.name}</h3>
-                      <p className="text-muted-foreground mb-4">{actor.role}</p>
-                      <p className="text-sm">{actor.bio}</p>
-                    </CardContent>
                   </Card>
                 ))}
               </div>
@@ -233,20 +232,19 @@ const Index = () => {
         {activeSection === 'news' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">Новости</h2>
-              <div className="max-w-3xl mx-auto space-y-8">
-                {news.map((item, idx) => (
-                  <Card key={idx} className="p-8 bg-card border-border hover:border-accent transition-colors">
-                    <div className="flex items-start gap-4 mb-4">
-                      <Icon name="Newspaper" size={24} className="text-accent mt-1" />
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-2 text-accent">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-4">{item.date}</p>
-                        <p className="text-lg">{item.description}</p>
+              <h2 className="text-5xl font-bold text-center mb-16">Расписание</h2>
+              <div className="max-w-3xl mx-auto">
+                <Card className="p-8 bg-card border-border">
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <Icon name="Calendar" size={24} className="text-accent mt-1" />
+                      <div>
+                        <h3 className="text-2xl font-bold mb-3 text-accent">Занятия и репетиции</h3>
+                        <p className="text-lg mb-2">Один раз в неделю по четвергам</p>
                       </div>
                     </div>
-                  </Card>
-                ))}
+                  </div>
+                </Card>
               </div>
             </div>
           </div>
@@ -263,28 +261,31 @@ const Index = () => {
                       <Icon name="MapPin" size={24} className="text-accent mt-1" />
                       <div>
                         <h3 className="text-xl font-bold mb-2 text-accent">Адрес</h3>
-                        <p className="text-lg">г. Москва, ул. Театральная, д. 15</p>
+                        <p className="text-lg">г. Краснодар, улица Горького, 104, офис 26</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <Icon name="Phone" size={24} className="text-accent mt-1" />
                       <div>
                         <h3 className="text-xl font-bold mb-2 text-accent">Телефон</h3>
-                        <p className="text-lg">+7 (495) 123-45-67</p>
+                        <p className="text-lg">8-918-311-17-12</p>
+                        <p className="text-sm text-muted-foreground">Светлана Алексеевна Кузикова</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <Icon name="Mail" size={24} className="text-accent mt-1" />
+                      <Icon name="MessageCircle" size={24} className="text-accent mt-1" />
                       <div>
-                        <h3 className="text-xl font-bold mb-2 text-accent">Email</h3>
-                        <p className="text-lg">info@comilfo-theatre.ru</p>
+                        <h3 className="text-xl font-bold mb-2 text-accent">WhatsApp</h3>
+                        <a href="https://wa.me/message/FKFHPRMEDBRYP1" target="_blank" rel="noopener noreferrer" className="text-lg text-accent hover:underline">
+                          Написать в WhatsApp
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <Icon name="Clock" size={24} className="text-accent mt-1" />
+                      <Icon name="Calendar" size={24} className="text-accent mt-1" />
                       <div>
-                        <h3 className="text-xl font-bold mb-2 text-accent">Касса</h3>
-                        <p className="text-lg">Ежедневно с 10:00 до 20:00</p>
+                        <h3 className="text-xl font-bold mb-2 text-accent">Расписание</h3>
+                        <p className="text-lg">Занятия по четвергам</p>
                       </div>
                     </div>
                   </div>
