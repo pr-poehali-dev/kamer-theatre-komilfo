@@ -11,6 +11,7 @@ const Index = () => {
     { id: 'schedule', label: 'Репертуар' },
     { id: 'courses', label: 'Учебный театр' },
     { id: 'gallery', label: 'Галерея' },
+    { id: 'reviews', label: 'Отзывы' },
     { id: 'troupe', label: 'Руководитель' },
     { id: 'news', label: 'Расписание' },
     { id: 'contacts', label: 'Контакты' },
@@ -92,6 +93,45 @@ const Index = () => {
     {
       url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/35e8f937-9d6a-403c-86d2-8bcf4cf551bc.jpg',
       title: 'Поклоны',
+    },
+  ];
+
+  const reviews = [
+    {
+      name: 'Анна Петрова',
+      role: 'Участник театра',
+      text: 'Театр изменил мою жизнь! Я обрела уверенность в себе, научилась выражать эмоции и нашла единомышленников. Атмосфера здесь невероятная.',
+      rating: 5,
+    },
+    {
+      name: 'Михаил Соколов',
+      role: 'Родитель ученика',
+      text: 'Моя дочь занимается в театре уже год. Результаты потрясающие — она стала более открытой, креативной и уверенной в публичных выступлениях.',
+      rating: 5,
+    },
+    {
+      name: 'Екатерина Волкова',
+      role: 'Участник театра',
+      text: 'Светлана — потрясающий педагог! Она умеет раскрыть потенциал каждого, создает теплую атмосферу, где не боишься экспериментировать.',
+      rating: 5,
+    },
+    {
+      name: 'Дмитрий Иванов',
+      role: 'Зритель',
+      text: 'Побывал на нескольких спектаклях — это просто волшебство! Актеры играют с душой, видно, что они по-настоящему любят то, что делают.',
+      rating: 5,
+    },
+    {
+      name: 'Ольга Смирнова',
+      role: 'Участник театра',
+      text: 'Здесь я нашла не просто хобби, а настоящее призвание. Театр научил меня быть собой, не бояться сцены и жить каждым моментом.',
+      rating: 5,
+    },
+    {
+      name: 'Александр Новиков',
+      role: 'Участник театра',
+      text: 'Три года в театре пролетели незаметно. Это лучший опыт в моей жизни — творчество, дружба, развитие. Благодарен каждому дню здесь!',
+      rating: 5,
     },
   ];
 
@@ -342,6 +382,40 @@ const Index = () => {
                         <h3 className="text-xl font-bold text-accent">{image.title}</h3>
                       </div>
                     </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'reviews' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4">
+              <h2 className="text-5xl font-bold text-center mb-8">Отзывы</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Что говорят участники и зрители нашего театра
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {reviews.map((review, idx) => (
+                  <Card
+                    key={idx}
+                    className="bg-card border-border hover:shadow-lg transition-shadow"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Icon key={i} name="Star" size={18} className="text-accent fill-accent" />
+                        ))}
+                      </div>
+                      <p className="text-base mb-6 text-foreground leading-relaxed">
+                        "{review.text}"
+                      </p>
+                      <div className="border-t border-border pt-4">
+                        <p className="font-semibold text-foreground">{review.name}</p>
+                        <p className="text-sm text-muted-foreground">{review.role}</p>
+                      </div>
+                    </CardContent>
                   </Card>
                 ))}
               </div>
