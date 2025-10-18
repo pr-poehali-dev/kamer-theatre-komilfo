@@ -10,6 +10,7 @@ const Index = () => {
     { id: 'home', label: 'Главная' },
     { id: 'schedule', label: 'Репертуар' },
     { id: 'courses', label: 'Учебный театр' },
+    { id: 'gallery', label: 'Галерея' },
     { id: 'troupe', label: 'Руководитель' },
     { id: 'news', label: 'Расписание' },
     { id: 'contacts', label: 'Контакты' },
@@ -64,6 +65,33 @@ const Index = () => {
       role: 'Основатель и режиссёр театра',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/2edf09ae-deaa-4454-9bb4-1fae41b9ef61.jpg',
       bio: 'Психолог, арт-терапевт, театральный педагог, автор курсов и книг',
+    },
+  ];
+
+  const galleryImages = [
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3b015a17-2e12-4d1c-b937-5f482bd32ffe.jpg',
+      title: 'Спектакль на сцене',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/b184303a-bbb6-4d6b-a721-fb64974cbed2.jpg',
+      title: 'Репетиция',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f5b05a1d-bd1c-417c-9ac9-8400069643c7.jpg',
+      title: 'За кулисами',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/d82abe88-7a71-401b-b4ac-60dc708bdea0.jpg',
+      title: 'Команда театра',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/12aaa431-a215-44e0-9f77-b346487edd9d.jpg',
+      title: 'Эмоциональный момент',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/35e8f937-9d6a-403c-86d2-8bcf4cf551bc.jpg',
+      title: 'Поклоны',
     },
   ];
 
@@ -286,6 +314,36 @@ const Index = () => {
                     Записаться на курс
                   </Button>
                 </Card>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'gallery' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4">
+              <h2 className="text-5xl font-bold text-center mb-8">Галерея</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Моменты из жизни театра: спектакли, репетиции, закулисье
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {galleryImages.map((image, idx) => (
+                  <Card
+                    key={idx}
+                    className="overflow-hidden hover:scale-105 transition-transform cursor-pointer bg-card border-border group"
+                  >
+                    <div className="aspect-square overflow-hidden relative">
+                      <img
+                        src={image.url}
+                        alt={image.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <h3 className="text-xl font-bold text-accent">{image.title}</h3>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
