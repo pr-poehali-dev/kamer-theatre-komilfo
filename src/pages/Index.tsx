@@ -110,7 +110,7 @@ const Index = () => {
                   Камерный театр Комильфо
                 </h2>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Классические постановки в современной интерпретации
+                  Творим с любовью, играем с душой
                 </p>
                 <Button
                   size="lg"
