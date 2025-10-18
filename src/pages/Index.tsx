@@ -9,6 +9,7 @@ const Index = () => {
   const navigation = [
     { id: 'home', label: 'Главная' },
     { id: 'schedule', label: 'Репертуар' },
+    { id: 'courses', label: 'Учебный театр' },
     { id: 'troupe', label: 'Руководитель' },
     { id: 'news', label: 'Расписание' },
     { id: 'contacts', label: 'Контакты' },
@@ -63,6 +64,29 @@ const Index = () => {
       role: 'Основатель и режиссёр театра',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/2edf09ae-deaa-4454-9bb4-1fae41b9ef61.jpg',
       bio: 'Психолог, арт-терапевт, театральный педагог, автор курсов и книг',
+    },
+  ];
+
+  const courses = [
+    {
+      title: 'Актерское мастерство',
+      description: 'Освойте основы актерского мастерства, научитесь управлять эмоциями и воплощать образы на сцене',
+      icon: 'Drama',
+    },
+    {
+      title: 'Ораторское искусство',
+      description: 'Развитие навыков публичных выступлений, уверенности в общении и преодоление страха сцены',
+      icon: 'Mic',
+    },
+    {
+      title: 'Арт-терапия',
+      description: 'Исцеление души через театральное искусство. Повышение самооценки и развитие эмоционального интеллекта',
+      icon: 'Heart',
+    },
+    {
+      title: 'Личностный рост',
+      description: 'Проработка психологических задач, раскрытие талантов и творческая реализация',
+      icon: 'Sparkles',
     },
   ];
 
@@ -193,6 +217,75 @@ const Index = () => {
                     </div>
                   </Card>
                 ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'courses' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4">
+              <h2 className="text-5xl font-bold text-center mb-8">Учебный театр</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Центр психологии и творчества Kuzikova school приглашает на актёрские курсы
+              </p>
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {courses.map((course, idx) => (
+                  <Card
+                    key={idx}
+                    className="p-8 bg-card border-border hover:border-accent transition-all hover:scale-105"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-accent/10 rounded-lg">
+                        <Icon name={course.icon} size={32} className="text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-3 text-accent">{course.title}</h3>
+                        <p className="text-base leading-relaxed text-muted-foreground">
+                          {course.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+              <div className="mt-16 text-center">
+                <Card className="p-8 bg-muted border-border max-w-3xl mx-auto">
+                  <h3 className="text-3xl font-bold mb-6 text-accent">Что вы получите</h3>
+                  <div className="grid md:grid-cols-2 gap-6 text-left">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Check" size={20} className="text-accent mt-1" />
+                      <p className="text-base">Преодоление зажатости и неуверенности</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Check" size={20} className="text-accent mt-1" />
+                      <p className="text-base">Развитие актёрских навыков</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Check" size={20} className="text-accent mt-1" />
+                      <p className="text-base">Уверенность в публичных выступлениях</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Check" size={20} className="text-accent mt-1" />
+                      <p className="text-base">Раскрытие творческого потенциала</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Check" size={20} className="text-accent mt-1" />
+                      <p className="text-base">Участие в спектаклях театра</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Check" size={20} className="text-accent mt-1" />
+                      <p className="text-base">Повышение самооценки</p>
+                    </div>
+                  </div>
+                  <Button
+                    size="lg"
+                    className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground"
+                    onClick={() => setActiveSection('contacts')}
+                  >
+                    Записаться на курс
+                  </Button>
+                </Card>
               </div>
             </div>
           </div>
