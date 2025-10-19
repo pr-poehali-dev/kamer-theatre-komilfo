@@ -452,30 +452,44 @@ className={`transition-colors ${
                 <Card className="bg-card border-border p-8">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-4 mb-6">
-                      <Icon name="Sparkles" size={32} className="text-primary mt-1" />
-                      <div>
-                        <h3 className="text-2xl font-bold mb-3">Детская театральная студия</h3>
+                      <Icon name="Mic" size={32} className="text-primary mt-1" />
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-3">Курс ораторского искусства<br />«Своя игра»</h3>
                         <p className="text-muted-foreground mb-4">
-                          Программа для детей 7-13 лет. Развитие творческих способностей, 
-                          уверенности в себе и навыков публичных выступлений.
+                          Уникальный формат обучения с групповыми и индивидуальными занятиями. 
+                          Развитие навыков публичных выступлений и уверенной коммуникации.
                         </p>
-                        <ul className="space-y-2 text-muted-foreground">
+                        <ul className="space-y-2 text-muted-foreground mb-4">
                           <li className="flex items-start gap-2">
                             <Icon name="Check" size={18} className="text-primary mt-1" />
-                            <span>Занятия 1 раз в неделю по 1,5 часа</span>
+                            <span>Групповые и индивидуальные занятия</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <Icon name="Check" size={18} className="text-primary mt-1" />
-                            <span>Группы до 10 детей</span>
+                            <span>Практика публичных выступлений</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <Icon name="Check" size={18} className="text-primary mt-1" />
-                            <span>Выступления для родителей</span>
+                            <span>Работа с голосом и дикцией</span>
                           </li>
                         </ul>
+                        
+                        <a 
+                          href="https://orator-site-creation--preview.poehali.dev/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-primary hover:underline mb-4"
+                        >
+                          <span>Подробнее о курсе</span>
+                          <Icon name="ExternalLink" size={16} />
+                        </a>
+                        
                         <div className="mt-6 pt-6 border-t border-border">
-                          <p className="text-2xl font-bold text-primary mb-2">8 000 ₽/мес</p>
-                          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                          <p className="text-2xl font-bold text-primary mb-2">от 15 900 ₽</p>
+                          <Button 
+                            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                            onClick={() => window.open('https://orator-site-creation--preview.poehali.dev/', '_blank')}
+                          >
                             Записаться на курс
                           </Button>
                         </div>
