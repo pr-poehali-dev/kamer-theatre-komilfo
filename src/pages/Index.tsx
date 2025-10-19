@@ -11,6 +11,7 @@ const Index = () => {
     { id: 'home', label: 'Главная' },
     { id: 'about', label: 'О театре' },
     { id: 'repertoire', label: 'Репертуар' },
+    { id: 'troupe', label: 'Труппа' },
     { id: 'education', label: 'Учебный театр' },
     { id: 'gallery', label: 'Галерея' },
     { id: 'schedule', label: 'Афиша' },
@@ -650,6 +651,190 @@ className={`transition-colors ${
                   </Card>
                 ))}
               </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'troupe' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4 max-w-6xl">
+              <h2 className="text-5xl font-bold text-center mb-8">Наша труппа</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Профессиональные актёры и режиссёры, создающие волшебство на сцене
+              </p>
+
+              <div className="mb-16">
+                <h3 className="text-3xl font-bold mb-8 text-center">Режиссёр</h3>
+                <Card className="bg-card border-border max-w-4xl mx-auto">
+                  <CardContent className="p-8">
+                    <div className="grid md:grid-cols-3 gap-8">
+                      <div className="flex justify-center items-start">
+                        <div className="w-48 h-48 rounded-full bg-muted flex items-center justify-center">
+                          <Icon name="User" size={80} className="text-primary" />
+                        </div>
+                      </div>
+                      <div className="md:col-span-2">
+                        <h4 className="text-2xl font-bold mb-2">Имя Фамилия</h4>
+                        <p className="text-primary text-lg mb-4">Главный режиссёр театра</p>
+                        <div className="space-y-4 text-muted-foreground">
+                          <p>
+                            Окончил Российскую академию театрального искусства (ГИТИС). 
+                            Работал в ведущих театрах Москвы и Санкт-Петербурга.
+                          </p>
+                          <p>
+                            За 20 лет карьеры поставил более 50 спектаклей разных жанров — 
+                            от классической драмы до современных экспериментальных постановок.
+                          </p>
+                          <p>
+                            Лауреат премии "Золотая маска", обладатель множества профессиональных наград.
+                          </p>
+                        </div>
+                        <div className="mt-6 pt-6 border-t border-border">
+                          <p className="font-semibold mb-2">Известные постановки:</p>
+                          <ul className="space-y-1 text-muted-foreground">
+                            <li>• "Вишнёвый сад" А.П. Чехова</li>
+                            <li>• "Гамлет" У. Шекспира</li>
+                            <li>• "Мастер и Маргарита" М. Булгакова</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold mb-8 text-center">Актёры</h3>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
+                        <Icon name="User" size={60} className="text-primary" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">Имя Фамилия</h4>
+                      <p className="text-primary mb-4">Актриса театра</p>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Заслуженная артистка России. Выпускница Школы-студии МХАТ. 
+                        Играет главные роли в спектаклях театра уже 15 лет.
+                      </p>
+                      <div className="text-xs text-muted-foreground">
+                        <p className="font-semibold mb-1">Роли в репертуаре:</p>
+                        <p>Раневская в "Вишнёвом саде"</p>
+                        <p>Офелия в "Гамлете"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
+                        <Icon name="User" size={60} className="text-primary" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">Имя Фамилия</h4>
+                      <p className="text-primary mb-4">Актёр театра</p>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Народный артист России. Закончил Щепкинское училище. 
+                        Работает в театре с момента его основания.
+                      </p>
+                      <div className="text-xs text-muted-foreground">
+                        <p className="font-semibold mb-1">Роли в репертуаре:</p>
+                        <p>Гаев в "Вишнёвом саде"</p>
+                        <p>Клавдий в "Гамлете"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
+                        <Icon name="User" size={60} className="text-primary" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">Имя Фамилия</h4>
+                      <p className="text-primary mb-4">Актриса театра</p>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Лауреат премии "Хрустальная Турандот". Выпускница ГИТИСа. 
+                        Молодая звезда труппы с яркими характерными ролями.
+                      </p>
+                      <div className="text-xs text-muted-foreground">
+                        <p className="font-semibold mb-1">Роли в репертуаре:</p>
+                        <p>Аня в "Вишнёвом саде"</p>
+                        <p>Дуня в "Безумной карточке"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
+                        <Icon name="User" size={60} className="text-primary" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">Имя Фамилия</h4>
+                      <p className="text-primary mb-4">Актёр театра</p>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Выпускник Театрального института им. Б. Щукина. 
+                        Специализируется на комедийных и характерных ролях.
+                      </p>
+                      <div className="text-xs text-muted-foreground">
+                        <p className="font-semibold mb-1">Роли в репертуаре:</p>
+                        <p>Епиходов в "Вишнёвом саде"</p>
+                        <p>Официант в "Кафе Ромашка"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
+                        <Icon name="User" size={60} className="text-primary" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">Имя Фамилия</h4>
+                      <p className="text-primary mb-4">Актриса театра</p>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Заслуженная артистка РФ. Окончила РАТИ-ГИТИС. 
+                        Обладательница множества театральных премий.
+                      </p>
+                      <div className="text-xs text-muted-foreground">
+                        <p className="font-semibold mb-1">Роли в репертуаре:</p>
+                        <p>Шарлотта в "Вишнёвом саде"</p>
+                        <p>Баба Яга в "Баба Яга не против"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
+                        <Icon name="User" size={60} className="text-primary" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">Имя Фамилия</h4>
+                      <p className="text-primary mb-4">Актёр театра</p>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Выпускник Школы-студии МХАТ. Молодой актёр с большим потенциалом. 
+                        Исполняет как драматические, так и комедийные роли.
+                      </p>
+                      <div className="text-xs text-muted-foreground">
+                        <p className="font-semibold mb-1">Роли в репертуаре:</p>
+                        <p>Петя Трофимов в "Вишнёвом саде"</p>
+                        <p>Молодой человек в "Городских историях"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <Card className="bg-primary/5 border-primary/20 mt-16">
+                <CardContent className="p-8 text-center">
+                  <Icon name="Star" size={48} className="text-primary mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">Присоединяйтесь к нашей труппе</h3>
+                  <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Мы всегда ищем талантливых актёров. Если вы мечтаете играть на сцене — 
+                    отправьте нам своё портфолио.
+                  </p>
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Отправить заявку
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         )}
