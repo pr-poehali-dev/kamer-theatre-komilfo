@@ -213,13 +213,13 @@ className={`transition-colors ${
               }}
             >
               <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-                <h2 className="text-6xl md:text-7xl font-bold text-white mb-6">
+                <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 animate-fade-in-up">
                   Камерный театр<br />Комильфо
                 </h2>
-<p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
+<p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in-up delay-200">
                   Искусство изысканных постановок
                 </p>
-                <div className="flex gap-4">
+                <div className="flex gap-4 animate-fade-in-up delay-300">
 <Button
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -242,21 +242,21 @@ className={`transition-colors ${
             <div className="py-20 bg-muted/30">
               <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                  <div className="text-center">
+                  <div className="text-center animate-fade-in-up delay-100">
 <Icon name="Calendar" size={48} className="text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Регулярные показы</h3>
                     <p className="text-muted-foreground">
                       Спектакли каждую неделю
                     </p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-fade-in-up delay-200">
 <Icon name="Users" size={48} className="text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Профессиональная труппа</h3>
                     <p className="text-muted-foreground">
                       Заслуженные артисты России
                     </p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-fade-in-up delay-300">
 <Icon name="Award" size={48} className="text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Высокое качество</h3>
                     <p className="text-muted-foreground">
@@ -272,26 +272,26 @@ className={`transition-colors ${
         {activeSection === 'about' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4 max-w-4xl">
-              <h2 className="text-5xl font-bold text-center mb-12">О театре</h2>
+              <h2 className="text-5xl font-bold text-center mb-12 animate-fade-in-up">О театре</h2>
               <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+                <p className="text-xl text-muted-foreground leading-relaxed mb-6 animate-fade-in-up delay-100">
 Камерный театр "Комильфо" — это место, где искусство встречается с изысканностью.
                   Основанный в 2010 году, наш театр создан для тех, кто ценит качественные 
                   постановки в уютной камерной атмосфере.
                 </p>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+                <p className="text-xl text-muted-foreground leading-relaxed mb-6 animate-fade-in-up delay-200">
 Название "Комильфо" (от фр. comme il faut — "как следует") отражает нашу 
                   философию: каждый спектакль — это произведение искусства, созданное 
                   с максимальным вниманием к деталям.
                 </p>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8 animate-fade-in-up delay-300">
 Наш зал на 80 мест создаёт особую камерную атмосферу, где каждый зритель 
                   становится частью театрального действа. Мы предлагаем уникальные спектакли, 
                   которые сочетают традиции с современным взглядом на театральное искусство.
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 mt-12">
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-100">
                     <CardContent className="p-6">
 <Icon name="Trophy" size={32} className="text-primary mb-4" />
                       <h3 className="text-xl font-semibold mb-2">Наши достижения</h3>
@@ -303,7 +303,7 @@ className={`transition-colors ${
                     </CardContent>
                   </Card>
                   
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-200">
                     <CardContent className="p-6">
 <Icon name="Heart" size={32} className="text-primary mb-4" />
                       <h3 className="text-xl font-semibold mb-2">Наши ценности</h3>
@@ -323,15 +323,15 @@ className={`transition-colors ${
         {activeSection === 'repertoire' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-8">Репертуар</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+              <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Репертуар</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
                 Наши уникальные постановки для всей семьи
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 {performances.map((perf, idx) => (
                   <Card
                     key={idx}
-                    className="overflow-hidden hover:shadow-xl transition-all cursor-pointer bg-card border-border group"
+                    className={`overflow-hidden hover:shadow-xl transition-all cursor-pointer bg-card border-border group animate-scale-in delay-${100 + idx * 50}`}
                   >
                     <div className="relative h-64 overflow-hidden">
                       <img
@@ -367,13 +367,13 @@ className={`transition-colors ${
         {activeSection === 'education' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4 max-w-6xl">
-              <h2 className="text-5xl font-bold text-center mb-8">Учебный театр</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+              <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Учебный театр</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
                 Откройте в себе талант актёра в камерной атмосфере профессионального театра
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 mb-16">
-                <Card className="bg-card border-border p-8 relative">
+                <Card className="bg-card border-border p-8 relative animate-scale-in delay-100">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-4 mb-6">
                       <Icon name="Users" size={32} className="text-primary mt-1" />
@@ -455,7 +455,7 @@ className={`transition-colors ${
                   </CardContent>
                 </Card>
 
-                <Card className="bg-card border-border p-8">
+                <Card className="bg-card border-border p-8 animate-scale-in delay-200">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-4 mb-6">
                       <Icon name="Mic" size={32} className="text-primary mt-1" />
@@ -505,31 +505,31 @@ className={`transition-colors ${
                 </Card>
               </div>
 
-              <div className="bg-muted/30 rounded-lg p-8 mb-12">
+              <div className="bg-muted/30 rounded-lg p-8 mb-12 animate-fade-in-up delay-100">
                 <h3 className="text-3xl font-bold text-center mb-8">Что вы получите</h3>
                 <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
+                  <div className="text-center animate-fade-in-up delay-200">
                     <Icon name="Star" size={40} className="text-primary mx-auto mb-4" />
                     <h4 className="font-semibold mb-2">Профессиональные педагоги</h4>
                     <p className="text-sm text-muted-foreground">
                       Действующие актёры нашего театра
                     </p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-fade-in-up delay-300">
                     <Icon name="Theater" size={40} className="text-primary mx-auto mb-4" />
                     <h4 className="font-semibold mb-2">Реальная сцена</h4>
                     <p className="text-sm text-muted-foreground">
                       Занятия на профессиональной площадке
                     </p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-fade-in-up delay-400">
                     <Icon name="Award" size={40} className="text-primary mx-auto mb-4" />
                     <h4 className="font-semibold mb-2">Сертификат</h4>
                     <p className="text-sm text-muted-foreground">
                       По окончании курса
                     </p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center animate-fade-in-up delay-500">
                     <Icon name="Heart" size={40} className="text-primary mx-auto mb-4" />
                     <h4 className="font-semibold mb-2">Творческая атмосфера</h4>
                     <p className="text-sm text-muted-foreground">
@@ -540,7 +540,7 @@ className={`transition-colors ${
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <Card className="bg-primary/5 border-primary/20">
+                <Card className="bg-primary/5 border-primary/20 animate-scale-in delay-100">
                   <CardContent className="p-8 text-center">
                     <Icon name="MessageSquare" size={48} className="text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-bold mb-4">Отзывы наших учеников</h3>
@@ -557,7 +557,7 @@ className={`transition-colors ${
                   </CardContent>
                 </Card>
 
-                <Card className="bg-primary/5 border-primary/20">
+                <Card className="bg-primary/5 border-primary/20 animate-scale-in delay-200">
                   <CardContent className="p-8 text-center">
                     <Icon name="Gift" size={48} className="text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-bold mb-4">Бесплатное пробное занятие</h3>
@@ -577,15 +577,15 @@ className={`transition-colors ${
         {activeSection === 'schedule' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4 max-w-5xl">
-<h2 className="text-5xl font-bold text-center mb-8">Афиша</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16">
+<h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Афиша</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 animate-fade-in-up delay-100">
                 Ближайшие спектакли
               </p>
               <div className="space-y-6">
                 {scheduleItems.map((item, idx) => (
                   <Card
                     key={idx}
-                    className="bg-card border-border hover:shadow-lg transition-shadow"
+                    className={`bg-card border-border hover:shadow-lg transition-shadow animate-scale-in delay-${100 + idx * 100}`}
                   >
                     <CardContent className="p-8">
                       <div className="flex items-center justify-between gap-8">
@@ -631,15 +631,15 @@ className={`transition-colors ${
         {activeSection === 'gallery' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-8">Галерея</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+              <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Галерея</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
                 Моменты наших спектаклей
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                 {galleryImages.map((image, idx) => (
                   <Card
                     key={idx}
-                    className="overflow-hidden hover:shadow-xl transition-all cursor-pointer bg-card border-border group"
+                    className={`overflow-hidden hover:shadow-xl transition-all cursor-pointer bg-card border-border group animate-scale-in delay-${100 + idx * 50}`}
                   >
                     <div className="relative h-80 overflow-hidden">
                       <img
@@ -663,14 +663,14 @@ className={`transition-colors ${
         {activeSection === 'troupe' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4 max-w-6xl">
-              <h2 className="text-5xl font-bold text-center mb-8">Наша труппа</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+              <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Наша труппа</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
                 Профессиональные актёры и режиссёры, создающие волшебство на сцене
               </p>
 
               <div className="mb-16">
-                <h3 className="text-3xl font-bold mb-8 text-center">Режиссёр</h3>
-                <Card className="bg-card border-border max-w-4xl mx-auto">
+                <h3 className="text-3xl font-bold mb-8 text-center animate-fade-in-up delay-200">Режиссёр</h3>
+                <Card className="bg-card border-border max-w-4xl mx-auto animate-scale-in delay-100">
                   <CardContent className="p-8">
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="flex justify-center items-start">
@@ -709,9 +709,9 @@ className={`transition-colors ${
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold mb-8 text-center">Актёры</h3>
+                <h3 className="text-3xl font-bold mb-8 text-center animate-fade-in-up delay-200">Актёры</h3>
                 <div className="grid md:grid-cols-3 gap-8">
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-100">
                     <CardContent className="p-6 text-center">
                       <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
                         <Icon name="User" size={60} className="text-primary" />
@@ -730,7 +730,7 @@ className={`transition-colors ${
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-200">
                     <CardContent className="p-6 text-center">
                       <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
                         <Icon name="User" size={60} className="text-primary" />
@@ -749,7 +749,7 @@ className={`transition-colors ${
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-300">
                     <CardContent className="p-6 text-center">
                       <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
                         <Icon name="User" size={60} className="text-primary" />
@@ -768,7 +768,7 @@ className={`transition-colors ${
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-400">
                     <CardContent className="p-6 text-center">
                       <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
                         <Icon name="User" size={60} className="text-primary" />
@@ -787,7 +787,7 @@ className={`transition-colors ${
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-500">
                     <CardContent className="p-6 text-center">
                       <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
                         <Icon name="User" size={60} className="text-primary" />
@@ -806,7 +806,7 @@ className={`transition-colors ${
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-card border-border">
+                  <Card className="bg-card border-border animate-scale-in delay-600">
                     <CardContent className="p-6 text-center">
                       <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
                         <Icon name="User" size={60} className="text-primary" />
@@ -827,7 +827,7 @@ className={`transition-colors ${
                 </div>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20 mt-16">
+              <Card className="bg-primary/5 border-primary/20 mt-16 animate-scale-in delay-100">
                 <CardContent className="p-8 text-center">
                   <Icon name="Sparkles" size={48} className="text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-4">Мечтаете выйти на сцену?</h3>
@@ -851,9 +851,9 @@ className={`transition-colors ${
         {activeSection === 'contacts' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4 max-w-5xl">
-              <h2 className="text-5xl font-bold text-center mb-16">Контакты</h2>
+              <h2 className="text-5xl font-bold text-center mb-16 animate-fade-in-up">Контакты</h2>
               <div className="grid md:grid-cols-2 gap-12">
-                <div>
+                <div className="animate-fade-in-up delay-100">
                   <h3 className="text-2xl font-semibold mb-6">Как нас найти</h3>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -892,7 +892,7 @@ className={`transition-colors ${
                   </div>
                 </div>
 
-                <Card className="bg-card border-border">
+                <Card className="bg-card border-border animate-scale-in delay-200">
                   <CardContent className="p-6">
                     <h3 className="text-2xl font-semibold mb-6">Напишите нам</h3>
                     <form className="space-y-4">
