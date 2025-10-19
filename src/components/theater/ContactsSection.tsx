@@ -58,8 +58,8 @@ export const ContactsSection = () => {
             <CardContent className="p-6 text-center">
               <Icon name="Mail" size={40} className="text-primary mx-auto mb-4" />
               <h3 className="font-bold mb-2">Email</h3>
-              <a href="mailto:info@komilfo-theatre.ru" className="text-muted-foreground hover:text-primary transition-colors">
-                info@komilfo-theatre.ru
+              <a href="mailto:s_kuzikova@mail.ru" className="text-muted-foreground hover:text-primary transition-colors">
+                s_kuzikova@mail.ru
               </a>
             </CardContent>
           </Card>
