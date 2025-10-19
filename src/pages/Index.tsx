@@ -258,7 +258,7 @@ className={`transition-colors ${
                   </div>
                   <div className="text-center animate-fade-in-up delay-300">
 <Icon name="Heart" size={48} className="text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">С душой и любовью</h3>
+                    <h3 className="text-xl font-semibold mb-2">Уютная атмосфера</h3>
                     <p className="text-muted-foreground">
                       Камерная атмосфера и внимание к деталям
                     </p>
