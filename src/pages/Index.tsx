@@ -665,7 +665,7 @@ className={`transition-colors ${
             <div className="container mx-auto px-4 max-w-6xl">
               <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Наша труппа</h2>
               <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
-                Профессиональные актёры и режиссёры, создающие волшебство на сцене
+                Артисты, влюблённые в театр, создающие каждый спектакль с профессиональным мастерством и искренней страстью к сцене
               </p>
 
               <div className="mb-16">
