@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -8,8 +8,16 @@ const Index = () => {
   const [showPerformanceInfo, setShowPerformanceInfo] = useState(false);
   const [selectedPerformance, setSelectedPerformance] = useState<number | null>(null);
 
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash && ['home', 'about', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'].includes(hash)) {
+      setActiveSection(hash);
+    }
+  }, []);
+
   const handleNavigate = (sectionId: string) => {
     setActiveSection(sectionId);
+    window.location.hash = sectionId;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
