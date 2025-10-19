@@ -19,32 +19,52 @@ const Index = () => {
 
   const performances = [
     {
-      title: 'Вишнёвый сад',
-      author: 'А.П. Чехов',
-      description: 'Лирическая комедия о прощании с прошлым',
-      duration: '2 часа 30 мин',
+      title: 'Вечернее турне',
+      description: 'Увлекательное театральное путешествие',
+      duration: '1 час 30 мин',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
     },
     {
-      title: 'Женитьба',
-      author: 'Н.В. Гоголь',
-      description: 'Комедия о поисках семейного счастья',
-      duration: '1 час 40 мин',
+      title: 'Безымянная карточка',
+      description: 'История о поиске себя',
+      duration: '1 час 20 мин',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/6d4ceee2-11fa-46be-9d9c-bfc981b32b19.jpg',
     },
     {
-      title: 'Три сестры',
-      author: 'А.П. Чехов',
-      description: 'Драма о мечтах и разочарованиях',
-      duration: '2 часа 15 мин',
+      title: 'Тайна "Кафе Ромашка"',
+      description: 'Детективная комедия с юмором',
+      duration: '1 час 45 мин',
       image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
     },
     {
-      title: 'Горе от ума',
-      author: 'А.С. Грибоедов',
-      description: 'Комедия о столкновении поколений',
-      duration: '2 часа',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
+      title: 'КраШная шапочка',
+      description: 'Сказка на новый лад',
+      duration: '1 час 15 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/d2eed063-bdee-47a3-9462-d2a928a2c641.jpg',
+    },
+    {
+      title: 'Городские истории',
+      description: 'Зарисовки из жизни мегаполиса',
+      duration: '1 час 40 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00dd068e-6899-47f8-9f71-a203c55d58b3.jpg',
+    },
+    {
+      title: 'Делегация радости',
+      description: 'Позитивная комедия о дружбе',
+      duration: '1 час 30 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/ff425e05-bb76-4034-8224-db504a7a20c5.jpg',
+    },
+    {
+      title: 'Баба Яга не против',
+      description: 'Современная интерпретация сказки',
+      duration: '1 час 25 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/bf56f932-b49f-4241-afef-f2a7cd681710.jpg',
+    },
+    {
+      title: 'Любовь и проводы',
+      description: 'Трогательная история о чувствах',
+      duration: '1 час 50 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00de7a63-d62e-49b6-a41c-fbebb119c06b.jpg',
     },
   ];
 
@@ -340,7 +360,7 @@ const Index = () => {
             <div className="container mx-auto px-4">
               <h2 className="text-5xl font-bold text-center mb-8">Репертуар</h2>
               <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-                Классические произведения русской драматургии
+                Наши уникальные постановки для всей семьи
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 {performances.map((perf, idx) => (
@@ -357,7 +377,6 @@ const Index = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4">
                         <h3 className="text-xl font-bold text-white mb-1">{perf.title}</h3>
-                        <p className="text-sm text-white/80">{perf.author}</p>
                       </div>
                     </div>
                     <CardContent className="p-4">
