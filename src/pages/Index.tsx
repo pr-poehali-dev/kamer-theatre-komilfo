@@ -533,18 +533,37 @@ className={`transition-colors ${
                 </div>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold mb-4">Бесплатное пробное занятие</h3>
-                  <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Приходите на пробное занятие, познакомьтесь с педагогами и почувствуйте 
-                    атмосферу нашей театральной студии
-                  </p>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Записаться на пробное занятие
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <Card className="bg-primary/5 border-primary/20">
+                  <CardContent className="p-8 text-center">
+                    <Icon name="MessageSquare" size={48} className="text-primary mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold mb-4">Отзывы наших учеников</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Узнайте, что говорят наши студенты о курсах и занятиях
+                    </p>
+                    <Button 
+                      size="lg" 
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                      onClick={() => window.open('https://yandex.ru/profile/108893235678?intent=reviews', '_blank')}
+                    >
+                      Читать отзывы
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-primary/5 border-primary/20">
+                  <CardContent className="p-8 text-center">
+                    <Icon name="Gift" size={48} className="text-primary mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold mb-4">Бесплатное пробное занятие</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Познакомьтесь с педагогами и почувствуйте атмосферу нашей студии
+                    </p>
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Записаться на пробное занятие
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         )}
