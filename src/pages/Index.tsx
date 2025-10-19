@@ -217,7 +217,7 @@ className={`transition-colors ${
                   Камерный театр<br />Комильфо
                 </h2>
 <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in-up delay-200">
-                  Где каждый спектакль создается с душой и любовью к театру
+                  Театр, созданный с любовью и душой
                 </p>
                 <div className="flex gap-4 animate-fade-in-up delay-300">
 <Button
