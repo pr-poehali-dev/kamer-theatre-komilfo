@@ -15,7 +15,7 @@ export const TroupeSection = () => {
             <div className="md:flex">
               <div className="md:w-1/3">
                 <img
-                  src="https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/e9a89eb0-c604-47e0-946b-c6b64bcde8c1.jpg"
+                  src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
                   alt="Светлана Кузикова"
                   className="w-full h-full object-cover"
                 />
