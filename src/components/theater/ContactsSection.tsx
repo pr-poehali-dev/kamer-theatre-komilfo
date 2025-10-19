@@ -17,8 +17,8 @@ export const ContactsSection = () => {
               <Icon name="MapPin" size={32} className="text-primary mb-4" />
               <h3 className="text-2xl font-bold mb-4">Адрес театра</h3>
               <p className="text-muted-foreground mb-4">
-                г. Краснодар, ул. Красная, 123<br />
-                ТЦ "Галерея", 3 этаж
+                г. Краснодар, ул. Горького, 104<br />
+                Офис 26, код двери: 26
               </p>
               <Button
                 variant="outline"
@@ -43,7 +43,7 @@ export const ContactsSection = () => {
           </Card>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow animate-scale-in delay-100">
             <CardContent className="p-6 text-center">
               <Icon name="Phone" size={40} className="text-primary mx-auto mb-4" />
@@ -78,6 +78,56 @@ export const ContactsSection = () => {
               </a>
             </CardContent>
           </Card>
+        </div>
+
+        <div className="mb-12">
+          <h3 className="text-3xl font-bold text-center mb-8">Наши социальные сети</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow animate-scale-in">
+              <CardContent className="p-6 text-center">
+                <Icon name="Video" size={40} className="text-primary mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Rutube</h3>
+                <a
+                  href="https://rutube.ru/channel/65667142/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Смотреть видео
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow animate-scale-in delay-100">
+              <CardContent className="p-6 text-center">
+                <Icon name="Send" size={40} className="text-primary mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Телеграм</h3>
+                <a
+                  href="https://t.me/kuzikova_school_theatre"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Подписаться
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow animate-scale-in delay-200">
+              <CardContent className="p-6 text-center">
+                <Icon name="Users" size={40} className="text-primary mx-auto mb-4" />
+                <h3 className="font-bold mb-2">ВКонтакте</h3>
+                <a
+                  href="https://vk.com/theatre_komilfo?from=groups"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Вступить в группу
+                </a>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         <Card className="bg-muted/30 border-border animate-fade-in-up delay-100">
