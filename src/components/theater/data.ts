@@ -92,9 +92,9 @@ export const performances = [
 
 export const galleryImages = [
   {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
+    url: 'https://cdn.poehali.dev/files/1b2ea3cb-9673-4ba7-8c67-eef631a81dd6.JPG',
     title: 'Вечернее турне',
-    description: 'Главная сцена спектакля',
+    description: 'Героиня спектакля',
   },
   {
     url: 'https://cdn.poehali.dev/files/d76e01a3-e311-4854-bafa-c98870f4dd3e.JPG',
