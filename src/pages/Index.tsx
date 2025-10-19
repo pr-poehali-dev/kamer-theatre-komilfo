@@ -11,6 +11,7 @@ const Index = () => {
     { id: 'about', label: 'О театре' },
     { id: 'repertoire', label: 'Репертуар' },
     { id: 'troupe', label: 'Труппа' },
+    { id: 'gallery', label: 'Галерея' },
     { id: 'schedule', label: 'Расписание' },
     { id: 'reviews', label: 'Отзывы' },
     { id: 'contacts', label: 'Контакты' },
@@ -105,6 +106,39 @@ const Index = () => {
       date: '8 ноября, 19:00',
       title: 'Вишнёвый сад',
       available: true,
+    },
+  ];
+
+  const galleryImages = [
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/d2eed063-bdee-47a3-9462-d2a928a2c641.jpg',
+      title: 'Вишнёвый сад',
+      description: 'Сцена из спектакля',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00dd068e-6899-47f8-9f71-a203c55d58b3.jpg',
+      title: 'Репетиция',
+      description: 'Подготовка к премьере',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/ff425e05-bb76-4034-8224-db504a7a20c5.jpg',
+      title: 'Поклоны',
+      description: 'Благодарность зрителям',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/bf56f932-b49f-4241-afef-f2a7cd681710.jpg',
+      title: 'Актёрская игра',
+      description: 'Эмоциональная сцена',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00de7a63-d62e-49b6-a41c-fbebb119c06b.jpg',
+      title: 'Зрительный зал',
+      description: 'Вид на сцену',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/e9a89eb0-c604-47e0-946b-c6b64bcde8c1.jpg',
+      title: 'За кулисами',
+      description: 'Костюмерная',
     },
   ];
 
@@ -407,6 +441,38 @@ const Index = () => {
                         </Button>
                       </div>
                     </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'gallery' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4">
+              <h2 className="text-5xl font-bold text-center mb-8">Галерея</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Моменты из жизни театра: спектакли, репетиции, закулисье
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {galleryImages.map((image, idx) => (
+                  <Card
+                    key={idx}
+                    className="overflow-hidden hover:scale-105 transition-transform cursor-pointer bg-card border-border group"
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={image.url}
+                        alt={image.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
+                        <h3 className="text-lg font-bold mb-1">{image.title}</h3>
+                        <p className="text-sm text-white/90">{image.description}</p>
+                      </div>
+                    </div>
                   </Card>
                 ))}
               </div>
