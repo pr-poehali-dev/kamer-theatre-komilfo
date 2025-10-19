@@ -11,23 +11,30 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
       <div
         className="relative h-[600px] bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.poehali.dev/files/4bd2b07f-862b-4c63-903e-0439f472c17b.jpg')`,
         }}
       >
         <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-          <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 animate-fade-in-up">
-            Камерный театр<br />Комильфо
+          <div className="bg-primary/20 backdrop-blur-sm rounded-lg p-3 mb-4 animate-fade-in-up">
+            <p className="text-white font-semibold text-lg">🎄 Новогодняя премьера 🎄</p>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 animate-fade-in-up delay-100">
+            Идеальный неидеальный вечер
           </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in-up delay-200">
-            творим с любовью, играем с душой
+          <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-2xl animate-fade-in-up delay-200">
+            Новогодняя комедия о встрече Нового года в неожиданном месте
+          </p>
+          <p className="text-lg text-white/80 mb-8 animate-fade-in-up delay-250">
+            1 и 8 декабря 2025 г. • 19:00
           </p>
           <div className="flex gap-4 animate-fade-in-up delay-300">
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => onNavigate('repertoire')}
+              onClick={() => window.open('https://afisha.nethouse.ru/event/perfect-new-year', '_blank')}
             >
-              Наш репертуар
+              <Icon name="Ticket" size={20} className="mr-2" />
+              Купить билет
             </Button>
             <Button
               size="lg"
