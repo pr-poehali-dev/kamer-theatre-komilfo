@@ -102,6 +102,21 @@ export const galleryImages = [
     description: 'Эмоциональный момент',
   },
   {
+    url: 'https://cdn.poehali.dev/files/39f07d22-9b73-4acc-a30c-dc3d0c25bad2.jpg',
+    title: 'Безымянная карточка',
+    description: 'Женщины на войне',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/04537c3b-c742-4c46-ba40-a6428bac150b.jpg',
+    title: 'Безымянная карточка',
+    description: 'Сцена военных лет',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/c1d73c21-3548-4782-b7e9-e95c94bfb1e9.jpg',
+    title: 'Безымянная карточка',
+    description: 'Героини спектакля',
+  },
+  {
     url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
     title: 'Тайна "Кафе Ромашка"',
     description: 'Детективная атмосфера',
