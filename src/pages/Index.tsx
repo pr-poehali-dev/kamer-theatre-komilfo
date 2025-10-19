@@ -55,7 +55,7 @@ const Index = () => {
 
       <footer className="bg-muted/30 py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2025 Камерный театр Комильфо. Все права защищены.</p>
+          <p>&copy; 2017 Камерный театр Комильфо. Все права защищены.</p>
         </div>
       </footer>
     </div>
