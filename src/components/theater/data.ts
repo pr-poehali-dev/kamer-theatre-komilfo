@@ -172,6 +172,26 @@ export const galleryImages = [
     description: 'Современная постановка',
   },
   {
+    url: 'https://cdn.poehali.dev/files/0dca324e-6bdf-41c7-a7ce-14a10d6deb9b.JPG',
+    title: 'Городские истории',
+    description: 'Сцена из спектакля',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/8e04fbef-1c8c-4602-b092-ef8e11fc34d1.JPG',
+    title: 'Городские истории',
+    description: 'Под зонтом',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/54254848-be78-4808-9355-980c6ed98388.JPG',
+    title: 'Городские истории',
+    description: 'Эмоциональная сцена',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/d15dc5b4-e8e4-478b-aabd-531862231a68.JPG',
+    title: 'Городские истории',
+    description: 'Персонажи спектакля',
+  },
+  {
     url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/ff425e05-bb76-4034-8224-db504a7a20c5.jpg',
     title: 'Делегация радости',
     description: 'Яркие моменты спектакля',
