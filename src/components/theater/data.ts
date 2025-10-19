@@ -94,7 +94,7 @@ export const galleryImages = [
   {
     url: 'https://cdn.poehali.dev/files/1b2ea3cb-9673-4ba7-8c67-eef631a81dd6.JPG',
     title: 'Вечернее турне',
-    description: 'Героиня спектакля',
+    description: 'Полина Андреевна',
   },
   {
     url: 'https://cdn.poehali.dev/files/d76e01a3-e311-4854-bafa-c98870f4dd3e.JPG',
