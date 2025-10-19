@@ -37,6 +37,11 @@ export const ScheduleSection = () => {
                         : 'bg-muted text-muted-foreground cursor-not-allowed'
                     }
                     disabled={!item.available}
+                    onClick={() => {
+                      if (item.available && (item as any).ticketUrl) {
+                        window.open((item as any).ticketUrl, '_blank');
+                      }
+                    }}
                   >
                     {item.available ? 'Купить билет' : 'Билеты проданы'}
                   </Button>
