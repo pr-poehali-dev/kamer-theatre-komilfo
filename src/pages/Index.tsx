@@ -8,182 +8,132 @@ const Index = () => {
 
   const navigation = [
     { id: 'home', label: 'Главная' },
-    { id: 'schedule', label: 'Репертуар' },
-    { id: 'courses', label: 'Учебный театр' },
-    { id: 'gallery', label: 'Галерея' },
-    { id: 'reviews', label: 'Отзывы' },
-    { id: 'troupe', label: 'Руководитель' },
-    { id: 'news', label: 'Расписание' },
+    { id: 'about', label: 'О театре' },
+    { id: 'repertoire', label: 'Репертуар' },
+    { id: 'troupe', label: 'Труппа' },
+    { id: 'schedule', label: 'Расписание' },
     { id: 'contacts', label: 'Контакты' },
   ];
 
   const performances = [
     {
-      title: 'Вечернее турне',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
+      title: 'Вишнёвый сад',
+      author: 'А.П. Чехов',
+      description: 'Лирическая комедия о прощании с прошлым',
+      duration: '2 часа 30 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
     },
     {
-      title: 'Безымянная карточка',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
+      title: 'Женитьба',
+      author: 'Н.В. Гоголь',
+      description: 'Комедия о поисках семейного счастья',
+      duration: '1 час 40 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/6d4ceee2-11fa-46be-9d9c-bfc981b32b19.jpg',
     },
     {
-      title: 'Тайна "Кафе Ромашка"',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
+      title: 'Три сестры',
+      author: 'А.П. Чехов',
+      description: 'Драма о мечтах и разочарованиях',
+      duration: '2 часа 15 мин',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
     },
     {
-      title: 'КраШная шапочка',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
-    },
-    {
-      title: 'Городские истории',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
-    },
-    {
-      title: 'Делегация радости',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
-    },
-    {
-      title: 'Баба Яга не против',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/db589e87-6f6f-43c9-801b-e394eb1cad13.jpg',
-    },
-    {
-      title: 'Любовь и проводы',
-      date: 'Репетиции по четвергам',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/a38c9992-a815-4090-914c-966def416b5c.jpg',
+      title: 'Горе от ума',
+      author: 'А.С. Грибоедов',
+      description: 'Комедия о столкновении поколений',
+      duration: '2 часа',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
     },
   ];
 
-  const troupe = [
-    {
-      name: 'Светлана Кузикова',
-      role: 'Основатель и режиссёр театра',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/2edf09ae-deaa-4454-9bb4-1fae41b9ef61.jpg',
-      bio: 'Психолог, арт-терапевт, театральный педагог, автор курсов и книг',
-    },
-  ];
-
-  const galleryImages = [
-    {
-      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3b015a17-2e12-4d1c-b937-5f482bd32ffe.jpg',
-      title: 'Спектакль на сцене',
-    },
-    {
-      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/b184303a-bbb6-4d6b-a721-fb64974cbed2.jpg',
-      title: 'Репетиция',
-    },
-    {
-      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f5b05a1d-bd1c-417c-9ac9-8400069643c7.jpg',
-      title: 'За кулисами',
-    },
-    {
-      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/d82abe88-7a71-401b-b4ac-60dc708bdea0.jpg',
-      title: 'Команда театра',
-    },
-    {
-      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/12aaa431-a215-44e0-9f77-b346487edd9d.jpg',
-      title: 'Эмоциональный момент',
-    },
-    {
-      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/35e8f937-9d6a-403c-86d2-8bcf4cf551bc.jpg',
-      title: 'Поклоны',
-    },
-  ];
-
-  const reviews = [
-    {
-      name: 'Анна Петрова',
-      role: 'Участник театра',
-      text: 'Театр изменил мою жизнь! Я обрела уверенность в себе, научилась выражать эмоции и нашла единомышленников. Атмосфера здесь невероятная.',
-      rating: 5,
-    },
-    {
-      name: 'Михаил Соколов',
-      role: 'Родитель ученика',
-      text: 'Моя дочь занимается в театре уже год. Результаты потрясающие — она стала более открытой, креативной и уверенной в публичных выступлениях.',
-      rating: 5,
-    },
+  const actors = [
     {
       name: 'Екатерина Волкова',
-      role: 'Участник театра',
-      text: 'Светлана — потрясающий педагог! Она умеет раскрыть потенциал каждого, создает теплую атмосферу, где не боишься экспериментировать.',
-      rating: 5,
+      role: 'Заслуженная артистка России',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/6d4ceee2-11fa-46be-9d9c-bfc981b32b19.jpg',
+    },
+    {
+      name: 'Александр Соколов',
+      role: 'Народный артист России',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
+    },
+    {
+      name: 'Мария Петрова',
+      role: 'Заслуженная артистка',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
     },
     {
       name: 'Дмитрий Иванов',
-      role: 'Зритель',
-      text: 'Побывал на нескольких спектаклях — это просто волшебство! Актеры играют с душой, видно, что они по-настоящему любят то, что делают.',
-      rating: 5,
+      role: 'Артист театра',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/6d4ceee2-11fa-46be-9d9c-bfc981b32b19.jpg',
     },
     {
       name: 'Ольга Смирнова',
-      role: 'Участник театра',
-      text: 'Здесь я нашла не просто хобби, а настоящее призвание. Театр научил меня быть собой, не бояться сцены и жить каждым моментом.',
-      rating: 5,
+      role: 'Артистка театра',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
     },
     {
-      name: 'Александр Новиков',
-      role: 'Участник театра',
-      text: 'Три года в театре пролетели незаметно. Это лучший опыт в моей жизни — творчество, дружба, развитие. Благодарен каждому дню здесь!',
-      rating: 5,
+      name: 'Николай Морозов',
+      role: 'Артист театра',
+      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
     },
   ];
 
-  const courses = [
+  const scheduleItems = [
     {
-      title: 'Актерское мастерство',
-      description: 'Освойте основы актерского мастерства, научитесь управлять эмоциями и воплощать образы на сцене',
-      icon: 'Drama',
+      date: '25 октября, 19:00',
+      title: 'Вишнёвый сад',
+      available: true,
     },
     {
-      title: 'Ораторское искусство',
-      description: 'Развитие навыков публичных выступлений, уверенности в общении и преодоление страха сцены',
-      icon: 'Mic',
+      date: '27 октября, 19:00',
+      title: 'Женитьба',
+      available: true,
     },
     {
-      title: 'Арт-терапия',
-      description: 'Исцеление души через театральное искусство. Повышение самооценки и развитие эмоционального интеллекта',
-      icon: 'Heart',
+      date: '1 ноября, 19:00',
+      title: 'Три сестры',
+      available: false,
     },
     {
-      title: 'Личностный рост',
-      description: 'Проработка психологических задач, раскрытие талантов и творческая реализация',
-      icon: 'Sparkles',
+      date: '3 ноября, 19:00',
+      title: 'Горе от ума',
+      available: true,
     },
-  ];
-
-  const aboutText = [
-    'Театр «КОМИЛЬФО» (бывший «Театр для своих») - независимый самодеятельный театральный коллектив, созданный из выпускников курсов и программ Центра психологии и творчества Kuzikova school.',
-    '"КОМИЛЬФО" это арт-пространство для исцеления души средствами театрального искусства и решения психологических задач личностного роста.',
-    'Это площадка для раскрытия талантов и творческой реализации. Это место - где участники начинают верить в себя, освобождаются от зажатости и неуверенности, учатся смело выступать перед аудиторией.',
-    'Театр «Комильфо» даёт возможность творчески развиваться, приобретать навыки актерского мастерства, ораторского искусства, а также решить психологические задачи по повышению самооценки и уверенности в себе, избавиться от страхов в общении и публичных выступлениях, развивать эмоциональный интеллект.',
+    {
+      date: '8 ноября, 19:00',
+      title: 'Вишнёвый сад',
+      available: true,
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <div className="min-h-screen bg-background">
+      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-accent">Комильфо</h1>
-            <div className="flex gap-6">
+            <div className="flex items-center gap-3">
+              <Icon name="Drama" size={32} className="text-accent" />
+              <h1 className="text-2xl font-bold text-foreground">Комильфо</h1>
+            </div>
+            <div className="hidden md:flex gap-6">
               {navigation.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setActiveSection(item.id)}
-                  className={`text-sm transition-colors hover:text-accent ${
-                    activeSection === item.id ? 'text-accent' : 'text-foreground'
+                  className={`transition-colors ${
+                    activeSection === item.id
+                      ? 'text-accent font-medium'
+                      : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
             </div>
+            <Button className="md:hidden" variant="ghost" size="icon">
+              <Icon name="Menu" size={24} />
+            </Button>
           </div>
         </div>
       </nav>
@@ -191,230 +141,157 @@ const Index = () => {
       <main className="pt-20">
         {activeSection === 'home' && (
           <div className="animate-fade-in">
-            <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-background z-0"></div>
-              <div className="container mx-auto px-4 text-center z-10">
-                <h2 className="text-6xl md:text-8xl font-bold mb-6 animate-scale-in">
-                  Камерный театр Комильфо
+            <div
+              className="relative h-[600px] bg-cover bg-center"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg')`,
+              }}
+            >
+              <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
+                <h2 className="text-6xl md:text-7xl font-bold text-white mb-6">
+                  Камерный театр<br />Комильфо
                 </h2>
-                <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Творим с любовью, играем с душой
+                <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
+                  Классика в современной интерпретации
                 </p>
-                <Button
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                  onClick={() => setActiveSection('schedule')}
-                >
-                  Посмотреть репертуар
-                </Button>
-              </div>
-            </section>
-
-            <section className="py-20 bg-background">
-              <div className="container mx-auto px-4 max-w-4xl">
-                <h3 className="text-4xl font-bold text-center mb-12">О театре</h3>
-                <div className="space-y-6 text-lg leading-relaxed">
-                  {aboutText.map((paragraph, idx) => (
-                    <p key={idx} className="text-muted-foreground">
-                      {paragraph}
-                    </p>
-                  ))}
+                <div className="flex gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                    onClick={() => setActiveSection('repertoire')}
+                  >
+                    Репертуар
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-background"
+                    onClick={() => setActiveSection('schedule')}
+                  >
+                    Расписание
+                  </Button>
                 </div>
               </div>
-            </section>
+            </div>
 
-            <section className="py-20 bg-card">
+            <div className="py-20 bg-muted/30">
               <div className="container mx-auto px-4">
-                <h3 className="text-4xl font-bold text-center mb-12">Репертуар театра</h3>
-                <div className="grid md:grid-cols-3 gap-8">
-                  {performances.map((perf, idx) => (
-                    <Card
-                      key={idx}
-                      className="overflow-hidden hover:scale-105 transition-transform cursor-pointer bg-muted border-border"
-                    >
-                      <div className="aspect-[3/4] overflow-hidden">
-                        <img
-                          src={perf.image}
-                          alt={perf.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <CardContent className="p-6">
-                        <h4 className="text-2xl font-bold mb-2 text-accent">{perf.title}</h4>
-                        <div className="flex items-center gap-2 text-sm">
-                          <Icon name="Calendar" size={16} className="text-accent" />
-                          <span>{perf.date}</span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                  <div className="text-center">
+                    <Icon name="Calendar" size={48} className="text-accent mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">Регулярные показы</h3>
+                    <p className="text-muted-foreground">
+                      Спектакли каждую неделю
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Icon name="Users" size={48} className="text-accent mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">Профессиональная труппа</h3>
+                    <p className="text-muted-foreground">
+                      Заслуженные артисты России
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Icon name="Award" size={48} className="text-accent mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">Высокое качество</h3>
+                    <p className="text-muted-foreground">
+                      Камерная атмосфера и внимание к деталям
+                    </p>
+                  </div>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         )}
 
-        {activeSection === 'schedule' && (
+        {activeSection === 'about' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <h2 className="text-5xl font-bold text-center mb-12">О театре</h2>
+              <div className="prose prose-lg max-w-none">
+                <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+                  Камерный театр "Комильфо" был основан в 2010 году группой энтузиастов, 
+                  влюблённых в классическую драматургию. Наша миссия — сохранить традиции 
+                  русского театра и представить классические произведения в современной, 
+                  актуальной интерпретации.
+                </p>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+                  Название "Комильфо" (от фр. comme il faut — "как следует") отражает нашу 
+                  философию: каждый спектакль создаётся с максимальным вниманием к деталям, 
+                  с уважением к автору и зрителю.
+                </p>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  Наш зал рассчитан на 80 мест, что создаёт уникальную камерную атмосферу — 
+                  вы становитесь не просто зрителем, а участником происходящего на сцене.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-12">
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6">
+                      <Icon name="Trophy" size={32} className="text-accent mb-4" />
+                      <h3 className="text-xl font-semibold mb-2">Наши достижения</h3>
+                      <ul className="space-y-2 text-muted-foreground">
+                        <li>• Лауреаты премии "Золотая маска" 2018</li>
+                        <li>• Более 200 постановок</li>
+                        <li>• 15 лет на сцене</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-card border-border">
+                    <CardContent className="p-6">
+                      <Icon name="Heart" size={32} className="text-accent mb-4" />
+                      <h3 className="text-xl font-semibold mb-2">Наши ценности</h3>
+                      <ul className="space-y-2 text-muted-foreground">
+                        <li>• Уважение к классике</li>
+                        <li>• Внимание к зрителю</li>
+                        <li>• Профессионализм труппы</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'repertoire' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">Репертуар</h2>
-              <div className="max-w-4xl mx-auto space-y-6">
+              <h2 className="text-5xl font-bold text-center mb-8">Репертуар</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Классические произведения русской драматургии
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 {performances.map((perf, idx) => (
                   <Card
                     key={idx}
-                    className="overflow-hidden hover:border-accent transition-colors bg-card border-border"
+                    className="overflow-hidden hover:shadow-xl transition-all cursor-pointer bg-card border-border group"
                   >
-                    <div className="md:flex">
-                      <div className="md:w-1/3 aspect-[4/5] overflow-hidden">
-                        <img
-                          src={perf.image}
-                          alt={perf.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <CardContent className="md:w-2/3 p-8">
-                        <h3 className="text-3xl font-bold mb-3 text-accent">{perf.title}</h3>
-                        <div className="flex items-center gap-3 mb-6">
-                          <Icon name="Calendar" size={20} className="text-accent" />
-                          <span className="text-lg">{perf.date}</span>
-                        </div>
-                        <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                          Узнать подробнее
-                        </Button>
-                      </CardContent>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeSection === 'courses' && (
-          <div className="py-20 animate-fade-in">
-            <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-8">Учебный театр</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-                Центр психологии и творчества Kuzikova school приглашает на актёрские курсы
-              </p>
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                {courses.map((course, idx) => (
-                  <Card
-                    key={idx}
-                    className="p-8 bg-card border-border hover:border-accent transition-all hover:scale-105"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-accent/10 rounded-lg">
-                        <Icon name={course.icon} size={32} className="text-accent" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-3 text-accent">{course.title}</h3>
-                        <p className="text-base leading-relaxed text-muted-foreground">
-                          {course.description}
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-              <div className="mt-16 text-center">
-                <Card className="p-8 bg-muted border-border max-w-3xl mx-auto">
-                  <h3 className="text-3xl font-bold mb-6 text-accent">Что вы получите</h3>
-                  <div className="grid md:grid-cols-2 gap-6 text-left">
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-accent mt-1" />
-                      <p className="text-base">Преодоление зажатости и неуверенности</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-accent mt-1" />
-                      <p className="text-base">Развитие актёрских навыков</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-accent mt-1" />
-                      <p className="text-base">Уверенность в публичных выступлениях</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-accent mt-1" />
-                      <p className="text-base">Раскрытие творческого потенциала</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-accent mt-1" />
-                      <p className="text-base">Участие в спектаклях театра</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-accent mt-1" />
-                      <p className="text-base">Повышение самооценки</p>
-                    </div>
-                  </div>
-                  <Button
-                    size="lg"
-                    className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground"
-                    onClick={() => setActiveSection('contacts')}
-                  >
-                    Записаться на курс
-                  </Button>
-                </Card>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeSection === 'gallery' && (
-          <div className="py-20 animate-fade-in">
-            <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-8">Галерея</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-                Моменты из жизни театра: спектакли, репетиции, закулисье
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {galleryImages.map((image, idx) => (
-                  <Card
-                    key={idx}
-                    className="overflow-hidden hover:scale-105 transition-transform cursor-pointer bg-card border-border group"
-                  >
-                    <div className="aspect-square overflow-hidden relative">
+                    <div className="relative h-64 overflow-hidden">
                       <img
-                        src={image.url}
-                        alt={image.title}
+                        src={perf.image}
+                        alt={perf.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <h3 className="text-xl font-bold text-accent">{image.title}</h3>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <h3 className="text-xl font-bold text-white mb-1">{perf.title}</h3>
+                        <p className="text-sm text-white/80">{perf.author}</p>
                       </div>
                     </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeSection === 'reviews' && (
-          <div className="py-20 animate-fade-in">
-            <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-8">Отзывы</h2>
-              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
-                Что говорят участники и зрители нашего театра
-              </p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {reviews.map((review, idx) => (
-                  <Card
-                    key={idx}
-                    className="bg-card border-border hover:shadow-lg transition-shadow"
-                  >
-                    <CardContent className="p-6">
-                      <div className="flex gap-1 mb-4">
-                        {[...Array(review.rating)].map((_, i) => (
-                          <Icon key={i} name="Star" size={18} className="text-accent fill-accent" />
-                        ))}
+                    <CardContent className="p-4">
+                      <p className="text-sm text-muted-foreground mb-2">{perf.description}</p>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Icon name="Clock" size={16} />
+                        <span>{perf.duration}</span>
                       </div>
-                      <p className="text-base mb-6 text-foreground leading-relaxed">
-                        "{review.text}"
-                      </p>
-                      <div className="border-t border-border pt-4">
-                        <p className="font-semibold text-foreground">{review.name}</p>
-                        <p className="text-sm text-muted-foreground">{review.role}</p>
-                      </div>
+                      <Button
+                        className="w-full mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
+                        onClick={() => setActiveSection('schedule')}
+                      >
+                        Купить билет
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
@@ -426,27 +303,27 @@ const Index = () => {
         {activeSection === 'troupe' && (
           <div className="py-20 animate-fade-in">
             <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">Руководитель</h2>
-              <div className="max-w-2xl mx-auto">
-                {troupe.map((actor, idx) => (
+              <h2 className="text-5xl font-bold text-center mb-8">Наша труппа</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Профессиональные артисты с богатым опытом
+              </p>
+              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {actors.map((actor, idx) => (
                   <Card
                     key={idx}
-                    className="overflow-hidden bg-card border-border"
+                    className="overflow-hidden hover:shadow-lg transition-shadow bg-card border-border"
                   >
-                    <div className="md:flex">
-                      <div className="md:w-1/3 aspect-square overflow-hidden">
-                        <img
-                          src={actor.image}
-                          alt={actor.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <CardContent className="md:w-2/3 p-8">
-                        <h3 className="text-3xl font-bold mb-3 text-accent">{actor.name}</h3>
-                        <p className="text-lg text-muted-foreground mb-4">{actor.role}</p>
-                        <p className="text-base leading-relaxed">{actor.bio}</p>
-                      </CardContent>
+                    <div className="relative h-80 overflow-hidden">
+                      <img
+                        src={actor.image}
+                        alt={actor.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
+                    <CardContent className="p-6 text-center">
+                      <h3 className="text-xl font-bold mb-2">{actor.name}</h3>
+                      <p className="text-muted-foreground">{actor.role}</p>
+                    </CardContent>
                   </Card>
                 ))}
               </div>
@@ -454,22 +331,38 @@ const Index = () => {
           </div>
         )}
 
-        {activeSection === 'news' && (
+        {activeSection === 'schedule' && (
           <div className="py-20 animate-fade-in">
-            <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">Расписание</h2>
-              <div className="max-w-3xl mx-auto">
-                <Card className="p-8 bg-card border-border">
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <Icon name="Calendar" size={24} className="text-accent mt-1" />
-                      <div>
-                        <h3 className="text-2xl font-bold mb-3 text-accent">Занятия и репетиции</h3>
-                        <p className="text-lg mb-2">Один раз в неделю по четвергам</p>
+            <div className="container mx-auto px-4 max-w-4xl">
+              <h2 className="text-5xl font-bold text-center mb-8">Расписание</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16">
+                Ближайшие спектакли
+              </p>
+              <div className="space-y-4">
+                {scheduleItems.map((item, idx) => (
+                  <Card
+                    key={idx}
+                    className="bg-card border-border hover:shadow-md transition-shadow"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-6">
+                          <div className="flex items-center gap-3 text-accent">
+                            <Icon name="Calendar" size={24} />
+                            <span className="text-lg font-semibold">{item.date}</span>
+                          </div>
+                          <h3 className="text-xl font-bold">{item.title}</h3>
+                        </div>
+                        <Button
+                          disabled={!item.available}
+                          className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                        >
+                          {item.available ? 'Купить билет' : 'Билетов нет'}
+                        </Button>
                       </div>
-                    </div>
-                  </div>
-                </Card>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
@@ -477,43 +370,87 @@ const Index = () => {
 
         {activeSection === 'contacts' && (
           <div className="py-20 animate-fade-in">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 max-w-5xl">
               <h2 className="text-5xl font-bold text-center mb-16">Контакты</h2>
-              <div className="max-w-2xl mx-auto">
-                <Card className="p-8 bg-card border-border">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-6">Как нас найти</h3>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <Icon name="MapPin" size={24} className="text-accent mt-1" />
                       <div>
-                        <h3 className="text-xl font-bold mb-2 text-accent">Адрес</h3>
-                        <p className="text-lg">г. Краснодар, улица Горького, 104, офис 26</p>
+                        <p className="font-semibold mb-1">Адрес</p>
+                        <p className="text-muted-foreground">
+                          г. Москва, ул. Театральная, д. 15
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <Icon name="Phone" size={24} className="text-accent mt-1" />
                       <div>
-                        <h3 className="text-xl font-bold mb-2 text-accent">Телефон</h3>
-                        <p className="text-lg">8-918-311-17-12</p>
-                        <p className="text-sm text-muted-foreground">Светлана Алексеевна Кузикова</p>
+                        <p className="font-semibold mb-1">Телефон</p>
+                        <p className="text-muted-foreground">+7 (495) 123-45-67</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <Icon name="MessageCircle" size={24} className="text-accent mt-1" />
+                      <Icon name="Mail" size={24} className="text-accent mt-1" />
                       <div>
-                        <h3 className="text-xl font-bold mb-2 text-accent">WhatsApp</h3>
-                        <a href="https://wa.me/message/FKFHPRMEDBRYP1" target="_blank" rel="noopener noreferrer" className="text-lg text-accent hover:underline">
-                          Написать в WhatsApp
-                        </a>
+                        <p className="font-semibold mb-1">Email</p>
+                        <p className="text-muted-foreground">info@commefo-theatre.ru</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <Icon name="Calendar" size={24} className="text-accent mt-1" />
+                      <Icon name="Clock" size={24} className="text-accent mt-1" />
                       <div>
-                        <h3 className="text-xl font-bold mb-2 text-accent">Расписание</h3>
-                        <p className="text-lg">Занятия по четвергам</p>
+                        <p className="font-semibold mb-1">Касса работает</p>
+                        <p className="text-muted-foreground">
+                          Вт-Вс: 11:00 — 19:00<br />
+                          Пн: выходной
+                        </p>
                       </div>
                     </div>
                   </div>
+                </div>
+
+                <Card className="bg-card border-border">
+                  <CardContent className="p-6">
+                    <h3 className="text-2xl font-semibold mb-6">Напишите нам</h3>
+                    <form className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Ваше имя
+                        </label>
+                        <input
+                          type="text"
+                          className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground"
+                          placeholder="Иван Иванов"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground"
+                          placeholder="example@mail.ru"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Сообщение
+                        </label>
+                        <textarea
+                          rows={4}
+                          className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground"
+                          placeholder="Ваш вопрос..."
+                        />
+                      </div>
+                      <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                        Отправить
+                      </Button>
+                    </form>
+                  </CardContent>
                 </Card>
               </div>
             </div>
@@ -521,24 +458,28 @@ const Index = () => {
         )}
       </main>
 
-      <footer className="bg-card border-t border-border py-12 mt-20">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4 text-accent">Камерный театр Комильфо</h3>
-          <p className="text-muted-foreground mb-6">Искусство, которое трогает души</p>
-          <div className="flex justify-center gap-6">
-            <a href="#" className="text-foreground hover:text-accent transition-colors">
-              <Icon name="Facebook" size={24} />
-            </a>
-            <a href="#" className="text-foreground hover:text-accent transition-colors">
-              <Icon name="Instagram" size={24} />
-            </a>
-            <a href="#" className="text-foreground hover:text-accent transition-colors">
-              <Icon name="Youtube" size={24} />
-            </a>
+      <footer className="bg-muted/30 border-t border-border py-12 mt-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-3">
+              <Icon name="Drama" size={28} className="text-accent" />
+              <span className="text-xl font-bold">Комильфо</span>
+            </div>
+            <p className="text-muted-foreground text-center">
+              © 2025 Камерный театр Комильфо. Все права защищены.
+            </p>
+            <div className="flex gap-4">
+              <Button variant="ghost" size="icon">
+                <Icon name="Instagram" size={20} />
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Icon name="Facebook" size={20} />
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Icon name="Youtube" size={20} />
+              </Button>
+            </div>
           </div>
-          <p className="text-sm text-muted-foreground mt-8">
-            © 2024 Камерный театр Комильфо. Все права защищены.
-          </p>
         </div>
       </footer>
     </div>
