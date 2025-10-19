@@ -7,6 +7,11 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showPerformanceInfo, setShowPerformanceInfo] = useState(false);
 
+  const handleNavigate = (sectionId: string) => {
+    setActiveSection(sectionId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const navigation = [
     { id: 'home', label: 'Главная' },
     { id: 'about', label: 'О театре' },
@@ -172,7 +177,7 @@ const scheduleItems = [
               {navigation.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => setActiveSection(item.id)}
+                  onClick={() => handleNavigate(item.id)}
 className={`transition-colors ${
                     activeSection === item.id
                       ? 'text-primary font-semibold'
@@ -186,7 +191,7 @@ className={`transition-colors ${
 <div className="flex items-center gap-3">
               <Button 
                 className="hidden md:block bg-primary hover:bg-primary/90 text-primary-foreground"
-                onClick={() => setActiveSection('schedule')}
+                onClick={() => handleNavigate('schedule')}
               >
                 Купить билет
               </Button>
@@ -218,7 +223,7 @@ className={`transition-colors ${
 <Button
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                    onClick={() => setActiveSection('schedule')}
+                    onClick={() => handleNavigate('schedule')}
                   >
                     Афиша
                   </Button>
@@ -226,7 +231,7 @@ className={`transition-colors ${
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-background"
-                    onClick={() => setActiveSection('about')}
+                    onClick={() => handleNavigate('about')}
                   >
                     О театре
                   </Button>
@@ -347,7 +352,7 @@ className={`transition-colors ${
                       </div>
                       <Button
                         className="w-full mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
-                        onClick={() => setActiveSection('schedule')}
+                        onClick={() => handleNavigate('schedule')}
                       >
                         Купить билет
                       </Button>
@@ -833,7 +838,7 @@ className={`transition-colors ${
                   <Button 
                     size="lg" 
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                    onClick={() => setActiveSection('education')}
+                    onClick={() => handleNavigate('education')}
                   >
                     Узнать об учебном театре
                   </Button>
