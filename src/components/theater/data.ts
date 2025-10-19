@@ -127,6 +127,26 @@ export const galleryImages = [
     description: 'Сказочные декорации',
   },
   {
+    url: 'https://cdn.poehali.dev/files/2c25ac12-a4d5-4021-9c64-f67aedd9e443.JPG',
+    title: 'КраШная шапочка',
+    description: 'Праздничная атмосфера',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/7beff775-04e0-47f4-acb8-5af6c8e0bc36.JPG',
+    title: 'КраШная шапочка',
+    description: 'Современная интерпретация',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/a63fea89-ecd5-45e3-81a7-52d52ce8b6eb.JPG',
+    title: 'КраШная шапочка',
+    description: 'Бабушка и охотник',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/719e5e93-77a3-450f-aa93-95957411c737.JPG',
+    title: 'КраШная шапочка',
+    description: 'Главная героиня',
+  },
+  {
     url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00dd068e-6899-47f8-9f71-a203c55d58b3.jpg',
     title: 'Городские истории',
     description: 'Современная постановка',
