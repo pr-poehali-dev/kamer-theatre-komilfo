@@ -117,7 +117,7 @@ export const galleryImages = [
     description: 'Персонажи спектакля',
   },
   {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/6d4ceee2-11fa-46be-9d9c-bfc981b32b19.jpg',
+    url: 'https://cdn.poehali.dev/files/cdd9603d-f4ee-4ac8-8c72-9c74fc0b017e.jpg',
     title: 'Безымянная карточка',
     description: 'Эмоциональный момент',
   },
