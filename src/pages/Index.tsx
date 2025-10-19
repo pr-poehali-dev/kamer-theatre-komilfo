@@ -824,14 +824,18 @@ className={`transition-colors ${
 
               <Card className="bg-primary/5 border-primary/20 mt-16">
                 <CardContent className="p-8 text-center">
-                  <Icon name="Star" size={48} className="text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">Присоединяйтесь к нашей труппе</h3>
+                  <Icon name="Sparkles" size={48} className="text-primary mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">Мечтаете выйти на сцену?</h3>
                   <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Мы всегда ищем талантливых актёров. Если вы мечтаете играть на сцене — 
-                    отправьте нам своё портфолио.
+                    Присоединяйтесь к нашему учебному театру! Профессиональные актёры научат вас 
+                    искусству перевоплощения, работе с голосом и актёрскому мастерству.
                   </p>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Отправить заявку
+                  <Button 
+                    size="lg" 
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    onClick={() => setActiveSection('education')}
+                  >
+                    Узнать об учебном театре
                   </Button>
                 </CardContent>
               </Card>
