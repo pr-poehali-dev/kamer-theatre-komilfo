@@ -48,8 +48,8 @@ export const ContactsSection = () => {
             <CardContent className="p-6 text-center">
               <Icon name="Phone" size={40} className="text-primary mx-auto mb-4" />
               <h3 className="font-bold mb-2">Телефон</h3>
-              <a href="tel:+79189999999" className="text-muted-foreground hover:text-primary transition-colors">
-                +7 (918) 999-99-99
+              <a href="tel:+79183111712" className="text-muted-foreground hover:text-primary transition-colors">
+                +7 (918) 311-17-12
               </a>
             </CardContent>
           </Card>
@@ -66,15 +66,15 @@ export const ContactsSection = () => {
 
           <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow animate-scale-in delay-300">
             <CardContent className="p-6 text-center">
-              <Icon name="Send" size={40} className="text-primary mx-auto mb-4" />
-              <h3 className="font-bold mb-2">Telegram</h3>
+              <Icon name="MessageCircle" size={40} className="text-primary mx-auto mb-4" />
+              <h3 className="font-bold mb-2">WhatsApp</h3>
               <a
-                href="https://t.me/tanya_kuzikova"
+                href="https://wa.me/message/FKFHPRMEDBRYP1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                @tanya_kuzikova
+                Написать в WhatsApp
               </a>
             </CardContent>
           </Card>
@@ -89,7 +89,7 @@ export const ContactsSection = () => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => window.open('https://t.me/tanya_kuzikova', '_blank')}
+              onClick={() => window.open('https://wa.me/message/FKFHPRMEDBRYP1', '_blank')}
             >
               <Icon name="MessageCircle" size={20} className="mr-2" />
               Написать нам
