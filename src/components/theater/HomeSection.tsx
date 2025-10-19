@@ -11,7 +11,7 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
       <div
         className="relative h-[600px] bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.poehali.dev/files/1b2ea3cb-9673-4ba7-8c67-eef631a81dd6.JPG')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg')`,
         }}
       >
         <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
