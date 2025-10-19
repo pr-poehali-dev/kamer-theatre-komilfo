@@ -232,7 +232,7 @@ const Index = () => {
                   Камерный театр<br />Комильфо
                 </h2>
                 <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-                  Классика в современной интерпретации
+                  Творим с любовью, играем с душой
                 </p>
                 <div className="flex gap-4">
                   <Button
