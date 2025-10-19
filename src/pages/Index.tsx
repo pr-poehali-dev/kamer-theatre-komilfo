@@ -5,6 +5,7 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [showPerformanceInfo, setShowPerformanceInfo] = useState(false);
 
   const navigation = [
     { id: 'home', label: 'Главная' },
@@ -366,33 +367,68 @@ className={`transition-colors ${
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 mb-16">
-                <Card className="bg-card border-border p-8">
+                <Card className="bg-card border-border p-8 relative">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-4 mb-6">
                       <Icon name="Users" size={32} className="text-primary mt-1" />
-                      <div>
-                        <h3 className="text-2xl font-bold mb-3">Актёрское мастерство</h3>
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-3">
+                          <h3 className="text-2xl font-bold">Психологический актерский курс<br />«Перформанс-терапия»</h3>
+                          <button
+                            onClick={() => setShowPerformanceInfo(!showPerformanceInfo)}
+                            className="ml-2 p-2 rounded-full hover:bg-muted transition-colors"
+                            aria-label="Информация о курсе"
+                          >
+                            <Icon name="Info" size={20} className="text-primary" />
+                          </button>
+                        </div>
+                        
+                        {showPerformanceInfo && (
+                          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-4 animate-fade-in">
+                            <h4 className="font-bold mb-3 text-lg">Что это такое «Перфоманс-терапия»?</h4>
+                            <p className="text-sm text-muted-foreground mb-4">
+                              Это актерское мастерство + импровизация + групповая психотерапия, 
+                              направленная на обретение контакта с собой и миром = личностный рост, 
+                              уверенность в себе и готовность проЯвляться.
+                            </p>
+                            
+                            <h4 className="font-bold mb-3">Как это работает?</h4>
+                            <ul className="space-y-2 text-sm">
+                              <li className="flex items-start gap-2">
+                                <span>🎭</span>
+                                <span><strong>Актерские техники</strong> → убираем зажимы.</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span>🎤</span>
+                                <span><strong>Сценическая речь и вокал</strong> → прокачиваем уверенность.</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <span>👌</span>
+                                <span><strong>Импровизация</strong> → учимся быть собой даже в стрессовых ситуациях.</span>
+                              </li>
+                            </ul>
+                          </div>
+                        )}
+                        
                         <p className="text-muted-foreground mb-4">
-                          Курс для взрослых и подростков от 14 лет. Основы актёрской техники, 
-                          сценическая речь, работа с текстом и импровизация.
+                          Это уникальная групповая психотерапия с помощью театрального искусства.
                         </p>
-                        <ul className="space-y-2 text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <Icon name="Check" size={18} className="text-primary mt-1" />
-                            <span>Занятия 2 раза в неделю по 2 часа</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <Icon name="Check" size={18} className="text-primary mt-1" />
-                            <span>Группы до 12 человек</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <Icon name="Check" size={18} className="text-primary mt-1" />
-                            <span>Итоговый спектакль на сцене театра</span>
-                          </li>
-                        </ul>
+                        
+                        <a 
+                          href="https://orator.turbo.site/theatre" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-primary hover:underline mb-4"
+                        >
+                          <span>Подробнее о курсе</span>
+                          <Icon name="ExternalLink" size={16} />
+                        </a>
+                        
                         <div className="mt-6 pt-6 border-t border-border">
-                          <p className="text-2xl font-bold text-primary mb-2">12 000 ₽/мес</p>
-                          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                          <Button 
+                            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                            onClick={() => window.open('https://orator.turbo.site/theatre', '_blank')}
+                          >
                             Записаться на курс
                           </Button>
                         </div>
