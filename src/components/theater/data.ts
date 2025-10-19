@@ -74,7 +74,7 @@ export const performances = [
     title: 'Делегация радости',
     description: 'Позитивная комедия о дружбе',
     duration: '1 час 30 мин',
-    image: 'https://cdn.poehali.dev/files/d76e01a3-e311-4854-bafa-c98870f4dd3e.JPG',
+    image: 'https://cdn.poehali.dev/files/d9e32211-c7fc-47e0-8c68-b6f9d75a78ec.PNG',
   },
   {
     title: 'Баба Яга не против',
