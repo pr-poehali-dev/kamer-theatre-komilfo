@@ -136,16 +136,7 @@ export const galleryImages = [
     title: 'Безымянная карточка',
     description: 'Героини спектакля',
   },
-  {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
-    title: 'Тайна "Кафе Ромашка"',
-    description: 'Детективная атмосфера',
-  },
-  {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/d2eed063-bdee-47a3-9462-d2a928a2c641.jpg',
-    title: 'КраШная шапочка',
-    description: 'Сказочные декорации',
-  },
+
   {
     url: 'https://cdn.poehali.dev/files/2c25ac12-a4d5-4021-9c64-f67aedd9e443.JPG',
     title: 'КраШная шапочка',
@@ -191,31 +182,7 @@ export const galleryImages = [
     title: 'Городские истории',
     description: 'Персонажи спектакля',
   },
-  {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/ff425e05-bb76-4034-8224-db504a7a20c5.jpg',
-    title: 'Делегация радости',
-    description: 'Яркие моменты спектакля',
-  },
-  {
-    url: 'https://cdn.poehali.dev/files/43dc73d7-0ae1-4535-8625-ebf4c9c03257.PNG',
-    title: 'Делегация радости',
-    description: 'Персонажи спектакля',
-  },
-  {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/bf56f932-b49f-4241-afef-f2a7cd681710.jpg',
-    title: 'Баба Яга не против',
-    description: 'Сказка на новый лад',
-  },
-  {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00de7a63-d62e-49b6-a41c-fbebb119c06b.jpg',
-    title: 'Любовь и проводы',
-    description: 'Лирическая сцена',
-  },
-  {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/e9a89eb0-c604-47e0-946b-c6b64bcde8c1.jpg',
-    title: 'За кулисами',
-    description: 'Подготовка к спектаклю',
-  },
+
 ];
 
 export const scheduleItems = [
