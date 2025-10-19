@@ -217,7 +217,7 @@ className={`transition-colors ${
                   Камерный театр<br />Комильфо
                 </h2>
 <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in-up delay-200">
-                  Искусство изысканных постановок
+                  Где каждый спектакль создается с душой и любовью к театру
                 </p>
                 <div className="flex gap-4 animate-fade-in-up delay-300">
 <Button
@@ -243,22 +243,22 @@ className={`transition-colors ${
               <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                   <div className="text-center animate-fade-in-up delay-100">
-<Icon name="Calendar" size={48} className="text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">Регулярные показы</h3>
+<Icon name="Theater" size={48} className="text-primary mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">8 лет на сцене</h3>
                     <p className="text-muted-foreground">
-                      Спектакли каждую неделю
+                      11 спектаклей в репертуаре
                     </p>
                   </div>
                   <div className="text-center animate-fade-in-up delay-200">
 <Icon name="Users" size={48} className="text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">Профессиональная труппа</h3>
+                    <h3 className="text-xl font-semibold mb-2">Творческий коллектив</h3>
                     <p className="text-muted-foreground">
-                      Заслуженные артисты России
+                      Труппа из 17 увлеченных артистов
                     </p>
                   </div>
                   <div className="text-center animate-fade-in-up delay-300">
-<Icon name="Award" size={48} className="text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">Высокое качество</h3>
+<Icon name="Heart" size={48} className="text-primary mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">С душой и любовью</h3>
                     <p className="text-muted-foreground">
                       Камерная атмосфера и внимание к деталям
                     </p>
