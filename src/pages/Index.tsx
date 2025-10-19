@@ -12,6 +12,7 @@ const Index = () => {
     { id: 'repertoire', label: 'Репертуар' },
     { id: 'troupe', label: 'Труппа' },
     { id: 'schedule', label: 'Расписание' },
+    { id: 'reviews', label: 'Отзывы' },
     { id: 'contacts', label: 'Контакты' },
   ];
 
@@ -104,6 +105,51 @@ const Index = () => {
       date: '8 ноября, 19:00',
       title: 'Вишнёвый сад',
       available: true,
+    },
+  ];
+
+  const reviews = [
+    {
+      name: 'Анна Волкова',
+      date: '15 октября 2025',
+      performance: 'Вишнёвый сад',
+      rating: 5,
+      text: 'Потрясающая постановка! Актёры играют так искренне, что невозможно сдержать эмоции. Камерная атмосфера зала создаёт ощущение личного присутствия в истории. Обязательно вернусь!',
+    },
+    {
+      name: 'Дмитрий Соколов',
+      date: '10 октября 2025',
+      performance: 'Женитьба',
+      rating: 5,
+      text: 'Гоголь в исполнении труппы Комильфо — это настоящее открытие! Современная интерпретация классики, но с глубоким уважением к первоисточнику. Смеялись всем залом!',
+    },
+    {
+      name: 'Елена Петрова',
+      date: '5 октября 2025',
+      performance: 'Три сестры',
+      rating: 5,
+      text: 'Сильнейший спектакль. Чувствуется профессионализм каждого актёра. Декорации и свет дополняют атмосферу, а игра артистов цепляет за живое. Рекомендую всем ценителям качественного театра.',
+    },
+    {
+      name: 'Михаил Иванов',
+      date: '1 октября 2025',
+      performance: 'Горе от ума',
+      rating: 5,
+      text: 'Был с семьёй, все в восторге! Классика никогда не устареет, особенно в такой подаче. Актёры великолепны, постановка продумана до мелочей. Спасибо театру за незабываемый вечер!',
+    },
+    {
+      name: 'Ольга Смирнова',
+      date: '28 сентября 2025',
+      performance: 'Вишнёвый сад',
+      rating: 5,
+      text: 'Впервые в этом театре, и я очарована! Уютный зал, внимательный персонал и невероятно талантливые актёры. Чехов звучит современно и проникновенно. Буду приходить ещё!',
+    },
+    {
+      name: 'Александр Морозов',
+      date: '22 сентября 2025',
+      performance: 'Женитьба',
+      rating: 5,
+      text: 'Отличный театр для тех, кто ценит камерность и качество. Небольшой зал позволяет видеть каждую эмоцию актёров. Постановка Женитьбы — шедевр! Рекомендую.',
     },
   ];
 
@@ -359,6 +405,41 @@ const Index = () => {
                         >
                           {item.available ? 'Купить билет' : 'Билетов нет'}
                         </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeSection === 'reviews' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4">
+              <h2 className="text-5xl font-bold text-center mb-8">Отзывы зрителей</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Что говорят наши зрители о спектаклях
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {reviews.map((review, idx) => (
+                  <Card
+                    key={idx}
+                    className="bg-card border-border hover:shadow-lg transition-shadow"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Icon key={i} name="Star" size={18} className="text-accent fill-accent" />
+                        ))}
+                      </div>
+                      <p className="text-base mb-6 text-foreground leading-relaxed">
+                        "{review.text}"
+                      </p>
+                      <div className="border-t border-border pt-4">
+                        <p className="font-semibold text-foreground">{review.name}</p>
+                        <p className="text-sm text-muted-foreground">{review.performance}</p>
+                        <p className="text-xs text-muted-foreground mt-1">{review.date}</p>
                       </div>
                     </CardContent>
                   </Card>
