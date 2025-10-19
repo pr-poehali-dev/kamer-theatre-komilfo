@@ -10,6 +10,7 @@ const Index = () => {
     { id: 'home', label: 'Главная' },
     { id: 'about', label: 'О театре' },
     { id: 'repertoire', label: 'Репертуар' },
+    { id: 'gallery', label: 'Галерея' },
     { id: 'schedule', label: 'Афиша' },
     { id: 'contacts', label: 'Контакты' },
   ];
@@ -61,11 +62,57 @@ const Index = () => {
       title: 'Любовь и проводы',
       description: 'Трогательная история о чувствах',
       duration: '1 час 50 мин',
-      image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00de7a63-d62e-49b6-a41c-fbebb119c06b.jpg',
+image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00de7a63-d62e-49b6-a41c-fbebb119c06b.jpg',
     },
   ];
 
-
+  const galleryImages = [
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
+      title: 'Вечернее турне',
+      description: 'Главная сцена спектакля',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/6d4ceee2-11fa-46be-9d9c-bfc981b32b19.jpg',
+      title: 'Безымянная карточка',
+      description: 'Эмоциональный момент',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
+      title: 'Тайна "Кафе Ромашка"',
+      description: 'Детективная атмосфера',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/d2eed063-bdee-47a3-9462-d2a928a2c641.jpg',
+      title: 'КраШная шапочка',
+      description: 'Сказочные декорации',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00dd068e-6899-47f8-9f71-a203c55d58b3.jpg',
+      title: 'Городские истории',
+      description: 'Современная постановка',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/ff425e05-bb76-4034-8224-db504a7a20c5.jpg',
+      title: 'Делегация радости',
+      description: 'Яркие моменты спектакля',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/bf56f932-b49f-4241-afef-f2a7cd681710.jpg',
+      title: 'Баба Яга не против',
+      description: 'Сказка на новый лад',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00de7a63-d62e-49b6-a41c-fbebb119c06b.jpg',
+      title: 'Любовь и проводы',
+      description: 'Лирическая сцена',
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/e9a89eb0-c604-47e0-946b-c6b64bcde8c1.jpg',
+      title: 'За кулисами',
+      description: 'Подготовка к спектаклю',
+    },
+  ];
 
 const scheduleItems = [
     {
@@ -356,6 +403,38 @@ className={`transition-colors ${
                         </div>
                       </div>
                     </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+)}
+
+        {activeSection === 'gallery' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4">
+              <h2 className="text-5xl font-bold text-center mb-8">Галерея</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Моменты наших спектаклей
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {galleryImages.map((image, idx) => (
+                  <Card
+                    key={idx}
+                    className="overflow-hidden hover:shadow-xl transition-all cursor-pointer bg-card border-border group"
+                  >
+                    <div className="relative h-80 overflow-hidden">
+                      <img
+                        src={image.url}
+                        alt={image.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 className="text-xl font-bold text-white mb-2">{image.title}</h3>
+                        <p className="text-sm text-white/90">{image.description}</p>
+                      </div>
+                    </div>
                   </Card>
                 ))}
               </div>
