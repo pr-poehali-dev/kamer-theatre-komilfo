@@ -289,13 +289,13 @@ className={`transition-colors ${
                 
                 <div className="mt-12">
                   <h3 className="text-3xl font-bold text-center mb-8">Наши достижения</h3>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                     <Card className="bg-card border-border animate-scale-in delay-100 overflow-hidden hover:shadow-xl transition-shadow">
                       <CardContent className="p-0">
                         <img 
                           src="https://cdn.poehali.dev/files/cfce44b7-080f-484a-9a01-307bd921caf6.jpg" 
                           alt="Диплом Лауреата - Вечернее турне"
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                         />
                       </CardContent>
                     </Card>
@@ -305,7 +305,7 @@ className={`transition-colors ${
                         <img 
                           src="https://cdn.poehali.dev/files/453ab62d-8b40-4ccb-8d36-d349133a1f36.jpg" 
                           alt="Диплом Лауреата - Шепот музы"
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                         />
                       </CardContent>
                     </Card>
@@ -315,7 +315,7 @@ className={`transition-colors ${
                         <img 
                           src="https://cdn.poehali.dev/files/c706bc82-c085-4f7d-900a-ae989c1d19f7.jpg" 
                           alt="Благодарственное письмо - Гимназия 18ф"
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                         />
                       </CardContent>
                     </Card>
@@ -325,7 +325,7 @@ className={`transition-colors ${
                         <img 
                           src="https://cdn.poehali.dev/files/9c20a630-785d-4885-adb2-668466b9c9cc.png" 
                           alt="Диплом победителя - Звездопад"
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                         />
                       </CardContent>
                     </Card>
