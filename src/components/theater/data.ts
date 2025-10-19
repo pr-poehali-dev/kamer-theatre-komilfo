@@ -167,7 +167,7 @@ export const galleryImages = [
     description: 'Главная героиня',
   },
   {
-    url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00dd068e-6899-47f8-9f71-a203c55d58b3.jpg',
+    url: 'https://cdn.poehali.dev/files/9216776a-fcab-49dd-9ae4-2adb7dbf2b6e.JPG',
     title: 'Городские истории',
     description: 'Современная постановка',
   },
