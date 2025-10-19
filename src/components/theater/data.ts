@@ -25,13 +25,13 @@ export const performances = [
     title: 'Вечернее турне',
     description: 'Увлекательное театральное путешествие',
     duration: '1 час 30 мин',
-    image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/3d73f4ae-cdee-41e4-b17f-aba7a56c78e0.jpg',
+    image: 'https://cdn.poehali.dev/files/1b2ea3cb-9673-4ba7-8c67-eef631a81dd6.JPG',
   },
   {
     title: 'Безымянная карточка',
     description: 'Фантастическая история о памяти и патриотизме. Программист попадает в 1945 год и узнаёт правду о своих предках',
     duration: '1 час 20 мин',
-    image: 'https://cdn.poehali.dev/files/f0dc3dd7-7473-4394-b8ad-06ae575dcfe2.jpg',
+    image: 'https://cdn.poehali.dev/files/cdd9603d-f4ee-4ac8-8c72-9c74fc0b017e.jpg',
     fullDescription: `Спектакль создан по мотивам одноименной пьесы Эвелины Пиженко и материалам книги Светланы Алексиевич "У войны не женское лицо".
 
 Действие происходит 9 мая 2025 года. Молодой, талантливый программист по имени Михаил, собирается уехать в Соединённые Штаты Америки, чтобы работать там по контракту.
@@ -56,37 +56,37 @@ export const performances = [
     title: 'Тайна "Кафе Ромашка"',
     description: 'Детективная комедия с юмором',
     duration: '1 час 45 мин',
-    image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/f82ad391-1da9-46c4-a8f4-6554bb5e7d15.jpg',
+    image: 'https://cdn.poehali.dev/files/2c25ac12-a4d5-4021-9c64-f67aedd9e443.JPG',
   },
   {
     title: 'КраШная шапочка',
     description: 'Сказка на новый лад',
     duration: '1 час 15 мин',
-    image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/d2eed063-bdee-47a3-9462-d2a928a2c641.jpg',
+    image: 'https://cdn.poehali.dev/files/719e5e93-77a3-450f-aa93-95957411c737.JPG',
   },
   {
     title: 'Городские истории',
     description: 'Зарисовки из жизни мегаполиса',
     duration: '1 час 40 мин',
-    image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00dd068e-6899-47f8-9f71-a203c55d58b3.jpg',
+    image: 'https://cdn.poehali.dev/files/9216776a-fcab-49dd-9ae4-2adb7dbf2b6e.JPG',
   },
   {
     title: 'Делегация радости',
     description: 'Позитивная комедия о дружбе',
     duration: '1 час 30 мин',
-    image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/ff425e05-bb76-4034-8224-db504a7a20c5.jpg',
+    image: 'https://cdn.poehali.dev/files/d76e01a3-e311-4854-bafa-c98870f4dd3e.JPG',
   },
   {
     title: 'Баба Яга не против',
     description: 'Современная интерпретация сказки',
     duration: '1 час 25 мин',
-    image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/bf56f932-b49f-4241-afef-f2a7cd681710.jpg',
+    image: 'https://cdn.poehali.dev/files/feadb574-cb69-4b78-8ccf-fcdeb4fef9bf.JPG',
   },
   {
     title: 'Любовь и проводы',
     description: 'Трогательная история о чувствах',
     duration: '1 час 50 мин',
-    image: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/00de7a63-d62e-49b6-a41c-fbebb119c06b.jpg',
+    image: 'https://cdn.poehali.dev/files/06fab420-8268-4134-9959-d08dcb93a93e.JPG',
   },
 ];
 
