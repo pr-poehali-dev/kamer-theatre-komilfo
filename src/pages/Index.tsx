@@ -669,38 +669,38 @@ className={`transition-colors ${
               </p>
 
               <div className="mb-16">
-                <h3 className="text-3xl font-bold mb-8 text-center animate-fade-in-up delay-200">Режиссёр</h3>
+                <h3 className="text-3xl font-bold mb-8 text-center animate-fade-in-up delay-200">Главный режиссёр</h3>
                 <Card className="bg-card border-border max-w-4xl mx-auto animate-scale-in delay-100">
                   <CardContent className="p-8">
                     <div className="grid md:grid-cols-3 gap-8">
                       <div className="flex justify-center items-start">
-                        <div className="w-48 h-48 rounded-full bg-muted flex items-center justify-center">
-                          <Icon name="User" size={80} className="text-primary" />
-                        </div>
+                        <img
+                          src="https://cdn.poehali.dev/files/3ff74dd6-f5e0-432d-84d8-0339f2d5d3a6.JPG"
+                          alt="Кузикова Светлана Алексеевна"
+                          className="w-full h-auto rounded-xl object-cover shadow-lg"
+                        />
                       </div>
                       <div className="md:col-span-2">
-                        <h4 className="text-2xl font-bold mb-2">Имя Фамилия</h4>
-                        <p className="text-primary text-lg mb-4">Главный режиссёр театра</p>
+                        <h4 className="text-2xl font-bold mb-2">Кузикова Светлана Алексеевна</h4>
+                        <p className="text-primary text-lg mb-4">Главный режиссёр</p>
                         <div className="space-y-4 text-muted-foreground">
                           <p>
-                            Окончил Российскую академию театрального искусства (ГИТИС). 
-                            Работал в ведущих театрах Москвы и Санкт-Петербурга.
+                            Основатель театра «Комильфо», театральный педагог, автор курсов и книг.
                           </p>
-                          <p>
-                            За 20 лет карьеры поставил более 50 спектаклей разных жанров — 
-                            от классической драмы до современных экспериментальных постановок.
-                          </p>
-                          <p>
-                            Лауреат премии "Золотая маска", обладатель множества профессиональных наград.
-                          </p>
-                        </div>
-                        <div className="mt-6 pt-6 border-t border-border">
-                          <p className="font-semibold mb-2">Известные постановки:</p>
-                          <ul className="space-y-1 text-muted-foreground">
-                            <li>• "Вишнёвый сад" А.П. Чехова</li>
-                            <li>• "Гамлет" У. Шекспира</li>
-                            <li>• "Мастер и Маргарита" М. Булгакова</li>
-                          </ul>
+                          <div className="space-y-3">
+                            <div className="flex items-start gap-2">
+                              <Icon name="GraduationCap" size={20} className="text-primary mt-1 flex-shrink-0" />
+                              <p>Высшее театрально-режиссерское и высшее психологическое образование</p>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <Icon name="Award" size={20} className="text-primary mt-1 flex-shrink-0" />
+                              <p>Повышение квалификации по сценической речи, актерскому и ораторскому мастерству в ГИТИС</p>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <Icon name="Star" size={20} className="text-primary mt-1 flex-shrink-0" />
+                              <p>Прошла обучение по режиссуре у Ивана Яновича Стависского, режиссера БДТ им. Товстоногова (1997-2011 гг.)</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
