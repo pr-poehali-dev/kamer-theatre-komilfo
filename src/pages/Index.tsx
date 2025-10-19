@@ -10,6 +10,7 @@ const Index = () => {
     { id: 'home', label: 'Главная' },
     { id: 'about', label: 'О театре' },
     { id: 'repertoire', label: 'Репертуар' },
+    { id: 'education', label: 'Учебный театр' },
     { id: 'gallery', label: 'Галерея' },
     { id: 'schedule', label: 'Афиша' },
     { id: 'contacts', label: 'Контакты' },
@@ -352,6 +353,136 @@ className={`transition-colors ${
                   </Card>
                 ))}
               </div>
+            </div>
+          </div>
+)}
+
+        {activeSection === 'education' && (
+          <div className="py-20 animate-fade-in">
+            <div className="container mx-auto px-4 max-w-6xl">
+              <h2 className="text-5xl font-bold text-center mb-8">Учебный театр</h2>
+              <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto">
+                Откройте в себе талант актёра в камерной атмосфере профессионального театра
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-12 mb-16">
+                <Card className="bg-card border-border p-8">
+                  <CardContent className="p-0">
+                    <div className="flex items-start gap-4 mb-6">
+                      <Icon name="Users" size={32} className="text-primary mt-1" />
+                      <div>
+                        <h3 className="text-2xl font-bold mb-3">Актёрское мастерство</h3>
+                        <p className="text-muted-foreground mb-4">
+                          Курс для взрослых и подростков от 14 лет. Основы актёрской техники, 
+                          сценическая речь, работа с текстом и импровизация.
+                        </p>
+                        <ul className="space-y-2 text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <Icon name="Check" size={18} className="text-primary mt-1" />
+                            <span>Занятия 2 раза в неделю по 2 часа</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <Icon name="Check" size={18} className="text-primary mt-1" />
+                            <span>Группы до 12 человек</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <Icon name="Check" size={18} className="text-primary mt-1" />
+                            <span>Итоговый спектакль на сцене театра</span>
+                          </li>
+                        </ul>
+                        <div className="mt-6 pt-6 border-t border-border">
+                          <p className="text-2xl font-bold text-primary mb-2">12 000 ₽/мес</p>
+                          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                            Записаться на курс
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-card border-border p-8">
+                  <CardContent className="p-0">
+                    <div className="flex items-start gap-4 mb-6">
+                      <Icon name="Sparkles" size={32} className="text-primary mt-1" />
+                      <div>
+                        <h3 className="text-2xl font-bold mb-3">Детская театральная студия</h3>
+                        <p className="text-muted-foreground mb-4">
+                          Программа для детей 7-13 лет. Развитие творческих способностей, 
+                          уверенности в себе и навыков публичных выступлений.
+                        </p>
+                        <ul className="space-y-2 text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <Icon name="Check" size={18} className="text-primary mt-1" />
+                            <span>Занятия 1 раз в неделю по 1,5 часа</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <Icon name="Check" size={18} className="text-primary mt-1" />
+                            <span>Группы до 10 детей</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <Icon name="Check" size={18} className="text-primary mt-1" />
+                            <span>Выступления для родителей</span>
+                          </li>
+                        </ul>
+                        <div className="mt-6 pt-6 border-t border-border">
+                          <p className="text-2xl font-bold text-primary mb-2">8 000 ₽/мес</p>
+                          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                            Записаться на курс
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="bg-muted/30 rounded-lg p-8 mb-12">
+                <h3 className="text-3xl font-bold text-center mb-8">Что вы получите</h3>
+                <div className="grid md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <Icon name="Star" size={40} className="text-primary mx-auto mb-4" />
+                    <h4 className="font-semibold mb-2">Профессиональные педагоги</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Действующие актёры нашего театра
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Icon name="Theater" size={40} className="text-primary mx-auto mb-4" />
+                    <h4 className="font-semibold mb-2">Реальная сцена</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Занятия на профессиональной площадке
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Icon name="Award" size={40} className="text-primary mx-auto mb-4" />
+                    <h4 className="font-semibold mb-2">Сертификат</h4>
+                    <p className="text-sm text-muted-foreground">
+                      По окончании курса
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Icon name="Heart" size={40} className="text-primary mx-auto mb-4" />
+                    <h4 className="font-semibold mb-2">Творческая атмосфера</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Поддержка и вдохновение
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <Card className="bg-primary/5 border-primary/20">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold mb-4">Бесплатное пробное занятие</h3>
+                  <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Приходите на пробное занятие, познакомьтесь с педагогами и почувствуйте 
+                    атмосферу нашей театральной студии
+                  </p>
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Записаться на пробное занятие
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         )}
