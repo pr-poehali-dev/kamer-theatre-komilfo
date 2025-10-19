@@ -97,6 +97,26 @@ export const galleryImages = [
     description: 'Главная сцена спектакля',
   },
   {
+    url: 'https://cdn.poehali.dev/files/d76e01a3-e311-4854-bafa-c98870f4dd3e.JPG',
+    title: 'Вечернее турне',
+    description: 'Три подруги',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/feadb574-cb69-4b78-8ccf-fcdeb4fef9bf.JPG',
+    title: 'Вечернее турне',
+    description: 'Яркие моменты',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/06fab420-8268-4134-9959-d08dcb93a93e.JPG',
+    title: 'Вечернее турне',
+    description: 'Сцена из спектакля',
+  },
+  {
+    url: 'https://cdn.poehali.dev/files/23996e1d-44c6-4617-8ece-a9e0eb2a8683.JPG',
+    title: 'Вечернее турне',
+    description: 'Персонажи спектакля',
+  },
+  {
     url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/6d4ceee2-11fa-46be-9d9c-bfc981b32b19.jpg',
     title: 'Безымянная карточка',
     description: 'Эмоциональный момент',
