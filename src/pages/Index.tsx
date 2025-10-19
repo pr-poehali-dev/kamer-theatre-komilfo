@@ -297,6 +297,10 @@ className={`transition-colors ${
                           alt="Диплом Лауреата - Шепот музы"
                           className="w-full h-auto object-contain"
                         />
+                        <div className="p-4 bg-muted/30">
+                          <h4 className="font-semibold text-lg mb-1">Диплом Лауреата I степени</h4>
+                          <p className="text-sm text-muted-foreground">Международный фестиваль-конкурс "Шепот музы", Санкт-Петербург, май 2023</p>
+                        </div>
                       </CardContent>
                     </Card>
                     
@@ -307,6 +311,10 @@ className={`transition-colors ${
                           alt="Диплом победителя - Звездопад"
                           className="w-full h-auto object-contain"
                         />
+                        <div className="p-4 bg-muted/30">
+                          <h4 className="font-semibold text-lg mb-1">Диплом победителя</h4>
+                          <p className="text-sm text-muted-foreground">Международный конкурс-фестиваль "Звездопад", Санкт-Петербург, март 2022</p>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>
