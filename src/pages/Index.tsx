@@ -6,6 +6,7 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showPerformanceInfo, setShowPerformanceInfo] = useState(false);
+  const [selectedPerformance, setSelectedPerformance] = useState<number | null>(null);
 
   const handleNavigate = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -355,6 +356,7 @@ className={`transition-colors ${
                   <Card
                     key={idx}
                     className={`overflow-hidden hover:shadow-xl transition-all cursor-pointer bg-card border-border group animate-scale-in delay-${100 + idx * 50}`}
+                    onClick={() => setSelectedPerformance(idx)}
                   >
                     <div className="relative h-64 overflow-hidden">
                       <img
@@ -375,13 +377,82 @@ className={`transition-colors ${
                       </div>
                       <Button
                         className="w-full mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
-                        onClick={() => handleNavigate('schedule')}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleNavigate('schedule');
+                        }}
                       >
                         Купить билет
                       </Button>
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {selectedPerformance !== null && (
+          <div 
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-fade-in"
+            onClick={() => setSelectedPerformance(null)}
+          >
+            <div 
+              className="bg-background rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto relative animate-scale-in"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedPerformance(null)}
+                className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background rounded-full p-2 transition-colors"
+              >
+                <Icon name="X" size={24} />
+              </button>
+              
+              <img
+                src={performances[selectedPerformance].image}
+                alt={performances[selectedPerformance].title}
+                className="w-full h-80 object-cover"
+              />
+              
+              <div className="p-8">
+                <h2 className="text-4xl font-bold mb-4">{performances[selectedPerformance].title}</h2>
+                
+                <div className="flex items-center gap-2 text-muted-foreground mb-6">
+                  <Icon name="Clock" size={20} />
+                  <span className="text-lg">{performances[selectedPerformance].duration}</span>
+                </div>
+                
+                {performances[selectedPerformance].fullDescription ? (
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-lg text-muted-foreground whitespace-pre-line leading-relaxed">
+                      {performances[selectedPerformance].fullDescription}
+                    </p>
+                  </div>
+                ) : (
+                  <p className="text-lg text-muted-foreground">
+                    {performances[selectedPerformance].description}
+                  </p>
+                )}
+                
+                <div className="mt-8 flex gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    onClick={() => {
+                      setSelectedPerformance(null);
+                      handleNavigate('schedule');
+                    }}
+                  >
+                    Купить билет
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    onClick={() => setSelectedPerformance(null)}
+                  >
+                    Закрыть
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
