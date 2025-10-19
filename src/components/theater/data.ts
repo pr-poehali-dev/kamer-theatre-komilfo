@@ -177,6 +177,11 @@ export const galleryImages = [
     description: 'Яркие моменты спектакля',
   },
   {
+    url: 'https://cdn.poehali.dev/files/43dc73d7-0ae1-4535-8625-ebf4c9c03257.PNG',
+    title: 'Делегация радости',
+    description: 'Персонажи спектакля',
+  },
+  {
     url: 'https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/files/bf56f932-b49f-4241-afef-f2a7cd681710.jpg',
     title: 'Баба Яга не против',
     description: 'Сказка на новый лад',
