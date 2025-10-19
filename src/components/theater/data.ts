@@ -86,7 +86,7 @@ export const performances = [
     title: 'Любовь и проводы',
     description: 'Трогательная история о чувствах',
     duration: '1 час 50 мин',
-    image: 'https://cdn.poehali.dev/files/06fab420-8268-4134-9959-d08dcb93a93e.JPG',
+    image: 'https://cdn.poehali.dev/files/00a78b3b-8f13-4617-917c-199cd75105ee.JPG',
   },
 ];
 
