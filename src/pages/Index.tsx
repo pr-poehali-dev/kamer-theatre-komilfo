@@ -287,30 +287,49 @@ className={`transition-colors ${
                   Театр «Комильфо» даёт возможность творчески развиваться, приобретать навыки актерского мастерства, ораторского искусства, а также решить психологические задачи по повышению самооценки и уверенности в себе, избавиться от страхов в общении и публичных выступлениях, развивать эмоциональный интеллект.
                 </p>
                 
-                <div className="grid md:grid-cols-2 gap-6 mt-12">
-                  <Card className="bg-card border-border animate-scale-in delay-100">
-                    <CardContent className="p-6">
-<Icon name="Trophy" size={32} className="text-primary mb-4" />
-                      <h3 className="text-xl font-semibold mb-2">Наши достижения</h3>
-                      <ul className="space-y-2 text-muted-foreground">
-                        <li>• Лауреаты премии "Золотая маска" 2018</li>
-                        <li>• Более 200 постановок</li>
-                        <li>• 15 лет на сцене</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-card border-border animate-scale-in delay-200">
-                    <CardContent className="p-6">
-<Icon name="Heart" size={32} className="text-primary mb-4" />
-                      <h3 className="text-xl font-semibold mb-2">Наши ценности</h3>
-                      <ul className="space-y-2 text-muted-foreground">
-                        <li>• Уважение к классике</li>
-                        <li>• Внимание к зрителю</li>
-                        <li>• Профессионализм труппы</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
+                <div className="mt-12">
+                  <h3 className="text-3xl font-bold text-center mb-8">Наши достижения</h3>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <Card className="bg-card border-border animate-scale-in delay-100 overflow-hidden hover:shadow-xl transition-shadow">
+                      <CardContent className="p-0">
+                        <img 
+                          src="https://cdn.poehali.dev/files/cfce44b7-080f-484a-9a01-307bd921caf6.jpg" 
+                          alt="Диплом Лауреата - Вечернее турне"
+                          className="w-full h-full object-cover"
+                        />
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="bg-card border-border animate-scale-in delay-200 overflow-hidden hover:shadow-xl transition-shadow">
+                      <CardContent className="p-0">
+                        <img 
+                          src="https://cdn.poehali.dev/files/453ab62d-8b40-4ccb-8d36-d349133a1f36.jpg" 
+                          alt="Диплом Лауреата - Шепот музы"
+                          className="w-full h-full object-cover"
+                        />
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="bg-card border-border animate-scale-in delay-300 overflow-hidden hover:shadow-xl transition-shadow">
+                      <CardContent className="p-0">
+                        <img 
+                          src="https://cdn.poehali.dev/files/c706bc82-c085-4f7d-900a-ae989c1d19f7.jpg" 
+                          alt="Благодарственное письмо - Гимназия 18ф"
+                          className="w-full h-full object-cover"
+                        />
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="bg-card border-border animate-scale-in delay-400 overflow-hidden hover:shadow-xl transition-shadow">
+                      <CardContent className="p-0">
+                        <img 
+                          src="https://cdn.poehali.dev/files/9c20a630-785d-4885-adb2-668466b9c9cc.png" 
+                          alt="Диплом победителя - Звездопад"
+                          className="w-full h-full object-cover"
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
               </div>
             </div>
