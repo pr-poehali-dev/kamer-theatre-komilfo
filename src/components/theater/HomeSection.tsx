@@ -19,7 +19,7 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
             Камерный театр<br />Комильфо
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in-up delay-200">
-            творим с любовью, играем с душой
+            маленькая сцена для больших переживаний
           </p>
           <div className="flex gap-4 animate-fade-in-up delay-300">
             <Button
