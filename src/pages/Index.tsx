@@ -15,10 +15,19 @@ const Index = () => {
   const [selectedPerformance, setSelectedPerformance] = useState<number | null>(null);
 
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash && ['home', 'about', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'].includes(hash)) {
-      setActiveSection(hash);
-    }
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash && ['home', 'about', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'].includes(hash)) {
+        setActiveSection(hash);
+      } else if (!hash) {
+        setActiveSection('home');
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   const handleNavigate = (sectionId: string) => {
