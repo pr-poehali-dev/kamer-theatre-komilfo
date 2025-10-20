@@ -27,7 +27,7 @@ export const RepertoireSection = ({ onNavigate, onPerformanceClick }: Repertoire
                 <img
                   src={perf.image}
                   alt={perf.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-contain bg-muted group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
