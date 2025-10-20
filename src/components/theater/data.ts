@@ -80,7 +80,7 @@ export const performances = [
     title: 'Баба Яга не против',
     description: 'Современная интерпретация сказки',
     duration: '1 час 25 мин',
-    image: 'https://cdn.poehali.dev/files/feadb574-cb69-4b78-8ccf-fcdeb4fef9bf.JPG',
+    image: 'https://cdn.poehali.dev/files/f4cc33d7-a0c1-4867-a803-a79bfe37dbe2.jpg',
   },
   {
     title: 'Любовь и проводы',
