@@ -27,7 +27,9 @@ export const RepertoireSection = ({ onNavigate, onPerformanceClick }: Repertoire
                 <img
                   src={perf.image}
                   alt={perf.title}
-                  className="w-full h-full object-contain bg-muted group-hover:scale-110 transition-transform duration-300"
+                  className={`w-full h-full group-hover:scale-110 transition-transform duration-300 ${
+                    perf.title === 'Баба Яга не против' ? 'object-contain bg-muted' : 'object-cover'
+                  }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
