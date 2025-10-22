@@ -92,9 +92,42 @@ const Index = () => {
         onNavigate={handleNavigate}
       />
 
-      <footer className="bg-muted/30 py-8 border-t border-border">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2017 Камерный театр Комильфо. Все права защищены.</p>
+      <footer className="bg-muted/30 py-12 border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4">Официальная информация</h3>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong>ИП Кузикова Светлана Алексеевна</strong></p>
+                <p>ОГРНИП: 318237500160591</p>
+                <p>Адрес: г. Краснодар, ул. Горького, 104, офис 26</p>
+                <p>Телефон: <a href="tel:+79183111712" className="hover:text-primary transition-colors">+7 918 311 17 12</a></p>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4">Документы</h3>
+              <div className="space-y-2 text-sm">
+                <p>
+                  <a href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                    Политика конфиденциальности
+                  </a>
+                </p>
+                <p>
+                  <a href="/offer" className="text-muted-foreground hover:text-primary transition-colors">
+                    Публичная оферта
+                  </a>
+                </p>
+                <p>
+                  <a href="/consent" className="text-muted-foreground hover:text-primary transition-colors">
+                    Согласие на обработку персональных данных
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="text-center text-muted-foreground text-sm pt-6 border-t border-border">
+            <p>&copy; 2017 Камерный театр Комильфо. Все права защищены.</p>
+          </div>
         </div>
       </footer>
     </div>
