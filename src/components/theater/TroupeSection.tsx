@@ -51,7 +51,7 @@ export const TroupeSection = () => {
             <img
               src="https://cdn.poehali.dev/files/333df901-4df8-4e3d-97d2-db05a168637a.JPG"
               alt="Александра Линькова"
-              className="w-full h-80 object-cover"
+              className="w-full h-80 object-cover object-top"
             />
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Александра Линькова</h3>
