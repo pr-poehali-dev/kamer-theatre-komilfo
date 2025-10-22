@@ -1,10 +1,10 @@
 export const navigation = [
   { id: 'home', label: 'Главная' },
+  { id: 'schedule', label: 'Афиша' },
   { id: 'repertoire', label: 'Репертуар' },
   { id: 'troupe', label: 'Труппа' },
   { id: 'education', label: 'Учебный театр' },
   { id: 'gallery', label: 'Галерея' },
-  { id: 'schedule', label: 'Афиша' },
   { id: 'contacts', label: 'Контакты' },
 ];
 

@@ -16,7 +16,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'];
+      const sections = ['home', 'schedule', 'repertoire', 'troupe', 'education', 'gallery', 'contacts'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -60,6 +60,9 @@ const Index = () => {
         <div id="home">
           <HomeSection onNavigate={handleNavigate} />
         </div>
+        <div id="schedule">
+          <ScheduleSection />
+        </div>
         <div id="repertoire">
           <RepertoireSection 
             onNavigate={handleNavigate}
@@ -74,9 +77,6 @@ const Index = () => {
         </div>
         <div id="gallery">
           <GallerySection />
-        </div>
-        <div id="schedule">
-          <ScheduleSection />
         </div>
         <div id="contacts">
           <ContactsSection />
