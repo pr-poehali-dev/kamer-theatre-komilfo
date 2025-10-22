@@ -54,8 +54,8 @@ export const performances = [
   },
   {
     title: 'Тайна "Кафе Ромашка"',
-    description: 'Детективная комедия с юмором',
-    duration: '1 час 45 мин',
+    description: 'Детективная комедийная миниатюра',
+    duration: '45 мин',
     image: 'https://cdn.poehali.dev/files/822354b2-c9b0-46d4-b1d9-b3a3479becca.JPG',
   },
   {
