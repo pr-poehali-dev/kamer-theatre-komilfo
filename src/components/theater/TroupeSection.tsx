@@ -10,17 +10,17 @@ export const TroupeSection = () => {
           Познакомьтесь с творческой командой театра Комильфо
         </p>
 
-        <div className="max-w-2xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16 grid md:grid-cols-2 gap-8">
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
-            <div className="md:flex">
-              <div className="md:w-1/3">
+            <div className="md:flex md:flex-col">
+              <div className="md:h-64">
                 <img
                   src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
                   alt="Светлана Кузикова"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="md:w-2/3 p-8">
+              <CardContent className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Светлана Кузикова</h3>
                 <p className="text-primary font-semibold mb-4">Художественный руководитель и режиссёр</p>
                 <p className="text-muted-foreground mb-4">
@@ -41,6 +41,22 @@ export const TroupeSection = () => {
                     <span>Преподаватель актерского мастерства</span>
                   </div>
                 </div>
+              </CardContent>
+            </div>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-100">
+            <div className="md:flex md:flex-col">
+              <div className="md:h-64">
+                <img
+                  src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
+                  alt="Маргарита Щадова"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-2">Маргарита Щадова</h3>
+                <p className="text-primary font-semibold mb-4">Помощник режиссёра</p>
               </CardContent>
             </div>
           </Card>
