@@ -54,7 +54,7 @@ export const RepertoireSection = ({ onNavigate, onPerformanceClick }: Repertoire
                     onNavigate('schedule');
                   }}
                 >
-                  Купить билет
+                  {perf.title === 'Идеальный неидеальный вечер' ? 'Купить билет' : 'Афиша'}
                 </Button>
               </CardContent>
             </Card>
