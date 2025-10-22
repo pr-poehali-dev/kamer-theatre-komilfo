@@ -49,19 +49,6 @@ export const TroupeSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
             <img
-              src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
-              alt="Маргарита Щадова"
-              className="w-full h-80 object-cover"
-              style={{objectPosition: 'center 25%'}}
-            />
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Маргарита Щадова</h3>
-              <p className="text-primary font-semibold">Помощник режиссёра</p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
-            <img
               src="https://cdn.poehali.dev/files/333df901-4df8-4e3d-97d2-db05a168637a.JPG"
               alt="Александра Линькова"
               className="w-full h-80 object-cover"
@@ -202,6 +189,19 @@ export const TroupeSection = () => {
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Анна Бабенко</h3>
               <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-800">
+            <img
+              src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
+              alt="Маргарита Щадова"
+              className="w-full h-80 object-cover"
+              style={{objectPosition: 'center 25%'}}
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Маргарита Щадова</h3>
+              <p className="text-primary font-semibold">Помощник режиссёра</p>
             </CardContent>
           </Card>
         </div>
