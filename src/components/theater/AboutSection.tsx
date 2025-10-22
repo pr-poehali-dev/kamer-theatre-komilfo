@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const AboutSection = () => {
   return (
-    <div className="py-20 animate-fade-in">
+    <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-5xl font-bold text-center mb-12 animate-fade-in-up">О театре</h2>
         <div className="prose prose-lg max-w-none">

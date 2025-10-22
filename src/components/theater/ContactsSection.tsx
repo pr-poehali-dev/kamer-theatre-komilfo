@@ -4,7 +4,7 @@ import Icon from '@/components/ui/icon';
 
 export const ContactsSection = () => {
   return (
-    <div className="py-20 animate-fade-in">
+    <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Контакты</h2>
         <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">

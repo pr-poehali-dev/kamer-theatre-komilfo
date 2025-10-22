@@ -34,7 +34,7 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
         </div>
       </div>
 
-      <div className="py-20 bg-muted/30">
+      <div className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center animate-fade-in-up delay-100">
