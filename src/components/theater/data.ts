@@ -1,6 +1,5 @@
 export const navigation = [
   { id: 'home', label: 'Главная' },
-  { id: 'about', label: 'О театре' },
   { id: 'repertoire', label: 'Репертуар' },
   { id: 'troupe', label: 'Труппа' },
   { id: 'education', label: 'Учебный театр' },

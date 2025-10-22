@@ -17,8 +17,10 @@ const Index = () => {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.slice(1);
-      if (hash && ['home', 'about', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'].includes(hash)) {
+      if (hash && ['home', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'].includes(hash)) {
         setActiveSection(hash);
+      } else if (hash === 'about') {
+        setActiveSection('home');
       } else if (!hash) {
         setActiveSection('home');
       }
@@ -42,7 +44,6 @@ const Index = () => {
 
       <main className="pt-20">
         {activeSection === 'home' && <HomeSection onNavigate={handleNavigate} />}
-        {activeSection === 'about' && <AboutSection />}
         {activeSection === 'repertoire' && (
           <RepertoireSection 
             onNavigate={handleNavigate}

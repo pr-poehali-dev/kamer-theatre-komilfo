@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { AboutSection } from './AboutSection';
 
 interface HomeSectionProps {
   onNavigate: (sectionId: string) => void;
@@ -60,6 +61,8 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
           </div>
         </div>
       </div>
+
+      <AboutSection />
     </div>
   );
 };
