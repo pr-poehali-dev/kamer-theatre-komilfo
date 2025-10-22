@@ -10,14 +10,14 @@ export const TroupeSection = () => {
           Познакомьтесь с творческой командой театра Комильфо
         </p>
 
-        <div className="max-w-4xl mx-auto mb-16 grid md:grid-cols-2 gap-8">
+        <div className="max-w-2xl mx-auto mb-16">
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
             <div className="md:flex md:flex-col">
-              <div className="md:h-64">
+              <div className="md:h-96">
                 <img
                   src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
                   alt="Светлана Кузикова"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-6">
@@ -44,28 +44,24 @@ export const TroupeSection = () => {
               </CardContent>
             </div>
           </Card>
-
-          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-100">
-            <div className="md:flex md:flex-col">
-              <div className="md:h-64">
-                <img
-                  src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
-                  alt="Маргарита Щадова"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-2">Маргарита Щадова</h3>
-                <p className="text-primary font-semibold mb-4">Помощник режиссёра</p>
-                <p className="text-muted-foreground mb-4">
-                  Профессиональный педагог-психолог, увлекается балетом и живописью. Студентка режиссерского факультета.
-                </p>
-              </CardContent>
-            </div>
-          </Card>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
+            <img
+              src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
+              alt="Маргарита Щадова"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Маргарита Щадова</h3>
+              <p className="text-primary font-semibold mb-2">Помощник режиссёра</p>
+              <p className="text-sm text-muted-foreground">
+                Профессиональный педагог-психолог, увлекается балетом и живописью. Студентка режиссерского факультета.
+              </p>
+            </CardContent>
+          </Card>
+
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
             <img
               src="https://cdn.poehali.dev/files/333df901-4df8-4e3d-97d2-db05a168637a.JPG"
