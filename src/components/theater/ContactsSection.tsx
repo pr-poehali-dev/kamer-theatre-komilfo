@@ -139,10 +139,10 @@ export const ContactsSection = () => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => window.open('https://wa.me/message/FKFHPRMEDBRYP1', '_blank')}
+              onClick={() => window.open('https://t.me/svetlana_kuzikova', '_blank')}
             >
-              <Icon name="MessageCircle" size={20} className="mr-2" />
-              Написать нам
+              <Icon name="Send" size={20} className="mr-2" />
+              Написать в Телеграм
             </Button>
           </CardContent>
         </Card>
