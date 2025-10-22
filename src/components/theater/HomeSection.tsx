@@ -55,7 +55,7 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
               <Icon name="Heart" size={40} className="text-primary mx-auto mb-3" />
               <h3 className="text-lg md:text-xl font-semibold mb-2">Внимание к деталям</h3>
               <p className="text-sm md:text-base text-muted-foreground">
-                Камерная атмосфера и качественные постановки
+                Уютная атмосфера зала
               </p>
             </div>
           </div>
