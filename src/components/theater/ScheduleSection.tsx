@@ -20,7 +20,7 @@ export const ScheduleSection = () => {
           </div>
           <h4 className="text-3xl font-bold text-center mb-3">Идеальный неидеальный вечер</h4>
           <p className="text-center text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Новогодняя комедия о встрече Нового года в неожиданном месте. Смех, неожиданности и праздничное настроение гарантированы!
+            Новогодняя комедия о встрече Нового года в необычном месте. Смех, сюрпризы и праздничное настроение гарантированы!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-2">
