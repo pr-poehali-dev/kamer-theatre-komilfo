@@ -15,27 +15,41 @@ const Index = () => {
   const [selectedPerformance, setSelectedPerformance] = useState<number | null>(null);
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1);
-      if (hash && ['home', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'].includes(hash)) {
-        setActiveSection(hash);
-      } else if (hash === 'about') {
-        setActiveSection('home');
-      } else if (!hash) {
-        setActiveSection('home');
+    const handleScroll = () => {
+      const sections = ['home', 'repertoire', 'troupe', 'education', 'gallery', 'schedule', 'contacts'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
       }
     };
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleNavigate = (sectionId: string) => {
     setActiveSection(sectionId);
-    window.location.hash = sectionId;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -43,18 +57,30 @@ const Index = () => {
       <Navigation activeSection={activeSection} onNavigate={handleNavigate} />
 
       <main className="pt-20">
-        {activeSection === 'home' && <HomeSection onNavigate={handleNavigate} />}
-        {activeSection === 'repertoire' && (
+        <div id="home">
+          <HomeSection onNavigate={handleNavigate} />
+        </div>
+        <div id="repertoire">
           <RepertoireSection 
             onNavigate={handleNavigate}
             onPerformanceClick={setSelectedPerformance}
           />
-        )}
-        {activeSection === 'troupe' && <TroupeSection />}
-        {activeSection === 'education' && <EducationSection />}
-        {activeSection === 'gallery' && <GallerySection />}
-        {activeSection === 'schedule' && <ScheduleSection />}
-        {activeSection === 'contacts' && <ContactsSection />}
+        </div>
+        <div id="troupe">
+          <TroupeSection />
+        </div>
+        <div id="education">
+          <EducationSection />
+        </div>
+        <div id="gallery">
+          <GallerySection />
+        </div>
+        <div id="schedule">
+          <ScheduleSection />
+        </div>
+        <div id="contacts">
+          <ContactsSection />
+        </div>
       </main>
 
       <PerformanceModal
