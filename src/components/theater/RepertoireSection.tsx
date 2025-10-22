@@ -31,6 +31,11 @@ export const RepertoireSection = ({ onNavigate, onPerformanceClick }: Repertoire
                     perf.title === 'Баба Яга не против' ? 'object-contain bg-muted' : 'object-cover'
                   }`}
                 />
+                {perf.title === 'Идеальный неидеальный вечер' && (
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                    Премьера
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white mb-1">{perf.title}</h3>
