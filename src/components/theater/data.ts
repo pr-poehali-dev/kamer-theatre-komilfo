@@ -2,6 +2,7 @@ export const navigation = [
   { id: 'home', label: 'Главная' },
   { id: 'schedule', label: 'Афиша' },
   { id: 'repertoire', label: 'Репертуар' },
+  { id: 'about', label: 'О театре' },
   { id: 'troupe', label: 'Труппа' },
   { id: 'education', label: 'Учебный театр' },
   { id: 'gallery', label: 'Галерея' },

@@ -16,7 +16,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'schedule', 'repertoire', 'troupe', 'education', 'gallery', 'contacts'];
+      const sections = ['home', 'schedule', 'repertoire', 'about', 'troupe', 'education', 'gallery', 'contacts'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -69,7 +69,9 @@ const Index = () => {
             onPerformanceClick={setSelectedPerformance}
           />
         </div>
-        <AboutSection />
+        <div id="about">
+          <AboutSection />
+        </div>
         <div id="troupe">
           <TroupeSection />
         </div>
