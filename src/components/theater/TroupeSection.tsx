@@ -10,34 +10,34 @@ export const TroupeSection = () => {
           Познакомьтесь с творческой командой театра Комильфо
         </p>
 
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-3xl mx-auto mb-16">
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
             <div className="md:flex md:flex-row">
-              <div className="md:w-1/2">
+              <div className="md:w-2/5 h-56 md:h-auto">
                 <img
                   src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
                   alt="Светлана Кузикова"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <CardContent className="p-6 md:w-1/2 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2">Светлана Кузикова</h3>
-                <p className="text-primary font-semibold mb-3">Художественный руководитель и режиссёр</p>
-                <p className="text-muted-foreground mb-4">
+              <CardContent className="p-5 md:w-3/5 flex flex-col justify-center">
+                <h3 className="text-xl font-bold mb-1">Светлана Кузикова</h3>
+                <p className="text-primary font-semibold mb-2 text-sm">Художественный руководитель и режиссёр</p>
+                <p className="text-muted-foreground mb-3 text-sm">
                   Основатель театра «Комильфо» и школы Kuzikova school. 
                   Создатель уникальной методики «Перформанс-терапия», сочетающей театральное искусство и психологию.
                 </p>
-                <div className="space-y-2 text-muted-foreground">
+                <div className="space-y-1.5 text-muted-foreground text-xs">
                   <div className="flex items-center gap-2">
-                    <Icon name="Award" size={18} className="text-primary" />
+                    <Icon name="Award" size={14} className="text-primary" />
                     <span>Профессиональный психолог</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Theater" size={18} className="text-primary" />
+                    <Icon name="Theater" size={14} className="text-primary" />
                     <span>Режиссёр более 20 спектаклей</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Users" size={18} className="text-primary" />
+                    <Icon name="Users" size={14} className="text-primary" />
                     <span>Преподаватель актерского мастерства</span>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ export const TroupeSection = () => {
               src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
               alt="Маргарита Щадова"
               className="w-full h-80 object-cover"
-              style={{objectPosition: 'center 10%'}}
+              style={{objectPosition: 'center 5%'}}
             />
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Маргарита Щадова</h3>
