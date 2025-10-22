@@ -17,7 +17,8 @@ export const TroupeSection = () => {
                 <img
                   src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
                   alt="Светлана Кузикова"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover"
+                  style={{objectPosition: 'center'}}
                 />
               </div>
               <CardContent className="p-6">
@@ -51,7 +52,8 @@ export const TroupeSection = () => {
             <img
               src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
               alt="Маргарита Щадова"
-              className="w-full h-80 object-cover object-top"
+              className="w-full h-80 object-cover"
+              style={{objectPosition: 'center 20%'}}
             />
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Маргарита Щадова</h3>
