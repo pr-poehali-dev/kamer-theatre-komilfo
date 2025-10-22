@@ -106,6 +106,66 @@ export const TroupeSection = () => {
               <p className="text-primary font-semibold">Актриса</p>
             </CardContent>
           </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-500">
+            <img
+              src="https://cdn.poehali.dev/files/bc5eda8a-7b07-47f4-a36d-67fb6bcb0df7.jpg"
+              alt="Анна Котышева"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Анна Котышева</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-600">
+            <img
+              src="https://cdn.poehali.dev/files/894949bf-cfd4-4859-92dc-bd1adaeaed46.jpg"
+              alt="Марина Лапанина"
+              className="w-full h-80 object-cover object-top"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Марина Лапанина</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-700">
+            <img
+              src="https://cdn.poehali.dev/files/eed38ff6-37cf-4311-a81c-38cda6f02ebb.jpg"
+              alt="Вадим Котков"
+              className="w-full h-80 object-cover object-top"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Вадим Котков</h3>
+              <p className="text-primary font-semibold">Актёр</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-700">
+            <img
+              src="https://cdn.poehali.dev/files/d297b153-c34b-4120-a41d-e24c16a95cc0.jpg"
+              alt="Екатерина Миронова"
+              className="w-full h-80 object-cover object-top"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Екатерина Миронова</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-700">
+            <img
+              src="https://cdn.poehali.dev/files/3eacd4c3-117b-4ab9-b141-d56502b29550.JPG"
+              alt="Галина Попова"
+              className="w-full h-80 object-cover object-top"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Галина Попова</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="text-center max-w-3xl mx-auto">
