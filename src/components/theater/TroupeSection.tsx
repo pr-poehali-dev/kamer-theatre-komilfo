@@ -17,7 +17,7 @@ export const TroupeSection = () => {
                 <img
                   src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
                   alt="Светлана Кузикова"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <CardContent className="p-6">
@@ -57,6 +57,9 @@ export const TroupeSection = () => {
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Маргарита Щадова</h3>
                 <p className="text-primary font-semibold mb-4">Помощник режиссёра</p>
+                <p className="text-muted-foreground mb-4">
+                  Профессиональный педагог-психолог, увлекается балетом и живописью. Студентка режиссерского факультета.
+                </p>
               </CardContent>
             </div>
           </Card>
