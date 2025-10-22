@@ -13,31 +13,31 @@ export const TroupeSection = () => {
         <div className="max-w-3xl mx-auto mb-16">
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
             <div className="md:flex md:flex-row">
-              <div className="md:w-2/5 h-56 md:h-auto">
+              <div className="md:w-2/5 h-72 md:h-auto">
                 <img
                   src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
                   alt="Светлана Кузикова"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[center_30%]"
                 />
               </div>
-              <CardContent className="p-5 md:w-3/5 flex flex-col justify-center">
-                <h3 className="text-xl font-bold mb-1">Светлана Кузикова</h3>
-                <p className="text-primary font-semibold mb-2 text-sm">Художественный руководитель и режиссёр</p>
-                <p className="text-muted-foreground mb-3 text-sm">
+              <CardContent className="p-6 md:w-3/5 flex flex-col justify-center">
+                <h3 className="text-2xl font-bold mb-2">Светлана Кузикова</h3>
+                <p className="text-primary font-semibold mb-3 text-base">Художественный руководитель и режиссёр</p>
+                <p className="text-muted-foreground mb-4 text-base">
                   Основатель театра «Комильфо» и школы Kuzikova school. 
                   Создатель уникальной методики «Перформанс-терапия», сочетающей театральное искусство и психологию.
                 </p>
-                <div className="space-y-1.5 text-muted-foreground text-sm">
+                <div className="space-y-2 text-muted-foreground text-base">
                   <div className="flex items-center gap-2">
-                    <Icon name="Award" size={16} className="text-primary" />
+                    <Icon name="Award" size={18} className="text-primary" />
                     <span>Профессиональный психолог</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Theater" size={16} className="text-primary" />
+                    <Icon name="Theater" size={18} className="text-primary" />
                     <span>Режиссёр более 20 спектаклей</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Users" size={16} className="text-primary" />
+                    <Icon name="Users" size={18} className="text-primary" />
                     <span>Преподаватель актерского мастерства</span>
                   </div>
                 </div>
