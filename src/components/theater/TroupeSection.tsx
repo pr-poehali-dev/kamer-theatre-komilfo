@@ -52,14 +52,11 @@ export const TroupeSection = () => {
               src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
               alt="Маргарита Щадова"
               className="w-full h-80 object-cover"
-              style={{objectPosition: 'center 5%'}}
+              style={{objectPosition: 'center 15%'}}
             />
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Маргарита Щадова</h3>
-              <p className="text-primary font-semibold mb-2">Помощник режиссёра</p>
-              <p className="text-sm text-muted-foreground">
-                Профессиональный педагог-психолог, увлекается балетом и живописью. Студентка режиссерского факультета.
-              </p>
+              <p className="text-primary font-semibold">Помощник режиссёра</p>
             </CardContent>
           </Card>
 
