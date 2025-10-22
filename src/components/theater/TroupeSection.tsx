@@ -46,6 +46,68 @@ export const TroupeSection = () => {
           </Card>
         </div>
 
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
+            <img
+              src="https://cdn.poehali.dev/files/333df901-4df8-4e3d-97d2-db05a168637a.JPG"
+              alt="Александра Линькова"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Александра Линькова</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-100">
+            <img
+              src="https://cdn.poehali.dev/files/05270faa-ccc9-4e82-95b2-91e989be40c4.JPG"
+              alt="Оксана Суханова"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Оксана Суханова</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-200">
+            <img
+              src="https://cdn.poehali.dev/files/44de1856-5684-422b-91e2-915bf5cbe0a7.jpg"
+              alt="Евгения Трунова"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Евгения Трунова</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-300">
+            <img
+              src="https://cdn.poehali.dev/files/0217f62e-3092-4c22-bdd5-96ee006168bb.jpg"
+              alt="Елена Короткова"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Елена Короткова</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-400">
+            <img
+              src="https://cdn.poehali.dev/files/fa153495-5697-4b90-8503-4aaa2ee50e64.jpg"
+              alt="Елена Соболева"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Елена Соболева</h3>
+              <p className="text-primary font-semibold">Актриса</p>
+            </CardContent>
+          </Card>
+        </div>
+
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-lg text-muted-foreground mb-6">
             В нашей труппе — талантливые актёры, объединённые любовью к театру и стремлением к творческому росту. 
