@@ -69,6 +69,7 @@ const Index = () => {
             onPerformanceClick={setSelectedPerformance}
           />
         </div>
+        <AboutSection />
         <div id="troupe">
           <TroupeSection />
         </div>

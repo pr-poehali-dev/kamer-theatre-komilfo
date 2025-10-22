@@ -61,8 +61,6 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
           </div>
         </div>
       </div>
-
-      <AboutSection />
     </div>
   );
 };
