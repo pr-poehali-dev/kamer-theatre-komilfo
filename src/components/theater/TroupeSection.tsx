@@ -27,17 +27,17 @@ export const TroupeSection = () => {
                   Основатель театра «Комильфо» и школы Kuzikova school. 
                   Создатель уникальной методики «Перформанс-терапия», сочетающей театральное искусство и психологию.
                 </p>
-                <div className="space-y-1.5 text-muted-foreground text-xs">
+                <div className="space-y-1.5 text-muted-foreground text-sm">
                   <div className="flex items-center gap-2">
-                    <Icon name="Award" size={14} className="text-primary" />
+                    <Icon name="Award" size={16} className="text-primary" />
                     <span>Профессиональный психолог</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Theater" size={14} className="text-primary" />
+                    <Icon name="Theater" size={16} className="text-primary" />
                     <span>Режиссёр более 20 спектаклей</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Users" size={14} className="text-primary" />
+                    <Icon name="Users" size={16} className="text-primary" />
                     <span>Преподаватель актерского мастерства</span>
                   </div>
                 </div>
