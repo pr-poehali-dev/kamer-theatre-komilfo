@@ -133,7 +133,7 @@ export const EducationSection = () => {
                   </a>
                   
                   <div className="mt-6 pt-6 border-t border-border">
-                    <p className="text-2xl font-bold text-primary mb-2">от 15 900 ₽</p>
+                    <p className="text-2xl font-bold text-primary mb-2">от 19 500 ₽</p>
                     <Button 
                       className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                       onClick={() => window.open('https://orator-site-creation--preview.poehali.dev/', '_blank')}
