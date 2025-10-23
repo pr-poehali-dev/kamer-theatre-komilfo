@@ -199,6 +199,7 @@ export const TroupeSection = () => {
               src="https://cdn.poehali.dev/files/6222ec37-1322-42c3-84a4-d7a055807477.JPG"
               alt="Андрей Савченко"
               className="w-full h-80 object-cover"
+              style={{objectPosition: 'center 20%'}}
             />
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Андрей Савченко</h3>
