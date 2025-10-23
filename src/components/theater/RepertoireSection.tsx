@@ -51,7 +51,11 @@ export const RepertoireSection = ({ onNavigate, onPerformanceClick }: Repertoire
                   className="w-full mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
                   onClick={(e) => {
                     e.stopPropagation();
-                    onNavigate('schedule');
+                    if (perf.title === 'Идеальный неидеальный вечер') {
+                      window.open('https://afisha.nethouse.ru/event/perfect-new-year', '_blank');
+                    } else {
+                      onNavigate('schedule');
+                    }
                   }}
                 >
                   {perf.title === 'Идеальный неидеальный вечер' ? 'Купить билет' : 'Афиша'}
