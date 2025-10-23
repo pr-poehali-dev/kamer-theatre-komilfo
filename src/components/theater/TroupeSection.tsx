@@ -35,7 +35,7 @@ export const TroupeSection = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Icon name="Theater" size={18} className="text-primary" />
-                      <span>Режиссёр более 20 спектаклей</span>
+                      <span>Создала более 20 спектаклей</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Icon name="Users" size={18} className="text-primary" />
@@ -48,14 +48,14 @@ export const TroupeSection = () => {
 
             <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-100">
               <div className="md:flex md:flex-row">
-                <div className="md:w-2/5 h-72 md:h-auto">
+                <div className="md:w-[45%] h-80 md:h-auto">
                   <img
                     src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
                     alt="Маргарита Щадова"
                     className="w-full h-full object-cover object-[center_25%]"
                   />
                 </div>
-                <CardContent className="p-6 md:w-3/5 flex flex-col justify-center">
+                <CardContent className="p-6 md:w-[55%] flex flex-col justify-center">
                   <h3 className="text-2xl font-bold mb-2">Маргарита Щадова</h3>
                   <p className="text-primary font-semibold mb-3 text-base">Помощник режиссёра</p>
                   <p className="text-muted-foreground mb-4 text-base">
