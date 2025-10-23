@@ -196,6 +196,42 @@ export const TroupeSection = () => {
 
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-800">
             <img
+              src="https://cdn.poehali.dev/files/6222ec37-1322-42c3-84a4-d7a055807477.JPG"
+              alt="Андрей Савченко"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Андрей Савченко</h3>
+              <p className="text-primary font-semibold">Актёр</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-900">
+            <img
+              src="https://cdn.poehali.dev/files/4a84b9a1-caa2-4a3d-81c0-05d17d1d5a05.JPG"
+              alt="Леонид Батышев"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Леонид Батышев</h3>
+              <p className="text-primary font-semibold">Актёр</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-1000">
+            <img
+              src="https://cdn.poehali.dev/files/793fb641-52ba-4cc9-9132-9f4b31b5693a.jpg"
+              alt="Темирлан Тугушев"
+              className="w-full h-80 object-cover"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Темирлан Тугушев</h3>
+              <p className="text-primary font-semibold">Актёр</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-1100">
+            <img
               src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
               alt="Маргарита Щадова"
               className="w-full h-80 object-cover"
