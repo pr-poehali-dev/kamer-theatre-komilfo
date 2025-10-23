@@ -83,31 +83,25 @@ export const ScheduleSection = () => {
             </Card>
           ))}
         </div>
-        <div className="mt-12 text-center bg-muted/30 rounded-lg p-8">
-          <Icon name="Info" size={32} className="text-primary mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-4">Как купить билеты</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Для приобретения билетов свяжитесь с нами по телефону или через мессенджеры. 
-            Мы поможем выбрать лучшие места и ответим на все вопросы.
+        <div className="mt-12 text-center">
+          <p className="text-muted-foreground mb-4">
+            Для приобретения билетов свяжитесь с нами: {' '}
+            <a 
+              href="https://t.me/svetlana_kuzikova" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
+              Telegram
+            </a>
+            {' '} или {' '}
+            <a 
+              href="tel:+79183111712"
+              className="text-primary hover:underline font-semibold"
+            >
+              +7 918 311 17 12
+            </a>
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => window.open('https://t.me/svetlana_kuzikova', '_blank')}
-            >
-              <Icon name="Send" size={20} className="mr-2" />
-              Написать в Telegram
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => window.open('tel:+79183111712', '_blank')}
-            >
-              <Icon name="Phone" size={20} className="mr-2" />
-              Позвонить
-            </Button>
-          </div>
         </div>
       </div>
     </div>
