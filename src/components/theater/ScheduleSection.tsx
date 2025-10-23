@@ -94,7 +94,7 @@ export const ScheduleSection = () => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => window.open('https://t.me/tanya_kuzikova', '_blank')}
+              onClick={() => window.open('https://t.me/svetlana_kuzikova', '_blank')}
             >
               <Icon name="Send" size={20} className="mr-2" />
               Написать в Telegram
@@ -102,7 +102,7 @@ export const ScheduleSection = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => window.open('tel:+79189999999', '_blank')}
+              onClick={() => window.open('tel:+79183111712', '_blank')}
             >
               <Icon name="Phone" size={20} className="mr-2" />
               Позвонить
