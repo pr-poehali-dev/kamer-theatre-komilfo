@@ -7,6 +7,7 @@ import { PerformanceModal } from '@/components/theater/PerformanceModal';
 import { TroupeSection } from '@/components/theater/TroupeSection';
 import { EducationSection } from '@/components/theater/EducationSection';
 import { GallerySection } from '@/components/theater/GallerySection';
+import { ReviewsSection } from '@/components/theater/ReviewsSection';
 import { ScheduleSection } from '@/components/theater/ScheduleSection';
 import { ContactsSection } from '@/components/theater/ContactsSection';
 
@@ -16,7 +17,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'schedule', 'repertoire', 'about', 'troupe', 'education', 'gallery', 'contacts'];
+      const sections = ['home', 'schedule', 'repertoire', 'about', 'troupe', 'education', 'gallery', 'reviews', 'contacts'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -80,6 +81,9 @@ const Index = () => {
         </div>
         <div id="gallery">
           <GallerySection />
+        </div>
+        <div id="reviews">
+          <ReviewsSection />
         </div>
         <div id="contacts">
           <ContactsSection />
