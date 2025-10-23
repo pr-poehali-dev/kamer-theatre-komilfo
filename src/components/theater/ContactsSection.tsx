@@ -11,39 +11,7 @@ export const ContactsSection = () => {
           Мы всегда рады ответить на ваши вопросы
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="bg-card border-border hover:shadow-lg transition-shadow animate-scale-in delay-100">
-            <CardContent className="p-8">
-              <Icon name="MapPin" size={32} className="text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Адрес театра</h3>
-              <p className="text-muted-foreground mb-4">
-                г. Краснодар, ул. Горького, 104<br />
-                Офис 26, код двери: 26
-              </p>
-              <Button
-                variant="outline"
-                onClick={() => window.open('https://yandex.ru/maps/-/CDdkv0dW', '_blank')}
-              >
-                <Icon name="Navigation" size={18} className="mr-2" />
-                Построить маршрут
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-card border-border hover:shadow-lg transition-shadow animate-scale-in delay-200">
-            <CardContent className="p-8">
-              <Icon name="Clock" size={32} className="text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Режим работы</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Понедельник - Пятница: 10:00 - 21:00</p>
-                <p>Суббота - Воскресенье: 11:00 - 22:00</p>
-                <p className="text-sm mt-4">Кассы открываются за час до начала спектакля</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow animate-scale-in delay-100">
             <CardContent className="p-6 text-center">
               <Icon name="Phone" size={40} className="text-primary mx-auto mb-4" />
@@ -79,6 +47,24 @@ export const ContactsSection = () => {
             </CardContent>
           </Card>
         </div>
+
+        <Card className="bg-card border-border hover:shadow-lg transition-shadow animate-scale-in delay-100 mb-12">
+          <CardContent className="p-8">
+            <Icon name="MapPin" size={32} className="text-primary mb-4" />
+            <h3 className="text-2xl font-bold mb-4">Адрес театра</h3>
+            <p className="text-muted-foreground mb-4">
+              г. Краснодар, ул. Горького, 104<br />
+              Офис 26, код двери: 26
+            </p>
+            <Button
+              variant="outline"
+              onClick={() => window.open('https://yandex.ru/maps/-/CDdkv0dW', '_blank')}
+            >
+              <Icon name="Navigation" size={18} className="mr-2" />
+              Построить маршрут
+            </Button>
+          </CardContent>
+        </Card>
 
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-center mb-8">Наши социальные сети</h3>
