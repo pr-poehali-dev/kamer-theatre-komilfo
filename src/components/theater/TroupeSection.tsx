@@ -25,12 +25,12 @@ export const TroupeSection = () => {
                 <p className="text-primary font-semibold mb-3 text-base">Художественный руководитель и режиссёр</p>
                 <p className="text-muted-foreground mb-4 text-base">
                   Основатель театра «Комильфо» и школы Kuzikova school. 
-                  Создатель уникальной методики «Перформанс-терапия», сочетающей театральное искусство и психологию.
+                  Создатель уникального курса «Перформанс-терапия», сочетающего театральное искусство и психологию.
                 </p>
                 <div className="space-y-2 text-muted-foreground text-base">
                   <div className="flex items-center gap-2">
                     <Icon name="Award" size={18} className="text-primary" />
-                    <span>Профессиональный психолог</span>
+                    <span>Профессиональный психолог и режиссёр</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Icon name="Theater" size={18} className="text-primary" />
@@ -38,7 +38,7 @@ export const TroupeSection = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Icon name="Users" size={18} className="text-primary" />
-                    <span>Преподаватель актерского мастерства</span>
+                    <span>Педагог по ораторскому искусству</span>
                   </div>
                 </div>
               </CardContent>
