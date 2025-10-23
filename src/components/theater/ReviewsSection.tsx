@@ -44,7 +44,7 @@ export const ReviewsSection = () => {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a
-              href="https://vk.com/komilfo_theatre"
+              href="https://vk.com/theatre_komilfo?from=groups"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
@@ -53,7 +53,7 @@ export const ReviewsSection = () => {
               ВКонтакте
             </a>
             <a
-              href="https://t.me/tanya_kuzikova"
+              href="https://t.me/kuzikova_school_theatre"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
