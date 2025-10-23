@@ -48,23 +48,23 @@ export const ContactsSection = () => {
           </Card>
         </div>
 
-        <Card className="bg-card border-border hover:shadow-lg transition-shadow animate-scale-in delay-100 mb-12">
-          <CardContent className="p-8">
-            <Icon name="MapPin" size={32} className="text-primary mb-4" />
-            <h3 className="text-2xl font-bold mb-4">Адрес театра</h3>
-            <p className="text-muted-foreground mb-4">
-              г. Краснодар, ул. Горького, 104<br />
-              Офис 26, код двери: 26
-            </p>
-            <Button
-              variant="outline"
-              onClick={() => window.open('https://yandex.ru/maps/-/CDdkv0dW', '_blank')}
-            >
-              <Icon name="Navigation" size={18} className="mr-2" />
-              Построить маршрут
-            </Button>
-          </CardContent>
-        </Card>
+        <div className="text-center mb-12 animate-fade-in-up delay-100">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <Icon name="MapPin" size={24} className="text-primary" />
+            <h3 className="text-2xl font-bold">Адрес театра</h3>
+          </div>
+          <p className="text-muted-foreground text-lg mb-4">
+            г. Краснодар, ул. Горького, 104<br />
+            Офис 26, код двери: 26
+          </p>
+          <Button
+            variant="outline"
+            onClick={() => window.open('https://yandex.ru/maps/-/CDdkv0dW', '_blank')}
+          >
+            <Icon name="Navigation" size={18} className="mr-2" />
+            Построить маршрут
+          </Button>
+        </div>
 
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-center mb-8">Наши социальные сети</h3>
