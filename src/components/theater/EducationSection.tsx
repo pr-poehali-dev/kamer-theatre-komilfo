@@ -209,7 +209,7 @@ export const EducationSection = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                onClick={() => window.open('https://t.me/tanya_kuzikova', '_blank')}
+                onClick={() => window.open('https://t.me/svetlana_kuzikova', '_blank')}
               >
                 Написать в Telegram
               </Button>
