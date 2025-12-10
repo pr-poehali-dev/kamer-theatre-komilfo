@@ -10,75 +10,40 @@ export const TroupeSection = () => {
           Познакомьтесь с творческой командой театра Комильфо
         </p>
 
-        <div className="max-w-6xl mx-auto mb-16">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
-              <div className="md:flex md:flex-row">
-                <div className="md:w-2/5 h-72 md:h-auto">
-                  <img
-                    src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
-                    alt="Светлана Кузикова"
-                    className="w-full h-full object-cover object-[center_30%]"
-                  />
-                </div>
-                <CardContent className="p-6 md:w-3/5 flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-2">Светлана Кузикова</h3>
-                  <p className="text-primary font-semibold mb-3 text-base">Художественный руководитель и режиссёр</p>
-                  <p className="text-muted-foreground mb-4 text-base">
-                    Основатель театра «Комильфо» и школы Kuzikova school. 
-                    Создатель уникального курса «Перформанс-терапия», сочетающего театральное искусство и психологию.
-                  </p>
-                  <div className="space-y-2 text-muted-foreground text-base">
-                    <div className="flex items-center gap-2">
-                      <Icon name="Award" size={18} className="text-primary" />
-                      <span>Профессиональный психолог и режиссёр</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Icon name="Theater" size={18} className="text-primary" />
-                      <span>Создала более 20 спектаклей</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Icon name="Users" size={18} className="text-primary" />
-                      <span>Педагог по ораторскому искусству</span>
-                    </div>
-                  </div>
-                </CardContent>
+        <div className="max-w-4xl mx-auto mb-16">
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in">
+            <div className="md:flex md:flex-row">
+              <div className="md:w-2/5 h-72 md:h-auto">
+                <img
+                  src="https://cdn.poehali.dev/files/69dfcfe5-c796-4a3f-99a4-abf7a96dd6ce.JPG"
+                  alt="Светлана Кузикова"
+                  className="w-full h-full object-cover object-[center_30%]"
+                />
               </div>
-            </Card>
-
-            <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-100">
-              <div className="md:flex md:flex-row">
-                <div className="md:w-[45%] h-80 md:h-auto">
-                  <img
-                    src="https://cdn.poehali.dev/files/8f415f8c-d913-4207-b8b6-59caaa53d957.jpg"
-                    alt="Маргарита Щадова"
-                    className="w-full h-full object-cover object-[center_25%]"
-                  />
-                </div>
-                <CardContent className="p-6 md:w-[55%] flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-2">Маргарита Щадова</h3>
-                  <p className="text-primary font-semibold mb-3 text-base">Помощник режиссёра</p>
-                  <p className="text-muted-foreground mb-4 text-base">
-                    Профессиональный педагог-психолог, студентка режиссёрского факультета, увлечена балетом и живописью.
-                  </p>
-                  <div className="space-y-2 text-muted-foreground text-base">
-                    <div className="flex items-center gap-2">
-                      <Icon name="Users" size={18} className="text-primary" />
-                      <span>Помощник режиссёра по работе с актёрами</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Icon name="Briefcase" size={18} className="text-primary" />
-                      <span>Менеджер проектов</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Icon name="Calendar" size={18} className="text-primary" />
-                      <span>Организатор мероприятий</span>
-                    </div>
+              <CardContent className="p-6 md:w-3/5 flex flex-col justify-center">
+                <h3 className="text-2xl font-bold mb-2">Светлана Кузикова</h3>
+                <p className="text-primary font-semibold mb-3 text-base">Художественный руководитель и режиссёр</p>
+                <p className="text-muted-foreground mb-4 text-base">
+                  Основатель театра «Комильфо» и школы Kuzikova school. 
+                  Создатель уникального курса «Перформанс-терапия», сочетающего театральное искусство и психологию.
+                </p>
+                <div className="space-y-2 text-muted-foreground text-base">
+                  <div className="flex items-center gap-2">
+                    <Icon name="Award" size={18} className="text-primary" />
+                    <span>Профессиональный психолог и режиссёр</span>
                   </div>
-                </CardContent>
-              </div>
-            </Card>
-          </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="Theater" size={18} className="text-primary" />
+                    <span>Создала более 20 спектаклей</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="Users" size={18} className="text-primary" />
+                    <span>Педагог по ораторскому искусству</span>
+                  </div>
+                </div>
+              </CardContent>
+            </div>
+          </Card>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
