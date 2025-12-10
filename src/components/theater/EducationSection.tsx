@@ -73,24 +73,14 @@ export const EducationSection = () => {
                     </li>
                   </ul>
                   
-                  <a 
-                    href="https://orator.turbo.site/theatre" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:underline mb-4"
-                  >
-                    <span>Подробнее о курсе</span>
-                    <Icon name="ExternalLink" size={16} />
-                  </a>
-                  
                   <div className="mt-6 pt-6 border-t border-border">
                     <p className="text-2xl font-bold text-primary mb-2">9 500 ₽/мес</p>
                     <p className="text-sm text-muted-foreground mb-3">при регистрации до 25 декабря</p>
                     <Button 
                       className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                      onClick={() => window.open('https://orator.turbo.site/theatre', '_blank')}
+                      onClick={() => window.open('https://performance-therapy-landing--preview.poehali.dev/', '_blank')}
                     >
-                      Записаться на курс
+                      Подробнее
                     </Button>
                   </div>
                 </div>
