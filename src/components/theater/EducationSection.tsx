@@ -69,7 +69,7 @@ export const EducationSection = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="CalendarCheck" size={18} className="text-primary mt-1" />
-                      <span>Следующий поток: с 28 ноября 2025 г.</span>
+                      <span>Следующий поток: с 19 января 2026 г.</span>
                     </li>
                   </ul>
                   
@@ -85,6 +85,7 @@ export const EducationSection = () => {
                   
                   <div className="mt-6 pt-6 border-t border-border">
                     <p className="text-2xl font-bold text-primary mb-2">9 500 ₽/мес</p>
+                    <p className="text-sm text-muted-foreground mb-3">при регистрации до 25 декабря</p>
                     <Button 
                       className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                       onClick={() => window.open('https://orator.turbo.site/theatre', '_blank')}
