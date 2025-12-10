@@ -186,24 +186,7 @@ export const galleryImages = [
 
 ];
 
-export const scheduleItems = [
-  {
-    date: '1 декабря',
-    time: '19:00',
-    title: 'Идеальный неидеальный вечер',
-    price: '700 ₽',
-    available: true,
-    ticketUrl: 'https://afisha.nethouse.ru/event/perfect-new-year',
-  },
-  {
-    date: '8 декабря',
-    time: '19:00',
-    title: 'Идеальный неидеальный вечер',
-    price: '700 ₽',
-    available: true,
-    ticketUrl: 'https://afisha.nethouse.ru/event/perfect-new-year',
-  },
-];
+export const scheduleItems = [];
 
 export const reviews = [
   {
