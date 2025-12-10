@@ -8,41 +8,9 @@ export const ScheduleSection = () => {
     <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Афиша</h2>
-        <p className="text-xl text-center text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up delay-100">
+        <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in-up delay-100">
           Ближайшие спектакли театра Комильфо
         </p>
-        
-        <div className="mb-12 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-xl p-8 border-2 border-primary/20 animate-fade-in-up delay-200">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Icon name="Sparkles" size={24} className="text-primary" />
-            <h3 className="text-2xl font-bold text-primary">🎄 Новогодняя премьера 🎄</h3>
-            <Icon name="Sparkles" size={24} className="text-primary" />
-          </div>
-          <h4 className="text-3xl font-bold text-center mb-3">Идеальный неидеальный вечер</h4>
-          <p className="text-center text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Новогодняя комедия о встрече Нового года в необычном месте. Смех, сюрпризы и праздничное настроение гарантированы!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <div className="flex items-center gap-2">
-              <Icon name="Calendar" size={20} className="text-primary" />
-              <span className="font-semibold">1 и 8 декабря 2025 г.</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Icon name="Clock" size={20} className="text-primary" />
-              <span className="font-semibold">19:00</span>
-            </div>
-          </div>
-          <div className="flex justify-center mt-6">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => window.open('https://afisha.nethouse.ru/event/perfect-new-year', '_blank')}
-            >
-              <Icon name="Ticket" size={20} className="mr-2" />
-              Купить билет
-            </Button>
-          </div>
-        </div>
 
         <div className="space-y-4">
           {scheduleItems.map((item, idx) => (
