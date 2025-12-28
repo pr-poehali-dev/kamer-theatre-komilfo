@@ -74,8 +74,7 @@ export const EducationSection = () => {
                   </ul>
                   
                   <div className="mt-6 pt-6 border-t border-border">
-                    <p className="text-2xl font-bold text-primary mb-2">9 500 ₽/мес</p>
-                    <p className="text-sm text-muted-foreground mb-3">при регистрации до 25 декабря</p>
+                    <p className="text-2xl font-bold text-primary mb-2">12 000 ₽/мес</p>
                     <Button 
                       className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                       onClick={() => window.open('https://performance-therapy-landing--preview.poehali.dev/', '_blank')}
