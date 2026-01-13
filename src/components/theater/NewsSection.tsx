@@ -1,77 +1,294 @@
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { newsItems, type News } from './data';
 
 export const NewsSection = () => {
+  const [news, setNews] = useState<News[]>(newsItems);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [isAdding, setIsAdding] = useState(false);
+  const [formData, setFormData] = useState<Partial<News>>({
+    title: '',
+    content: '',
+    tags: [],
+  });
+
+  const visibleNews = news.filter(item => item.isVisible);
+
+  const handleToggleVisibility = (id: string) => {
+    setNews(prev =>
+      prev.map(item =>
+        item.id === id ? { ...item, isVisible: !item.isVisible } : item
+      )
+    );
+  };
+
+  const handleDelete = (id: string) => {
+    if (confirm('Вы уверены, что хотите удалить эту новость?')) {
+      setNews(prev => prev.filter(item => item.id !== id));
+    }
+  };
+
+  const handleEdit = (item: News) => {
+    setEditingId(item.id);
+    setFormData(item);
+  };
+
+  const handleSave = () => {
+    if (editingId) {
+      setNews(prev =>
+        prev.map(item =>
+          item.id === editingId ? { ...item, ...formData } as News : item
+        )
+      );
+      setEditingId(null);
+    } else if (isAdding) {
+      const newItem: News = {
+        id: Date.now().toString(),
+        title: formData.title || '',
+        date: new Date().toISOString().split('T')[0],
+        content: formData.content || '',
+        tags: formData.tags || [],
+        isVisible: true,
+      };
+      setNews(prev => [newItem, ...prev]);
+      setIsAdding(false);
+    }
+    setFormData({ title: '', content: '', tags: [] });
+  };
+
+  const handleCancel = () => {
+    setEditingId(null);
+    setIsAdding(false);
+    setFormData({ title: '', content: '', tags: [] });
+  };
+
+  const handleAddNew = () => {
+    setIsAdding(true);
+    setFormData({ title: '', content: '', tags: [] });
+  };
+
   return (
     <div className="py-16 bg-gradient-to-b from-primary/5 to-transparent">
       <div className="container mx-auto px-4 max-w-4xl">
-        <Card className="bg-card border-primary/20 shadow-xl animate-fade-in">
-          <CardContent className="p-8 md:p-12">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Icon name="Trophy" size={32} className="text-primary" />
-              </div>
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h2 className="text-3xl md:text-4xl font-bold">Важная новость!</h2>
-                  <span className="text-3xl">🎉</span>
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-4xl font-bold">Новости театра</h2>
+          <Button onClick={handleAddNew} className="bg-primary hover:bg-primary/90">
+            <Icon name="Plus" size={20} className="mr-2" />
+            Добавить новость
+          </Button>
+        </div>
+
+        {isAdding && (
+          <Card className="mb-6 border-primary/30">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4">Новая новость</h3>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Заголовок</label>
+                  <input
+                    type="text"
+                    value={formData.title}
+                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                    className="w-full px-3 py-2 border border-border rounded-md bg-background"
+                    placeholder="Введите заголовок новости"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground">Январь 2026</p>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Содержание</label>
+                  <textarea
+                    value={formData.content}
+                    onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+                    className="w-full px-3 py-2 border border-border rounded-md bg-background min-h-[200px]"
+                    placeholder="Введите текст новости"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Теги (через запятую)</label>
+                  <input
+                    type="text"
+                    value={formData.tags?.join(', ')}
+                    onChange={(e) => setFormData({ ...formData, tags: e.target.value.split(',').map(t => t.trim()) })}
+                    className="w-full px-3 py-2 border border-border rounded-md bg-background"
+                    placeholder="тег1, тег2, тег3"
+                  />
+                </div>
+                <div className="flex gap-2">
+                  <Button onClick={handleSave} className="bg-primary hover:bg-primary/90">
+                    Сохранить
+                  </Button>
+                  <Button onClick={handleCancel} variant="outline">
+                    Отмена
+                  </Button>
+                </div>
               </div>
+            </CardContent>
+          </Card>
+        )}
+
+        <div className="space-y-6">
+          {visibleNews.map((item) => (
+            <Card key={item.id} className="bg-card border-primary/20 shadow-lg animate-fade-in">
+              {editingId === item.id ? (
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Редактирование новости</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Заголовок</label>
+                      <input
+                        type="text"
+                        value={formData.title}
+                        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                        className="w-full px-3 py-2 border border-border rounded-md bg-background"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Содержание</label>
+                      <textarea
+                        value={formData.content}
+                        onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+                        className="w-full px-3 py-2 border border-border rounded-md bg-background min-h-[200px]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Теги (через запятую)</label>
+                      <input
+                        type="text"
+                        value={formData.tags?.join(', ')}
+                        onChange={(e) => setFormData({ ...formData, tags: e.target.value.split(',').map(t => t.trim()) })}
+                        className="w-full px-3 py-2 border border-border rounded-md bg-background"
+                      />
+                    </div>
+                    <div className="flex gap-2">
+                      <Button onClick={handleSave} className="bg-primary hover:bg-primary/90">
+                        Сохранить
+                      </Button>
+                      <Button onClick={handleCancel} variant="outline">
+                        Отмена
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              ) : (
+                <CardContent className="p-8 md:p-12">
+                  <div className="flex items-start justify-between gap-4 mb-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <Icon name="Newspaper" size={32} className="text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-2">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">
+                          {new Date(item.date).toLocaleDateString('ru-RU', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                          })}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        onClick={() => handleEdit(item)}
+                        title="Редактировать"
+                      >
+                        <Icon name="Pencil" size={18} />
+                      </Button>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        onClick={() => handleToggleVisibility(item.id)}
+                        title={item.isVisible ? 'Скрыть' : 'Показать'}
+                      >
+                        <Icon name={item.isVisible ? 'EyeOff' : 'Eye'} size={18} />
+                      </Button>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        onClick={() => handleDelete(item.id)}
+                        title="Удалить"
+                        className="text-destructive hover:text-destructive"
+                      >
+                        <Icon name="Trash2" size={18} />
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 text-base leading-relaxed whitespace-pre-wrap">
+                    {item.content}
+                  </div>
+
+                  {item.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-border">
+                      {item.tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </CardContent>
+              )}
+            </Card>
+          ))}
+
+          {visibleNews.length === 0 && !isAdding && (
+            <Card className="bg-muted/30">
+              <CardContent className="p-12 text-center">
+                <Icon name="Newspaper" size={48} className="text-muted-foreground mx-auto mb-4" />
+                <p className="text-muted-foreground text-lg">Пока нет новостей</p>
+                <Button onClick={handleAddNew} className="mt-4 bg-primary hover:bg-primary/90">
+                  Добавить первую новость
+                </Button>
+              </CardContent>
+            </Card>
+          )}
+        </div>
+
+        {news.filter(item => !item.isVisible).length > 0 && (
+          <div className="mt-8 p-4 bg-muted/30 rounded-lg">
+            <h3 className="font-bold mb-3 flex items-center gap-2">
+              <Icon name="EyeOff" size={20} />
+              Скрытые новости ({news.filter(item => !item.isVisible).length})
+            </h3>
+            <div className="space-y-2">
+              {news
+                .filter(item => !item.isVisible)
+                .map(item => (
+                  <div
+                    key={item.id}
+                    className="flex items-center justify-between p-3 bg-background rounded-md"
+                  >
+                    <span className="text-sm">{item.title}</span>
+                    <div className="flex gap-2">
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        onClick={() => handleToggleVisibility(item.id)}
+                      >
+                        <Icon name="Eye" size={16} className="mr-1" />
+                        Показать
+                      </Button>
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        onClick={() => handleDelete(item.id)}
+                        className="text-destructive hover:text-destructive"
+                      >
+                        <Icon name="Trash2" size={16} />
+                      </Button>
+                    </div>
+                  </div>
+                ))}
             </div>
-
-            <div className="space-y-4 text-lg leading-relaxed">
-              <p className="font-semibold text-xl text-primary">
-                Наш театр «Комильфо» стал победителем грантового конкурса Президентского фонда культурных инициатив 2026 года!
-              </p>
-
-              <p>
-                Наш проект <strong>«ОЖИВШАЯ ИСТОРИЯ: театральный тур по местам боевой славы 46-го авиационного женского полка»</strong> вошел в число 810 лучших инициатив со всей России.
-              </p>
-
-              <p className="text-primary font-semibold">
-                Для нас это большая честь и высокая степень ответственности!
-              </p>
-
-              <div className="bg-muted/30 rounded-lg p-6 my-6">
-                <h3 className="font-bold text-xl mb-4">О проекте</h3>
-                <p className="mb-4">
-                  В рамках проекта мы в 2026 году организуем выезды в регионы края с показом спектакля <strong>«Безымянная карточка»</strong>, посвященного Великой Победе в 1941-1945 гг. и героическому подвигу женщин-ветеранов ВОВ, воевавших в разных родах войск, в том числе летчиц гвардейского авиационного полка «ночных ведьм», который базировался у нас в крае во время освобождения Кубани и Таманского полуострова.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold mb-3">Именно поэтому мы выбрали выезды в эти регионы края:</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🎖️</span>
-                    <span><strong>Станица Ивановская</strong> — здесь женскому авиационному полку было вручено знамя и присвоено звание Гвардейского.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🎖️</span>
-                    <span><strong>Поселок Пересыпь, Новороссийск и Крымск</strong> — в этих местах полк базировался в период воздушных боев на «Голубой линии».</span>
-                  </li>
-                </ul>
-              </div>
-
-              <p className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4">
-                Спектакль создан по материалам пьесы Э. Пиженко, книги С. Алексиевич «У войны не женское лицо», а также поэзии и прозы советских авторов.
-              </p>
-
-              <p className="font-semibold text-lg">
-                Мы уверены, что наша команда сможет ярко и качественно воплотить задуманное в жизнь, а наш патриотический проект будет тепло встречен жителями Кубани.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-border">
-                <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">#ФондКультурныхИнициатив</span>
-                <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">#ЯПобедительПФКИ</span>
-                <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">#театрКомильфо</span>
-                <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">#ВеликаяПобеда</span>
-                <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">#ПамятьПоколений</span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+          </div>
+        )}
       </div>
     </div>
   );
