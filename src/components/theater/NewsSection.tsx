@@ -240,7 +240,7 @@ export const NewsSection = () => {
                       <img 
                         src={item.image} 
                         alt={item.title}
-                        className="w-full h-64 object-cover"
+                        className="w-full h-auto max-h-96 object-contain bg-muted/20"
                       />
                     </div>
                   )}
