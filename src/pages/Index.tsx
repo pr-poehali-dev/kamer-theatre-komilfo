@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navigation } from '@/components/theater/Navigation';
 import { HomeSection } from '@/components/theater/HomeSection';
+import { NewsSection } from '@/components/theater/NewsSection';
 import { AboutSection } from '@/components/theater/AboutSection';
 import { RepertoireSection } from '@/components/theater/RepertoireSection';
 import { PerformanceModal } from '@/components/theater/PerformanceModal';
@@ -61,6 +62,7 @@ const Index = () => {
         <div id="home">
           <HomeSection onNavigate={handleNavigate} />
         </div>
+        <NewsSection />
         <div id="schedule">
           <ScheduleSection />
         </div>
