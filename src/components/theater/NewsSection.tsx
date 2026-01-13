@@ -11,8 +11,11 @@ export const NewsSection = () => {
   const [formData, setFormData] = useState<Partial<News>>({
     title: '',
     content: '',
+    image: '',
     tags: [],
   });
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string>('');
 
   const visibleNews = news.filter(item => item.isVisible);
 
@@ -33,13 +36,17 @@ export const NewsSection = () => {
   const handleEdit = (item: News) => {
     setEditingId(item.id);
     setFormData(item);
+    setImagePreview(item.image || '');
+    setImageFile(null);
   };
 
   const handleSave = () => {
+    const finalImage = imagePreview || formData.image || '';
+    
     if (editingId) {
       setNews(prev =>
         prev.map(item =>
-          item.id === editingId ? { ...item, ...formData } as News : item
+          item.id === editingId ? { ...item, ...formData, image: finalImage } as News : item
         )
       );
       setEditingId(null);
@@ -49,24 +56,49 @@ export const NewsSection = () => {
         title: formData.title || '',
         date: new Date().toISOString().split('T')[0],
         content: formData.content || '',
+        image: finalImage,
         tags: formData.tags || [],
         isVisible: true,
       };
       setNews(prev => [newItem, ...prev]);
       setIsAdding(false);
     }
-    setFormData({ title: '', content: '', tags: [] });
+    setFormData({ title: '', content: '', image: '', tags: [] });
+    setImageFile(null);
+    setImagePreview('');
   };
 
   const handleCancel = () => {
     setEditingId(null);
     setIsAdding(false);
-    setFormData({ title: '', content: '', tags: [] });
+    setFormData({ title: '', content: '', image: '', tags: [] });
+    setImageFile(null);
+    setImagePreview('');
   };
 
   const handleAddNew = () => {
     setIsAdding(true);
-    setFormData({ title: '', content: '', tags: [] });
+    setFormData({ title: '', content: '', image: '', tags: [] });
+    setImageFile(null);
+    setImagePreview('');
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setImageFile(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setImageFile(null);
+    setImagePreview('');
+    setFormData({ ...formData, image: '' });
   };
 
   return (
@@ -103,6 +135,37 @@ export const NewsSection = () => {
                     className="w-full px-3 py-2 border border-border rounded-md bg-background min-h-[200px]"
                     placeholder="Введите текст новости"
                   />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Изображение</label>
+                  {imagePreview ? (
+                    <div className="relative">
+                      <img src={imagePreview} alt="Preview" className="w-full h-48 object-cover rounded-md" />
+                      <Button
+                        type="button"
+                        size="icon"
+                        variant="destructive"
+                        className="absolute top-2 right-2"
+                        onClick={handleRemoveImage}
+                      >
+                        <Icon name="X" size={16} />
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="border-2 border-dashed border-border rounded-md p-6 text-center">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageChange}
+                        className="hidden"
+                        id="image-upload"
+                      />
+                      <label htmlFor="image-upload" className="cursor-pointer">
+                        <Icon name="Upload" size={32} className="mx-auto mb-2 text-muted-foreground" />
+                        <p className="text-sm text-muted-foreground">Нажмите для загрузки изображения</p>
+                      </label>
+                    </div>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Теги (через запятую)</label>
@@ -172,6 +235,15 @@ export const NewsSection = () => {
                 </CardContent>
               ) : (
                 <CardContent className="p-8 md:p-12">
+                  {item.image && (
+                    <div className="mb-6 -mx-8 md:-mx-12 -mt-8 md:-mt-12">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-64 object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-start justify-between gap-4 mb-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-primary/10 p-3 rounded-full">

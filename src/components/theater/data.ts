@@ -194,6 +194,7 @@ export interface News {
   title: string;
   date: string;
   content: string;
+  image?: string;
   tags: string[];
   isVisible: boolean;
 }
