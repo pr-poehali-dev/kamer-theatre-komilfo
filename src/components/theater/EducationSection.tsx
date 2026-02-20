@@ -65,11 +65,11 @@ export const EducationSection = () => {
                   <ul className="space-y-2 text-muted-foreground mb-4">
                     <li className="flex items-start gap-2">
                       <Icon name="Calendar" size={18} className="text-primary mt-1" />
-                      <span>Продолжительность: 3 месяца</span>
+                      <span>Продолжительность: 4 месяца</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="CalendarCheck" size={18} className="text-primary mt-1" />
-                      <span>Следующий поток: с 19 января 2026 г.</span>
+                      <span>Следующий поток: с сентября 2026 г.</span>
                     </li>
                   </ul>
                   
