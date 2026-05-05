@@ -53,6 +53,8 @@ export const RepertoireSection = ({ onNavigate, onPerformanceClick }: Repertoire
                     e.stopPropagation();
                     if (perf.title === 'Идеальный неидеальный вечер') {
                       window.open('https://afisha.nethouse.ru/event/perfect-new-year', '_blank');
+                    } else if (perf.title === 'Безымянная карточка') {
+                      window.open('https://afisha.nethouse.ru/event/bezymiannaia-kartocka-3', '_blank');
                     } else {
                       onNavigate('schedule');
                     }

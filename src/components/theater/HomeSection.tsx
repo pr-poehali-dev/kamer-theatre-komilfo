@@ -26,7 +26,7 @@ export const HomeSection = ({ onNavigate }: HomeSectionProps) => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => onNavigate('schedule')}
+              onClick={() => window.open('https://afisha.nethouse.ru/event/bezymiannaia-kartocka-3', '_blank')}
             >
               Афиша
             </Button>
