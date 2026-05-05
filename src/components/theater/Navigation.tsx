@@ -42,7 +42,7 @@ export const Navigation = ({ activeSection, onNavigate }: NavigationProps) => {
           <div className="flex items-center gap-3">
             <Button 
               className="hidden md:block bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => onNavigate('schedule')}
+              onClick={() => window.open('https://afisha.nethouse.ru/event/bezymiannaia-kartocka-3', '_blank')}
             >
               Купить билет
             </Button>
@@ -76,7 +76,7 @@ export const Navigation = ({ activeSection, onNavigate }: NavigationProps) => {
             ))}
             <Button 
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={() => handleNavigate('schedule')}
+              onClick={() => window.open('https://afisha.nethouse.ru/event/bezymiannaia-kartocka-3', '_blank')}
             >
               Купить билет
             </Button>
