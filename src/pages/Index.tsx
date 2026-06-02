@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navigation } from '@/components/theater/Navigation';
 import { HomeSection } from '@/components/theater/HomeSection';
-import { NewsSection } from '@/components/theater/NewsSection';
 import { AboutSection } from '@/components/theater/AboutSection';
 import { RepertoireSection } from '@/components/theater/RepertoireSection';
 import { PerformanceModal } from '@/components/theater/PerformanceModal';
@@ -18,7 +17,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'news', 'schedule', 'repertoire', 'about', 'troupe', 'education', 'gallery', 'reviews', 'contacts'];
+      const sections = ['home', 'schedule', 'repertoire', 'about', 'troupe', 'education', 'gallery', 'reviews', 'contacts'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -61,9 +60,6 @@ const Index = () => {
       <main className="pt-20">
         <div id="home">
           <HomeSection onNavigate={handleNavigate} />
-        </div>
-        <div id="news">
-          <NewsSection />
         </div>
         <div id="schedule">
           <ScheduleSection />

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { useNavigate } from 'react-router-dom';
 import { navigation } from './data';
 
 interface NavigationProps {
@@ -10,8 +11,14 @@ interface NavigationProps {
 
 export const Navigation = ({ activeSection, onNavigate }: NavigationProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleNavigate = (sectionId: string) => {
+    if (sectionId === 'news') {
+      navigate('/news');
+      setMobileMenuOpen(false);
+      return;
+    }
     onNavigate(sectionId);
     setMobileMenuOpen(false);
   };
@@ -28,7 +35,7 @@ export const Navigation = ({ activeSection, onNavigate }: NavigationProps) => {
             {navigation.map((item) => (
               <button
                 key={item.id}
-                onClick={() => onNavigate(item.id)}
+                onClick={() => handleNavigate(item.id)}
                 className={`transition-colors ${
                   activeSection === item.id
                     ? 'text-primary font-semibold'
