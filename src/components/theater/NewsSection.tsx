@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
-import { newsItems, type News } from './data';
+import { type News } from './data';
+
+const API_URL = 'https://functions.poehali.dev/94d4327a-7657-4e29-9efe-0d31e786f968';
 
 export const NewsSection = () => {
-  const [news, setNews] = useState<News[]>(newsItems);
+  const [news, setNews] = useState<News[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isAdding, setIsAdding] = useState(false);
   const [formData, setFormData] = useState<Partial<News>>({
@@ -14,12 +18,24 @@ export const NewsSection = () => {
     image: '',
     tags: [],
   });
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>('');
 
   const visibleNews = news.filter(item => item.isVisible);
 
-  const handleToggleVisibility = (id: string) => {
+  useEffect(() => {
+    fetchNews();
+  }, []);
+
+  const fetchNews = async () => {
+    setLoading(true);
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    setNews(data.news || []);
+    setLoading(false);
+  };
+
+  const handleToggleVisibility = async (id: string) => {
+    await fetch(`${API_URL}?action=toggle&id=${id}`, { method: 'PUT' });
     setNews(prev =>
       prev.map(item =>
         item.id === id ? { ...item, isVisible: !item.isVisible } : item
@@ -27,23 +43,41 @@ export const NewsSection = () => {
     );
   };
 
-  const handleDelete = (id: string) => {
-    if (confirm('Вы уверены, что хотите удалить эту новость?')) {
-      setNews(prev => prev.filter(item => item.id !== id));
-    }
+  const handleDelete = async (id: string) => {
+    if (!confirm('Вы уверены, что хотите удалить эту новость?')) return;
+    await fetch(`${API_URL}?id=${id}`, { method: 'DELETE' });
+    setNews(prev => prev.filter(item => item.id !== id));
   };
 
   const handleEdit = (item: News) => {
     setEditingId(item.id);
     setFormData(item);
     setImagePreview(item.image || '');
-    setImageFile(null);
   };
 
-  const handleSave = () => {
-    const finalImage = imagePreview || formData.image || '';
-    
+  const uploadImageIfNeeded = async (): Promise<string> => {
+    if (!imagePreview.startsWith('data:')) {
+      return imagePreview || formData.image || '';
+    }
+    const res = await fetch(`${API_URL}?action=upload_image`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ image: imagePreview }),
+    });
+    const data = await res.json();
+    return data.url || '';
+  };
+
+  const handleSave = async () => {
+    setSaving(true);
+    const finalImage = await uploadImageIfNeeded();
+
     if (editingId) {
+      await fetch(`${API_URL}?id=${editingId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, image: finalImage }),
+      });
       setNews(prev =>
         prev.map(item =>
           item.id === editingId ? { ...item, ...formData, image: finalImage } as News : item
@@ -51,10 +85,16 @@ export const NewsSection = () => {
       );
       setEditingId(null);
     } else if (isAdding) {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, image: finalImage }),
+      });
+      const data = await res.json();
       const newItem: News = {
-        id: Date.now().toString(),
+        id: data.id,
         title: formData.title || '',
-        date: new Date().toISOString().split('T')[0],
+        date: data.date,
         content: formData.content || '',
         image: finalImage,
         tags: formData.tags || [],
@@ -63,30 +103,28 @@ export const NewsSection = () => {
       setNews(prev => [newItem, ...prev]);
       setIsAdding(false);
     }
+
     setFormData({ title: '', content: '', image: '', tags: [] });
-    setImageFile(null);
     setImagePreview('');
+    setSaving(false);
   };
 
   const handleCancel = () => {
     setEditingId(null);
     setIsAdding(false);
     setFormData({ title: '', content: '', image: '', tags: [] });
-    setImageFile(null);
     setImagePreview('');
   };
 
   const handleAddNew = () => {
     setIsAdding(true);
     setFormData({ title: '', content: '', image: '', tags: [] });
-    setImageFile(null);
     setImagePreview('');
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setImageFile(file);
       const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result as string);
@@ -96,10 +134,87 @@ export const NewsSection = () => {
   };
 
   const handleRemoveImage = () => {
-    setImageFile(null);
     setImagePreview('');
     setFormData({ ...formData, image: '' });
   };
+
+  const renderForm = (title: string) => (
+    <Card className="mb-6 border-primary/30">
+      <CardContent className="p-6">
+        <h3 className="text-xl font-bold mb-4">{title}</h3>
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">Заголовок</label>
+            <input
+              type="text"
+              value={formData.title}
+              onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+              className="w-full px-3 py-2 border border-border rounded-md bg-background"
+              placeholder="Введите заголовок новости"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">Содержание</label>
+            <textarea
+              value={formData.content}
+              onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+              className="w-full px-3 py-2 border border-border rounded-md bg-background min-h-[200px]"
+              placeholder="Введите текст новости"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">Изображение</label>
+            {imagePreview ? (
+              <div className="relative">
+                <img src={imagePreview} alt="Preview" className="w-full h-48 object-cover rounded-md" />
+                <Button
+                  type="button"
+                  size="icon"
+                  variant="destructive"
+                  className="absolute top-2 right-2"
+                  onClick={handleRemoveImage}
+                >
+                  <Icon name="X" size={16} />
+                </Button>
+              </div>
+            ) : (
+              <div className="border-2 border-dashed border-border rounded-md p-6 text-center">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="hidden"
+                  id="image-upload"
+                />
+                <label htmlFor="image-upload" className="cursor-pointer">
+                  <Icon name="Upload" size={32} className="mx-auto mb-2 text-muted-foreground" />
+                  <p className="text-sm text-muted-foreground">Нажмите для загрузки изображения</p>
+                </label>
+              </div>
+            )}
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">Теги (через запятую)</label>
+            <input
+              type="text"
+              value={formData.tags?.join(', ')}
+              onChange={(e) => setFormData({ ...formData, tags: e.target.value.split(',').map(t => t.trim()).filter(Boolean) })}
+              className="w-full px-3 py-2 border border-border rounded-md bg-background"
+              placeholder="тег1, тег2, тег3"
+            />
+          </div>
+          <div className="flex gap-2">
+            <Button onClick={handleSave} disabled={saving} className="bg-primary hover:bg-primary/90">
+              {saving ? 'Сохранение...' : 'Сохранить'}
+            </Button>
+            <Button onClick={handleCancel} variant="outline" disabled={saving}>
+              Отмена
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
 
   return (
     <div className="py-16 bg-gradient-to-b from-primary/5 to-transparent">
@@ -112,216 +227,111 @@ export const NewsSection = () => {
           </Button>
         </div>
 
-        {isAdding && (
-          <Card className="mb-6 border-primary/30">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-4">Новая новость</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Заголовок</label>
-                  <input
-                    type="text"
-                    value={formData.title}
-                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full px-3 py-2 border border-border rounded-md bg-background"
-                    placeholder="Введите заголовок новости"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Содержание</label>
-                  <textarea
-                    value={formData.content}
-                    onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                    className="w-full px-3 py-2 border border-border rounded-md bg-background min-h-[200px]"
-                    placeholder="Введите текст новости"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Изображение</label>
-                  {imagePreview ? (
-                    <div className="relative">
-                      <img src={imagePreview} alt="Preview" className="w-full h-48 object-cover rounded-md" />
-                      <Button
-                        type="button"
-                        size="icon"
-                        variant="destructive"
-                        className="absolute top-2 right-2"
-                        onClick={handleRemoveImage}
-                      >
-                        <Icon name="X" size={16} />
-                      </Button>
-                    </div>
-                  ) : (
-                    <div className="border-2 border-dashed border-border rounded-md p-6 text-center">
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handleImageChange}
-                        className="hidden"
-                        id="image-upload"
-                      />
-                      <label htmlFor="image-upload" className="cursor-pointer">
-                        <Icon name="Upload" size={32} className="mx-auto mb-2 text-muted-foreground" />
-                        <p className="text-sm text-muted-foreground">Нажмите для загрузки изображения</p>
-                      </label>
-                    </div>
-                  )}
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Теги (через запятую)</label>
-                  <input
-                    type="text"
-                    value={formData.tags?.join(', ')}
-                    onChange={(e) => setFormData({ ...formData, tags: e.target.value.split(',').map(t => t.trim()) })}
-                    className="w-full px-3 py-2 border border-border rounded-md bg-background"
-                    placeholder="тег1, тег2, тег3"
-                  />
-                </div>
-                <div className="flex gap-2">
-                  <Button onClick={handleSave} className="bg-primary hover:bg-primary/90">
-                    Сохранить
-                  </Button>
-                  <Button onClick={handleCancel} variant="outline">
-                    Отмена
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        )}
+        {isAdding && renderForm('Новая новость')}
 
-        <div className="space-y-6">
-          {visibleNews.map((item) => (
-            <Card key={item.id} className="bg-card border-primary/20 shadow-lg animate-fade-in">
-              {editingId === item.id ? (
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">Редактирование новости</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">Заголовок</label>
-                      <input
-                        type="text"
-                        value={formData.title}
-                        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                        className="w-full px-3 py-2 border border-border rounded-md bg-background"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">Содержание</label>
-                      <textarea
-                        value={formData.content}
-                        onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                        className="w-full px-3 py-2 border border-border rounded-md bg-background min-h-[200px]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">Теги (через запятую)</label>
-                      <input
-                        type="text"
-                        value={formData.tags?.join(', ')}
-                        onChange={(e) => setFormData({ ...formData, tags: e.target.value.split(',').map(t => t.trim()) })}
-                        className="w-full px-3 py-2 border border-border rounded-md bg-background"
-                      />
-                    </div>
-                    <div className="flex gap-2">
-                      <Button onClick={handleSave} className="bg-primary hover:bg-primary/90">
-                        Сохранить
-                      </Button>
-                      <Button onClick={handleCancel} variant="outline">
-                        Отмена
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              ) : (
-                <CardContent className="p-8 md:p-12">
-                  {item.image && (
-                    <div className="mb-6 -mx-8 md:-mx-12 -mt-8 md:-mt-12">
-                      <img 
-                        src={item.image} 
-                        alt={item.title}
-                        className="w-full h-auto max-h-96 object-contain bg-muted/20"
-                      />
-                    </div>
-                  )}
-                  <div className="flex items-start justify-between gap-4 mb-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-full">
-                        <Icon name="Newspaper" size={32} className="text-primary" />
+        {loading ? (
+          <div className="text-center py-12 text-muted-foreground">
+            <Icon name="Loader" size={32} className="mx-auto mb-3 animate-spin" />
+            <p>Загрузка новостей...</p>
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {visibleNews.map((item) => (
+              <Card key={item.id} className="bg-card border-primary/20 shadow-lg animate-fade-in">
+                {editingId === item.id ? (
+                  <CardContent className="p-6">
+                    {renderForm('Редактирование новости')}
+                  </CardContent>
+                ) : (
+                  <CardContent className="p-8 md:p-12">
+                    {item.image && (
+                      <div className="mb-6 -mx-8 md:-mx-12 -mt-8 md:-mt-12">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-auto max-h-96 object-contain bg-muted/20"
+                        />
                       </div>
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-2">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground">
-                          {new Date(item.date).toLocaleDateString('ru-RU', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          })}
-                        </p>
+                    )}
+                    <div className="flex items-start justify-between gap-4 mb-6">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full">
+                          <Icon name="Newspaper" size={32} className="text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2">{item.title}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            {new Date(item.date).toLocaleDateString('ru-RU', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            })}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <Button
-                        size="icon"
-                        variant="ghost"
-                        onClick={() => handleEdit(item)}
-                        title="Редактировать"
-                      >
-                        <Icon name="Pencil" size={18} />
-                      </Button>
-                      <Button
-                        size="icon"
-                        variant="ghost"
-                        onClick={() => handleToggleVisibility(item.id)}
-                        title={item.isVisible ? 'Скрыть' : 'Показать'}
-                      >
-                        <Icon name={item.isVisible ? 'EyeOff' : 'Eye'} size={18} />
-                      </Button>
-                      <Button
-                        size="icon"
-                        variant="ghost"
-                        onClick={() => handleDelete(item.id)}
-                        title="Удалить"
-                        className="text-destructive hover:text-destructive"
-                      >
-                        <Icon name="Trash2" size={18} />
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4 text-base leading-relaxed whitespace-pre-wrap">
-                    {item.content}
-                  </div>
-
-                  {item.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-border">
-                      {item.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full"
+                      <div className="flex gap-2">
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          onClick={() => handleEdit(item)}
+                          title="Редактировать"
                         >
-                          #{tag}
-                        </span>
-                      ))}
+                          <Icon name="Pencil" size={18} />
+                        </Button>
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          onClick={() => handleToggleVisibility(item.id)}
+                          title={item.isVisible ? 'Скрыть' : 'Показать'}
+                        >
+                          <Icon name={item.isVisible ? 'EyeOff' : 'Eye'} size={18} />
+                        </Button>
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          onClick={() => handleDelete(item.id)}
+                          title="Удалить"
+                          className="text-destructive hover:text-destructive"
+                        >
+                          <Icon name="Trash2" size={18} />
+                        </Button>
+                      </div>
                     </div>
-                  )}
-                </CardContent>
-              )}
-            </Card>
-          ))}
 
-          {visibleNews.length === 0 && !isAdding && (
-            <Card className="bg-muted/30">
-              <CardContent className="p-12 text-center">
-                <Icon name="Newspaper" size={48} className="text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground text-lg">Пока нет новостей</p>
-                <Button onClick={handleAddNew} className="mt-4 bg-primary hover:bg-primary/90">
-                  Добавить первую новость
-                </Button>
-              </CardContent>
-            </Card>
-          )}
-        </div>
+                    <div className="space-y-4 text-base leading-relaxed whitespace-pre-wrap">
+                      {item.content}
+                    </div>
+
+                    {item.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-border">
+                        {item.tags.map((tag, index) => (
+                          <span
+                            key={index}
+                            className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </CardContent>
+                )}
+              </Card>
+            ))}
+
+            {visibleNews.length === 0 && !isAdding && (
+              <Card className="bg-muted/30">
+                <CardContent className="p-12 text-center">
+                  <Icon name="Newspaper" size={48} className="text-muted-foreground mx-auto mb-4" />
+                  <p className="text-muted-foreground text-lg">Пока нет новостей</p>
+                  <Button onClick={handleAddNew} className="mt-4 bg-primary hover:bg-primary/90">
+                    Добавить первую новость
+                  </Button>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        )}
 
         {news.filter(item => !item.isVisible).length > 0 && (
           <div className="mt-8 p-4 bg-muted/30 rounded-lg">
