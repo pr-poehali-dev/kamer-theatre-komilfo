@@ -25,11 +25,11 @@ export const ReviewsSection = () => {
                   ))}
                 </div>
                 
-                <p className="text-muted-foreground mb-4 italic">"{review.text}"</p>
+                <p className="text-base text-muted-foreground mb-4 italic">"{review.text}"</p>
                 
                 <div className="border-t border-border pt-4">
                   <p className="font-semibold text-foreground">{review.name}</p>
-                  <p className="text-sm text-muted-foreground">{review.performance}</p>
+                  <p className="text-base text-muted-foreground">{review.performance}</p>
                 </div>
               </CardContent>
             </Card>

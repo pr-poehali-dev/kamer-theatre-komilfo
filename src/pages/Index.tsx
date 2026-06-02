@@ -101,7 +101,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-lg mb-4">Официальная информация</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="space-y-2 text-base text-muted-foreground">
                 <p><strong>ИП Кузикова Светлана Алексеевна</strong></p>
                 <p>ОГРНИП: 318237500160591</p>
                 <p>Адрес: г. Краснодар, ул. Горького, 104, офис 26</p>
@@ -110,7 +110,7 @@ const Index = () => {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4">Документы</h3>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-2 text-base">
                 <p>
                   <a href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
                     Политика конфиденциальности
@@ -129,7 +129,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="text-center text-muted-foreground text-sm pt-6 border-t border-border">
+          <div className="text-center text-muted-foreground text-base pt-6 border-t border-border">
             <p>&copy; 2017 Камерный театр Комильфо. Все права защищены.</p>
           </div>
         </div>

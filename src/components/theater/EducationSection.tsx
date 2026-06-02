@@ -34,14 +34,14 @@ export const EducationSection = () => {
                   {showPerformanceInfo && (
                     <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-4 animate-fade-in">
                       <h4 className="font-bold mb-3 text-lg">Что это такое «Перфоманс-терапия»?</h4>
-                      <p className="text-sm text-muted-foreground mb-4">
+                      <p className="text-base text-muted-foreground mb-4">
                         Это актерское мастерство + импровизация + групповая психотерапия, 
                         направленная на обретение контакта с собой и миром = личностный рост, 
                         уверенность в себе и готовность проЯвляться.
                       </p>
                       
                       <h4 className="font-bold mb-3">Как это работает?</h4>
-                      <ul className="space-y-2 text-sm">
+                      <ul className="space-y-2 text-base">
                         <li className="flex items-start gap-2">
                           <span>🎭</span>
                           <span><strong>Актерские техники</strong> → убираем зажимы.</span>
@@ -143,21 +143,21 @@ export const EducationSection = () => {
             <div className="text-center animate-fade-in-up delay-200">
               <Icon name="Star" size={40} className="text-primary mx-auto mb-4" />
               <h4 className="font-semibold mb-2">Профессиональные педагоги</h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Действующие актёры нашего театра
               </p>
             </div>
             <div className="text-center animate-fade-in-up delay-300">
               <Icon name="Theater" size={40} className="text-primary mx-auto mb-4" />
               <h4 className="font-semibold mb-2">Реальная сцена</h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Занятия на профессиональной площадке
               </p>
             </div>
             <div className="text-center animate-fade-in-up delay-400">
               <Icon name="Award" size={40} className="text-primary mx-auto mb-4" />
               <h4 className="font-semibold mb-2">Сертификат</h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 По окончании курса
               </p>
             </div>
