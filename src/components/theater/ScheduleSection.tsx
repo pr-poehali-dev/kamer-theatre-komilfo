@@ -7,7 +7,7 @@ export const ScheduleSection = () => {
   return (
     <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Афиша</h2>
+        <h2 className="text-6xl font-bold text-center mb-8 animate-fade-in-up">Афиша</h2>
         <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in-up delay-100">
           Ближайшие спектакли театра Комильфо
         </p>

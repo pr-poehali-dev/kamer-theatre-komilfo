@@ -12,7 +12,7 @@ export const RepertoireSection = ({ onNavigate, onPerformanceClick }: Repertoire
   return (
     <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Репертуар</h2>
+        <h2 className="text-6xl font-bold text-center mb-8 animate-fade-in-up">Репертуар</h2>
         <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
           Камерный театр большой искренности
         </p>

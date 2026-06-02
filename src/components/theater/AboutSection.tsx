@@ -4,7 +4,7 @@ export const AboutSection = () => {
   return (
     <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-5xl font-bold text-center mb-12 animate-fade-in-up">О театре</h2>
+        <h2 className="text-6xl font-bold text-center mb-12 animate-fade-in-up">О театре</h2>
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-muted-foreground leading-relaxed mb-6 animate-fade-in-up delay-100">
             Театр «КОМИЛЬФО» (бывший «Театр для своих») - независимый самодеятельный театральный коллектив, созданный из выпускников курсов и программ Центра психологии и творчества Kuzikova school.
@@ -20,7 +20,7 @@ export const AboutSection = () => {
           </p>
           
           <div className="mt-12">
-            <h3 className="text-3xl font-bold text-center mb-8">Наши достижения</h3>
+            <h3 className="text-4xl font-bold text-center mb-8">Наши достижения</h3>
             <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               <Card className="bg-card border-border animate-scale-in delay-100 overflow-hidden hover:shadow-xl transition-shadow">
                 <CardContent className="p-0">

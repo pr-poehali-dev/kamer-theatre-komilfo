@@ -6,7 +6,7 @@ export const ContactsSection = () => {
   return (
     <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Контакты</h2>
+        <h2 className="text-6xl font-bold text-center mb-8 animate-fade-in-up">Контакты</h2>
         <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
           Мы всегда рады ответить на ваши вопросы
         </p>
@@ -67,7 +67,7 @@ export const ContactsSection = () => {
         </div>
 
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-center mb-8">Наши социальные сети</h3>
+          <h3 className="text-4xl font-bold text-center mb-8">Наши социальные сети</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="bg-primary/5 border-primary/20 hover:shadow-lg transition-shadow animate-scale-in">
               <CardContent className="p-6 text-center">

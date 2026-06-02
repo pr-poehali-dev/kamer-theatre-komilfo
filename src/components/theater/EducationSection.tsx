@@ -9,7 +9,7 @@ export const EducationSection = () => {
   return (
     <div className="py-12 animate-fade-in">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-5xl font-bold text-center mb-8 animate-fade-in-up">Учебный театр</h2>
+        <h2 className="text-6xl font-bold text-center mb-8 animate-fade-in-up">Учебный театр</h2>
         <p className="text-xl text-center text-muted-foreground mb-16 max-w-3xl mx-auto animate-fade-in-up delay-100">
           Откройте в себе талант актёра в камерной атмосфере нашего театра
         </p>
@@ -138,7 +138,7 @@ export const EducationSection = () => {
         </div>
 
         <div className="bg-muted/30 rounded-lg p-8 mb-12 animate-fade-in-up delay-100">
-          <h3 className="text-3xl font-bold text-center mb-8">Что вы получите</h3>
+          <h3 className="text-4xl font-bold text-center mb-8">Что вы получите</h3>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center animate-fade-in-up delay-200">
               <Icon name="Star" size={40} className="text-primary mx-auto mb-4" />
