@@ -85,7 +85,7 @@ export const TroupeSection = () => {
 
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-300">
             <img
-              src="https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/bucket/f632e0ea-6bf1-4e19-a782-e95cd8b74ef0.jpg"
+              src="https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/bucket/16a533ff-e245-42ee-aea9-d51c77f9739e.jpg"
               alt="Елена Короткова"
               className="w-full h-80 object-cover object-top"
             />
