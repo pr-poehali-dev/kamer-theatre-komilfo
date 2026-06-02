@@ -24,6 +24,17 @@ export const NewsSection = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [loginError, setLoginError] = useState(false);
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+
+  const toggleExpand = (id: string) => {
+    setExpandedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) { next.delete(id); } else { next.add(id); }
+      return next;
+    });
+  };
+
+  const PREVIEW_LENGTH = 200;
 
   useEffect(() => {
     const saved = sessionStorage.getItem(ADMIN_KEY);
@@ -375,9 +386,21 @@ export const NewsSection = () => {
                     )}
                     </div>
 
-                    <div className="space-y-4 text-base leading-relaxed whitespace-pre-wrap">
-                      {item.content}
+                    <div className="text-base leading-relaxed whitespace-pre-wrap">
+                      {expandedIds.has(item.id) || item.content.length <= PREVIEW_LENGTH
+                        ? item.content
+                        : item.content.slice(0, PREVIEW_LENGTH).trimEnd() + '...'}
                     </div>
+                    {item.content.length > PREVIEW_LENGTH && (
+                      <Button
+                        variant="ghost"
+                        className="mt-2 px-0 text-primary hover:text-primary/80 hover:bg-transparent"
+                        onClick={() => toggleExpand(item.id)}
+                      >
+                        {expandedIds.has(item.id) ? 'Свернуть' : 'Читать далее'}
+                        <Icon name={expandedIds.has(item.id) ? 'ChevronUp' : 'ChevronDown'} size={16} className="ml-1" />
+                      </Button>
+                    )}
 
                     {item.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-border">
