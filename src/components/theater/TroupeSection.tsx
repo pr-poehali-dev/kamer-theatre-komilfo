@@ -206,9 +206,9 @@ export const TroupeSection = () => {
 
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-1000">
             <img
-              src="https://cdn.poehali.dev/files/793fb641-52ba-4cc9-9132-9f4b31b5693a.jpg"
+              src="https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/bucket/c87b64ae-c46d-4219-9d23-2d880e4835f7.jpg"
               alt="Темирлан Тугушев"
-              className="w-full h-80 object-cover"
+              className="w-full h-80 object-cover object-top"
             />
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Темирлан Тугушев</h3>
