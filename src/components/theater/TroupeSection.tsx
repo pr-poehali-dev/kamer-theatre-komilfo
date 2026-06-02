@@ -21,23 +21,23 @@ export const TroupeSection = () => {
                 />
               </div>
               <CardContent className="p-6 md:w-3/5 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2">Светлана Кузикова</h3>
-                <p className="text-primary font-semibold mb-3 text-base">Художественный руководитель и режиссёр</p>
-                <p className="text-muted-foreground mb-4 text-base">
+                <h3 className="text-3xl font-bold mb-2">Светлана Кузикова</h3>
+                <p className="text-primary font-semibold mb-3 text-lg">Художественный руководитель и режиссёр</p>
+                <p className="text-muted-foreground mb-4 text-lg">
                   Основатель театра «Комильфо» и школы Kuzikova school. 
                   Создатель уникального курса «Перформанс-терапия», сочетающего театральное искусство и психологию.
                 </p>
-                <div className="space-y-2 text-muted-foreground text-base">
+                <div className="space-y-2 text-muted-foreground text-lg">
                   <div className="flex items-center gap-2">
-                    <Icon name="Award" size={18} className="text-primary" />
+                    <Icon name="Award" size={20} className="text-primary" />
                     <span>Профессиональный психолог и режиссёр</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Theater" size={18} className="text-primary" />
+                    <Icon name="Theater" size={20} className="text-primary" />
                     <span>Создала более 20 спектаклей</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="Users" size={18} className="text-primary" />
+                    <Icon name="Users" size={20} className="text-primary" />
                     <span>Педагог по ораторскому искусству</span>
                   </div>
                 </div>
