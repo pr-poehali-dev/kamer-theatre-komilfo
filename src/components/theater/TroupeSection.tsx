@@ -131,15 +131,15 @@ export const TroupeSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-700">
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-1000">
             <img
-              src="https://cdn.poehali.dev/files/eed38ff6-37cf-4311-a81c-38cda6f02ebb.jpg"
-              alt="Вадим Котков"
-              className="w-full h-80 object-cover object-[center_35%]"
+              src="https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/bucket/f5b1d1be-2be5-4ba2-99ab-d649b48a69a8.jpg"
+              alt="Валерия Суханова"
+              className="w-full h-80 object-cover object-top"
             />
             <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Вадим Котков</h3>
-              <p className="text-primary font-semibold">Актёр</p>
+              <h3 className="text-xl font-bold mb-1">Валерия Суханова</h3>
+              <p className="text-primary font-semibold">Актриса</p>
             </CardContent>
           </Card>
 
@@ -205,6 +205,18 @@ export const TroupeSection = () => {
 
           <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-1000">
             <img
+              src="https://cdn.poehali.dev/files/eed38ff6-37cf-4311-a81c-38cda6f02ebb.jpg"
+              alt="Вадим Котков"
+              className="w-full h-80 object-cover object-[center_35%]"
+            />
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-1">Вадим Котков</h3>
+              <p className="text-primary font-semibold">Актёр</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-1000">
+            <img
               src="https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/bucket/c87b64ae-c46d-4219-9d23-2d880e4835f7.jpg"
               alt="Темирлан Тугушев"
               className="w-full h-80 object-cover object-top"
@@ -212,18 +224,6 @@ export const TroupeSection = () => {
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-1">Темирлан Тугушев</h3>
               <p className="text-primary font-semibold">Актёр</p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-card border-border overflow-hidden hover:shadow-xl transition-shadow animate-scale-in delay-1000">
-            <img
-              src="https://cdn.poehali.dev/projects/b938984c-0d60-47c5-a439-7d0d401d3bf4/bucket/f5b1d1be-2be5-4ba2-99ab-d649b48a69a8.jpg"
-              alt="Валерия Суханова"
-              className="w-full h-80 object-cover object-top"
-            />
-            <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-1">Валерия Суханова</h3>
-              <p className="text-primary font-semibold">Актриса</p>
             </CardContent>
           </Card>
         </div>
