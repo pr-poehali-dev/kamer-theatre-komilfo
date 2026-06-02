@@ -13,8 +13,14 @@ SCHEMA = os.environ['MAIN_DB_SCHEMA']
 CORS = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Admin-Password',
 }
+
+
+def check_auth(event: dict) -> bool:
+    headers = event.get('headers') or {}
+    password = headers.get('X-Admin-Password') or headers.get('x-admin-password') or ''
+    return password == os.environ.get('ADMIN_PASSWORD', '')
 
 
 def get_conn():
@@ -31,6 +37,10 @@ def handler(event: dict, context) -> dict:
 
     if method == 'GET':
         return get_news()
+
+    if method in ('POST', 'PUT', 'DELETE'):
+        if not check_auth(event):
+            return {'statusCode': 403, 'headers': CORS, 'body': json.dumps({'error': 'Forbidden'})}
 
     if method == 'POST':
         body = json.loads(event.get('body') or '{}')
